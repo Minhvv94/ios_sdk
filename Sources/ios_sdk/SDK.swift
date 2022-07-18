@@ -8,12 +8,17 @@
 import Foundation
 
 public struct SDK {
+    
+    static let shared = SDK();
+    
     public private(set) var text = "Hello, World!"
+    
+    
 
     public init() {
     }
     
-    public func login(){
+    func login(){
         print("Login  sdk")
     }
 }

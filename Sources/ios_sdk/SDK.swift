@@ -18,7 +18,9 @@ public struct SDK {
     }
     
     public func login(){
-        print("Login  sdk")
+    
+        let topView = UIApplication.topViewController();
+        topView.backgroundColor = UIColor.red
     }
 }
 

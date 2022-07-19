@@ -19,8 +19,8 @@ public struct SDK {
     
         var topView = UIApplication.topViewController();
 
-        let v = UIView(frame: window.bounds)
-        window.addSubview(v)
+        let v = UIView(frame: topView.bounds)
+        topView.addSubview(v)
         v.backgroundColor = UIColor.blackColor()
         
     }

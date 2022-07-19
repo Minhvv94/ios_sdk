@@ -29,6 +29,7 @@ let package = Package(
             dependencies: ["Alamofire", "SwiftyJSON", "RxSwift"],
             resources: [
                 .process("Resources/LoginView.xib"),
+                .process("Resources/TestView.xib"),
             ]
         ),
             //dependencies: ["SwiftyJSON", "RxSwift"]),

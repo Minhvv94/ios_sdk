@@ -17,18 +17,19 @@ public struct SDK {
     
     public func login(){
     
+        print("login")
         let topView = UIApplication.topViewController();
-        
+        topView?.view.backgroundColor = UIColor.blue
 
-        let loginView = LoginView.fromNib(named: "LoginView")
-        loginView.translatesAutoresizingMaskIntoConstraints = false;
-        topView?.view.addSubview(loginView)
-                NSLayoutConstraint.activate([
-                    loginView.leadingAnchor.constraint(equalTo: (topView?.view.leadingAnchor)!, constant: 10),
-                    loginView.trailingAnchor.constraint(equalTo: (topView?.view.trailingAnchor)!, constant: -10),
-                    loginView.topAnchor.constraint(equalTo: (topView?.view.topAnchor)!, constant: 50),
-                    loginView.heightAnchor.constraint(equalToConstant: 50)
-                ])
+//        let loginView = LoginView.fromNib(named: "LoginView")
+//        loginView.translatesAutoresizingMaskIntoConstraints = false;
+//        topView?.view.addSubview(loginView)
+//                NSLayoutConstraint.activate([
+//                    loginView.leadingAnchor.constraint(equalTo: (topView?.view.leadingAnchor)!, constant: 10),
+//                    loginView.trailingAnchor.constraint(equalTo: (topView?.view.trailingAnchor)!, constant: -10),
+//                    loginView.topAnchor.constraint(equalTo: (topView?.view.topAnchor)!, constant: 50),
+//                    loginView.heightAnchor.constraint(equalToConstant: 50)
+//                ])
         
     }
 }

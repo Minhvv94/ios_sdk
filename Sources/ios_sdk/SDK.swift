@@ -22,10 +22,13 @@ public struct SDK {
         topView?.view.backgroundColor = UIColor.blue
         
         
-        let loginView = LoginView.fromNib(named: "LoginView")
-        loginView.translatesAutoresizingMaskIntoConstraints = false;
+        print(topView?.view.leadingAnchor)
         
-        loginView.frame = CGRect(x:0, y: 0, width: 100, height: 50.0)
+        
+//        let loginView = LoginView.fromNib(named: "LoginView")
+//        loginView.translatesAutoresizingMaskIntoConstraints = false;
+//
+//        loginView.frame = CGRect(x:0, y: 0, width: 100, height: 50.0)
         
         print("set background")
 

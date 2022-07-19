@@ -15,14 +15,14 @@ public struct SDK {
     public init() {
     }
     
-    public func login(){
-    
+    public func login(topView : UIViewController ){
+     
         print("login")
-        let topView = UIApplication.topViewController();
-        topView?.view.backgroundColor = UIColor.blue
+        //let topView = UIApplication.topViewController();
+        topView.view.backgroundColor = UIColor.blue
         
         
-        print(topView?.view.leadingAnchor)
+        print(topView.view.leadingAnchor)
         
         
 //        let loginView = LoginView.fromNib(named: "LoginView")

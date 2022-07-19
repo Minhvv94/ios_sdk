@@ -25,20 +25,13 @@ public struct SDK {
         print(topView.view.leadingAnchor)
         
         
-//        let loginView = LoginView.fromNib(named: "LoginView")
-//        loginView.translatesAutoresizingMaskIntoConstraints = false;
-//
-//        loginView.frame = CGRect(x:0, y: 0, width: 100, height: 50.0)
-        
-        print("set background")
+        let loginView = LoginView.fromNib(named: "LoginView")
+        loginView.translatesAutoresizingMaskIntoConstraints = false;
 
-//        topView?.view.addSubview(loginView)
-//                NSLayoutConstraint.activate([
-//                    loginView.leadingAnchor.constraint(equalTo: (topView?.view.leadingAnchor)!, constant: 10),
-//                    loginView.trailingAnchor.constraint(equalTo: (topView?.view.trailingAnchor)!, constant: -10),
-//                    loginView.topAnchor.constraint(equalTo: (topView?.view.topAnchor)!, constant: 50),
-//                    loginView.heightAnchor.constraint(equalToConstant: 50)
-//                ])
+        topView.view.addSubview(loginView)
+        
+        loginView.center = CGPoint(x: topView.view.frame.size.width,
+                                   y: topView.view.frame.size.height)
         
     }
 }

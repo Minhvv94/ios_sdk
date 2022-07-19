@@ -23,8 +23,8 @@ public struct SDK {
         
         
         
-        let loginView = LoginView.fromNib(named: "LoginView")
-        loginView.translatesAutoresizingMaskIntoConstraints = false;
+//        let loginView = LoginView.fromNib(named: "LoginView")
+//        loginView.translatesAutoresizingMaskIntoConstraints = false;
 //
 //        topView.view.addSubview(loginView)
 //

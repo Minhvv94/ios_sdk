@@ -6,13 +6,11 @@
 //
 
 import Foundation
+import UIKit
 
 public struct SDK {
     
     public static let shared = SDK();
-    
-    public private(set) var text = "Hello, World!"
-    
     
     public init() {
     }

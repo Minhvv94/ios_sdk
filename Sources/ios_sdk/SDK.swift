@@ -27,11 +27,12 @@ public struct SDK {
         
         let loginView = LoginView.fromNib(named: "LoginView")
         loginView.translatesAutoresizingMaskIntoConstraints = false;
+        loginView.center = CGPoint(x: topView.view.frame.size.width,
+                                   y: topView.view.frame.size.height)
 
         topView.view.addSubview(loginView)
         
-        loginView.center = CGPoint(x: topView.view.frame.size.width,
-                                   y: topView.view.frame.size.height)
+        
         
     }
 }

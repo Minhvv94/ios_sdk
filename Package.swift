@@ -6,7 +6,8 @@ import PackageDescription
 let package = Package(
     name: "ios_sdk",
     platforms: [
-            .iOS(.v10)
+            .iOS(.v13),
+            .macOS(.v10_12)
         ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
@@ -15,9 +16,7 @@ let package = Package(
             targets: ["ios_sdk"]),
     ],
     dependencies: [
-        // Dependencies declare other packages that this package depends on.
-        // .package(url: /* package url */, from: "1.0.0"),
-        .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from: "5.6.1")),
+        .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from: "5.6.2")),
         .package(url: "https://github.com/SwiftyJSON/SwiftyJSON.git", .upToNextMajor(from: "5.0.0")),
         .package(url: "https://github.com/ReactiveX/RxSwift.git", .upToNextMajor(from: "6.0.0")),
         .package(url: "https://github.com/facebook/facebook-ios-sdk.git", .upToNextMajor(from: "14.1.0"))
@@ -27,9 +26,15 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "ios_sdk",
-            dependencies: ["Alamofire", "SwiftyJSON", "RxSwift"]),
+            dependencies: ["Alamofire", "SwiftyJSON", "RxSwift"],
+            resources: [
+                .process("Resources/LoginView.xib"),
+            ]
+        ),
+            //dependencies: ["SwiftyJSON", "RxSwift"]),
         .testTarget(
             name: "ios_sdkTests",
             dependencies: ["ios_sdk"]),
     ]
 )
+ 

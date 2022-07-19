@@ -9,9 +9,9 @@
 //import JWTKit
 //
 //class Utils: NSObject {
-//    
+//
 //    static let shared = Utils()
-//    
+//
 //    func formatPercent(value: Double,isManual: Bool = false,maximumFractionDigits : Int = 2) -> String {
 //        let formatter = NumberFormatter()
 //        formatter.numberStyle = .percent
@@ -32,7 +32,7 @@
 //        let result = formatter.string(from: (value/100.0) as NSNumber)
 //        return result!
 //    }
-//    
+//
 //    func formatValue(value: Double) -> String {
 //        let formatter = NumberFormatter()
 //        formatter.numberStyle = .decimal
@@ -64,12 +64,12 @@
 //                    return result + "B"
 //                }
 //            }
-//            
+//
 //        }
 //        let result = formatter.string(from: value as NSNumber)
 //        return result!
 //    }
-//    
+//
 //    func formatValue(maximumFractionDigits : Int,value : Double) -> String {
 //        let formatter = NumberFormatter()
 //        formatter.numberStyle = .decimal
@@ -85,11 +85,11 @@
 //            }
 //            return result!
 //        }
-//        
+//
 //        let result = formatter.string(from: value as NSNumber)
 //        return result!
 //    }
-//    
+//
 //    func formatValue2(value: Double) -> String {
 //        let formatter = NumberFormatter()
 //        formatter.minimumFractionDigits = 3
@@ -121,12 +121,12 @@
 //                    return result + "B"
 //                }
 //            }
-//            
+//
 //        }
 //        let result = formatter.string(from: value as NSNumber)
 //        return result!
 //    }
-//    
+//
 //    func convertTimeStringToDouble(tString : String) -> Double {
 //        let dateFormatter = DateFormatter()
 //        //        let tempLocale = dateFormatter.locale // save locale temporarily
@@ -160,7 +160,7 @@
 //        let date21 = dateFormatter.string(from: date)
 //        return date21
 //    }
-//    
+//
 //    func convertTimeString(tString : String,format : String) -> String {
 //        var nFormat = "yyyy/MM/dd HH:mm:ss"
 //        if tString.contains(".")
@@ -185,7 +185,7 @@
 //        let date21 = dateFormatter.string(from: date)
 //        return date21
 //    }
-//    
+//
 //    func convertTime(tString : String,format : String) -> String {
 //        var nFormat = "yyyy/MM/dd HH:mm:ss"
 //        if tString.contains(".")
@@ -210,7 +210,7 @@
 //        let date21 = dateFormatter.string(from: date)
 //        return date21
 //    }
-//    
+//
 //    func convertTimetoDateYear(tString : String,format : String) -> String {
 //        var nFormat = "yyyy/MM/dd HH:mm:ss"
 //        if tString.contains(".")
@@ -235,8 +235,8 @@
 //        let date21 = dateFormatter.string(from: date)
 //        return date21
 //    }
-//    
-//    
+//
+//
 //    func formatDateMessage(tString : String, format : String) -> String {
 //        let dateFormatter = DateFormatter()
 //        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
@@ -246,7 +246,7 @@
 //        }
 //        return ""
 //    }
-//    
+//
 //    func formatDateMessage(date: Date) -> String {
 //        let dateFormatter = DateFormatter()
 //        if (Calendar.current.isDateInToday(date)) {
@@ -258,7 +258,7 @@
 //        let output = dateFormatter.string(from: date)
 //        return output
 //    }
-//    
+//
 //    func convertTimetoHour(tString : String,format : String) -> String {
 //        var nFormat = "yyyy/MM/dd HH:mm:ss"
 //        if tString.contains(".")
@@ -283,19 +283,19 @@
 //        let date21 = dateFormatter.string(from: date)
 //        return date21
 //    }
-//    
+//
 //    func UTCToLocal(date:String, fromFormat: String, toFormat: String) -> String {
 //        let dateFormatter = DateFormatter()
 //        dateFormatter.dateFormat = fromFormat
 //        dateFormatter.timeZone = TimeZone(abbreviation: "GMT+00")
-//        
+//
 //        let dt = dateFormatter.date(from: date)
 //        dateFormatter.timeZone = TimeZone.current
 //        dateFormatter.dateFormat = toFormat
-//        
+//
 //        return dateFormatter.string(from: dt!)
 //    }
-//    
+//
 //    func formatCurrency(currencyString : String) -> String {
 //        if let value = Int(currencyString)
 //        {
@@ -310,17 +310,17 @@
 //        }
 //        return ""
 //    }
-//    
+//
 //    func formatCurrency(value: NSNumber, identifier: String) -> String {
 //        let formatter = NumberFormatter()
 //        formatter.numberStyle = .currency
-//        
+//
 //        formatter.locale = Locale(identifier: identifier) //  "vi_VN"
 //        return formatter.string(from: value) ?? "0 đ"
 //    }
-//     
+//
 //    func createJwtFromJdt (appInfo : AppInfo, time : String) -> String {
-//        
+//
 //        var body : String = ""
 //        let client_secret : String = appInfo.client_secret ?? ""
 //        let iss : String = appInfo.client_id ?? ""
@@ -329,7 +329,7 @@
 //        let jti = String(jtiNbf)
 //        let expdate : Int = nbf + 60
 //        let jdt = JDT(dvId: "1656572775", os: appInfo.platformOS ?? "")
-//        
+//
 //        let exp = ExpirationClaim(value: Date(timeIntervalSince1970: TimeInterval(expdate)))
 //            do {
 //                let jwt = try JWTSigner.hs256(key: client_secret)
@@ -340,7 +340,7 @@
 //            }
 //        return body
 //    }
-//    
+//
 //    func testExpirationEncoding() -> String {
 //        let test = "PGlDvJMrBFmnsZPA29bRSOTxYsw4YvLJ4HnQuGhR42q+jZYOHL3z3sRr0QSQXH8B"
 //        let jti = "1656572775"
@@ -358,7 +358,7 @@
 //
 //            return test
 //        }
-//    
+//
 //}
 //struct Payload: JWTPayload, Equatable {
 //
@@ -376,15 +376,15 @@
 //struct JDT: JWTPayload, Equatable {
 //    var dvId : String
 //    var os : String
-//    
+//
 //    /// See `JWTClaim`.
 //    public init(dvId: String, os: String) {
 //        self.dvId = dvId
 //        self.os = os
 //    }
-//    
+//
 //    func verify(using signer: JWTSigner) throws {
-//                
+//
 //    }
 //
 //}

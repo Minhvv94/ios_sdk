@@ -17,8 +17,12 @@ public struct SDK {
     
     public func login(){
     
-        let topView = UIApplication.topViewController();
-        topView.backgroundColor = UIColor.red
+        var topView = UIApplication.topViewController();
+
+        let v = UIView(frame: window.bounds)
+        window.addSubview(v)
+        v.backgroundColor = UIColor.blackColor()
+        
     }
 }
 

@@ -1,8 +1,10 @@
 
 
-import UIKit
 import Alamofire
 import SwiftyJSON
+import UIKit
+
+
 
 class ApiResponse<T>: NSObject {
     let STATUS_SUCCESS = ApiConst.STATUS_SUCCESS

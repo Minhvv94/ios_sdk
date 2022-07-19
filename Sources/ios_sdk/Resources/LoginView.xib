@@ -18,9 +18,6 @@
             <color key="backgroundColor" systemColor="systemGreenColor"/>
             <color key="tintColor" systemColor="systemGreenColor"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <connections>
-                <outletCollection property="gestureRecognizers" destination="yKW-Qq-F2Q" id="zMU-uZ-haW"/>
-            </connections>
             <point key="canvasLocation" x="215.94202898550725" y="-38.504464285714285"/>
         </view>
     </objects>

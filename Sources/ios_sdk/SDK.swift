@@ -20,9 +20,15 @@ public struct SDK {
         print("login")
         let topView = UIApplication.topViewController();
         topView?.view.backgroundColor = UIColor.blue
+        
+        
+        let loginView = LoginView.fromNib(named: "LoginView")
+        loginView.translatesAutoresizingMaskIntoConstraints = false;
+        
+        loginView.frame = CGRect(x:0, y: 0, width: 100, height: 50.0)
+        
+        print("set background")
 
-//        let loginView = LoginView.fromNib(named: "LoginView")
-//        loginView.translatesAutoresizingMaskIntoConstraints = false;
 //        topView?.view.addSubview(loginView)
 //                NSLayoutConstraint.activate([
 //                    loginView.leadingAnchor.constraint(equalTo: (topView?.view.leadingAnchor)!, constant: 10),

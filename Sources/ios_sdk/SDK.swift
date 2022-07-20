@@ -22,7 +22,7 @@ public struct SDK {
         
         
         let rect = CGRect(x: 100, y: 100, width: 120, height: 240)
-        let newView = LoginView(frame: rect)
+        let newView = TestView(frame: rect)
         topView.view.addSubview(newView)
         
 //        let loginView = TestView.fromNib(named: "TestView");

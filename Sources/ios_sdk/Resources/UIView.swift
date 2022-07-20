@@ -19,6 +19,8 @@ extension UIView {
             /// we're using `first` here because compact map chokes compiler on
             /// optimized release, so you can't use two views in one nib if you wanted to
             /// and are now looking at this
+            ///
+            print(nib)
             let view = nib.first as? Self
             else { fatalError("view of type \(Self.self) not found in \(nib)") }
         return view

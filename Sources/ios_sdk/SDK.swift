@@ -23,6 +23,7 @@ public struct SDK {
         
         let rect = CGRect(x: 100, y: 100, width: 120, height: 240)
         let newView = ViewController(frame: rect)
+        newView.backgroundColor = UIColor.blue
         topView.view.addSubview(newView)
         
 //        let loginView = TestView.fromNib(named: "TestView");

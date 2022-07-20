@@ -23,7 +23,7 @@ class TestView : UIView {
 
     func initSubviews() {
 
-        let nib = UINib(nibName: LoginView.identifier, bundle: nil)
+        let nib = UINib(nibName: TestView.identifier, bundle: nil)
 
         guard let view = nib.instantiate(withOwner: self, options: nil).first as?
                             UIView else {fatalError("Unable to convert nib")}

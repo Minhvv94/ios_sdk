@@ -12,7 +12,8 @@ extension UIView {
     public class func fromNib(named: String? = nil) -> Self {
         let name = named ?? "\(Self.self)"
         guard
-            let nib = Bundle.main.loadNibNamed(name, owner: nil, options: nil)
+            //let nib = Bundle.main.loadNibNamed(name, owner: nil, options: nil)
+            let nib = Bundle.module.loadNibNamed(name, owner: nil, options: nil)
             else { fatalError("missing expected nib named: \(name)") }
         guard
             /// we're using `first` here because compact map chokes compiler on

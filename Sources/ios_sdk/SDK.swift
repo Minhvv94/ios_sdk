@@ -20,7 +20,7 @@ public struct SDK {
         print("login")
         topView.view.backgroundColor = UIColor.red
         
-        let loginView = LoginView.fromNib(named: "LoginView");
+        let loginView = TestView.fromNib(named: "TestView");
         loginView.translatesAutoresizingMaskIntoConstraints = false;
         topView.view.addSubview(loginView);
                 NSLayoutConstraint.activate([

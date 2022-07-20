@@ -9,5 +9,6 @@ import Foundation
 import UIKit
 
 class LoginView : UIView {
-    
+    // this is going to be our container object
+        
 }

@@ -20,19 +20,18 @@ public struct SDK {
         print("login")
         topView.view.backgroundColor = UIColor.red
         
-        
-        
-        
-        let loginView = TestView.fromNib(named: "TestView")
-
-        topView.view.addSubview(loginView)
-
-                NSLayoutConstraint.activate([
-                    loginView.leadingAnchor.constraint(equalTo: topView.view.leadingAnchor, constant: 10),
-                    loginView.trailingAnchor.constraint(equalTo: topView.view.trailingAnchor, constant: -10),
-                    loginView.topAnchor.constraint(equalTo: topView.view.topAnchor, constant: 20),
-                    loginView.heightAnchor.constraint(equalToConstant: 50)
-                ])
+//        let view = UINib(nibName: "CustomView", bundle: .main).instantiate(withOwner: nil, options: nil).first as! UIView
+        // let view = Bundle.main.loadNibNamed("CustomView", owner: nil, options: nil)!.first as! UIView // does the same as above
+//        view.frame = self.view.bounds
+//        self.view.addSubview(view)
+//        topView.view.addSubview(loginView)
+//
+//                NSLayoutConstraint.activate([
+//                    loginView.leadingAnchor.constraint(equalTo: topView.view.leadingAnchor, constant: 10),
+//                    loginView.trailingAnchor.constraint(equalTo: topView.view.trailingAnchor, constant: -10),
+//                    loginView.topAnchor.constraint(equalTo: topView.view.topAnchor, constant: 20),
+//                    loginView.heightAnchor.constraint(equalToConstant: 50)
+//                ])
         
     }
 }

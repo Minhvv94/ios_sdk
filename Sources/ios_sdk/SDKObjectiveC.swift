@@ -9,6 +9,7 @@ import Foundation
 
 protocol SwiftProtocol {
     func login()
+    func loginTest()
 }
 
 @objc class SDKObjectiveC: NSObject, SwiftProtocol {

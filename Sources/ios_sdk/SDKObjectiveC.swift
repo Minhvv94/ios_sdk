@@ -9,6 +9,10 @@ import Foundation
 
 @objc(SDKObjectiveC)
 public class SDKObjectiveC: NSObject {
+    
+    public override init(){
+        print(" ios sdk init")
+    }
    
     public func getSDK () {
         print(" ios sdk getSDK")

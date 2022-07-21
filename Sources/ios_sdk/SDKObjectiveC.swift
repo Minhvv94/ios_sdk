@@ -14,7 +14,7 @@ public class SDKObjectiveC: NSObject {
         print(" ios sdk init")
     }
     
-    public func getSDK() {
+    @objc open func  getSDK() {
         print(" ios sdk getSDK")
     }
    

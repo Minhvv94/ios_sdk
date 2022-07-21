@@ -7,12 +7,7 @@
 
 import Foundation
 
-protocol SwiftProtocol {
-    func login()
-    func loginTest()
-}
-
-@objc class SDKObjectiveC: NSObject, SwiftProtocol {
+@objc class SDKObjectiveC: NSObject {
     
     @objc func login(){
         print("call SDKObjectiveC framework ")

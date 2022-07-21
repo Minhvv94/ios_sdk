@@ -7,13 +7,14 @@
 
 import Foundation
 
-@objc class SDKObjectiveC: NSObject {
+@objc class SDKObjectiveC : NSObject {
     
-    @objc func login(){
-        print("call SDKObjectiveC framework ")
-    }
-    
-    @objc func loginTest(){
-        print("call SDKObjectiveC framework loginTest")
+    var someProperty: String = "Some Initializer Val"
+
+    public override init() {}
+
+    func someFunction(someArg:AnyObject) -> String {
+        var returnVal = "You sent me \(someArg)"
+        return returnVal
     }
 }

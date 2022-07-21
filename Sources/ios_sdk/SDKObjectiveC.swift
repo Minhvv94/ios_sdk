@@ -16,4 +16,8 @@ protocol SwiftProtocol {
     @objc func login(){
         print("call SDKObjectiveC framework ")
     }
+    
+    @objc func loginTest(){
+        print("call SDKObjectiveC framework loginTest")
+    }
 }

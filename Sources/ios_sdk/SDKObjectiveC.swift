@@ -7,14 +7,10 @@
 
 import Foundation
 
-@objc class SDKObjectiveC : NSObject {
-    
-    var someProperty: String = "Some Initializer Val"
-
-    public override init() {}
-
-    func someFunction(someArg:AnyObject) -> String {
-        var returnVal = "You sent me \(someArg)"
-        return returnVal
+@objc(SDKObjectiveC)
+public class SDKObjectiveC: NSObject {
+   
+    public func getSDK () {
+        print(" ios sdk getSDK")
     }
 }

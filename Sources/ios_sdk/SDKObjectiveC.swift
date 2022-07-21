@@ -7,6 +7,15 @@
 
 import Foundation
 
+
+extension NSObject {
+    
+    class func getSDK() {
+        print(" ios sdk getSDK")
+    }
+    
+}
+
 @objc(SDKObjectiveC)
 public class SDKObjectiveC: NSObject {
     

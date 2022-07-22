@@ -6,16 +6,22 @@
 //
 
 import Foundation
+import UIKit
 
 @objc(SDKObjectiveC)
-public class SDKObjectiveC: NSObject {
+public class SDKObjectiveC: UIView {
     
-    public override init(){
-        print(" ios sdk init")
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     @objc open func  getSDK() {
         print(" ios sdk getSDK")
     }
    
+    @objc open func login(topView : UIViewController){
+        
+        print("login")
+        topView.view.backgroundColor = UIColor.red
+    }
 }

@@ -29,6 +29,7 @@ public class SDKObjectiveC: UIView {
             let windowHeight = screenFrame.height
             let rect = CGRect(x: 0, y: 0, width: windowWidth , height: windowHeight)
             let newView = TestView(frame: rect)
+            newView.backgroundColor = UIColor.red
             topVC.view.addSubview(newView)
         }
         print("login")

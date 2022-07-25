@@ -11,8 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginView" customModule="ios_sdk">
             <connections>
-                <outlet property="contentView" destination="Ivz-FY-9Q5" id="32N-Oe-1uT"/>
-                <outletCollection property="gestureRecognizers" destination="uVM-nw-dV9" id="aeM-69-wb5"/>
+                <outlet property="contentView" destination="Ivz-FY-9Q5" id="CFZ-9z-KHU"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

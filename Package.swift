@@ -28,8 +28,7 @@ let package = Package(
             name: "ios_sdk",
             dependencies: ["Alamofire", "SwiftyJSON", "RxSwift"],
             resources: [
-                .process("Resources/LoginView.xib"),
-                .process("Resources/TestView.xib"),
+                .process("Resources/LoginView.xib")
             ]
         ),
             //dependencies: ["SwiftyJSON", "RxSwift"]),

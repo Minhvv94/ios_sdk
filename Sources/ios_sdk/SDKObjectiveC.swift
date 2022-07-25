@@ -25,9 +25,6 @@ public class SDKObjectiveC: UIView {
         print(" ios sdk getSDK")
     }
    
-    @objc open func login(topView : UIViewController){
-        
-        print("login")
-        topView.view.backgroundColor = UIColor.red
+    @objc open func login(frame: CGRect){
     }
 }

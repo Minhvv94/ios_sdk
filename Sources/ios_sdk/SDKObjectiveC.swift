@@ -11,8 +11,8 @@ import UIKit
 @objc(SDKObjectiveC)
 public class SDKObjectiveC: UIView {
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
     }
     
     @objc open func  getSDK() {

@@ -11,7 +11,8 @@ import UIKit
 @objc(LoginView)
 class LoginView: UIView {
 
-    @IBOutlet weak var contentView: UIView!
+    @IBOutlet var contentView: UIView!
+    
     //@IBOutlet var contentView: UIView!
     override init(frame: CGRect) {
         super.init(frame: frame)

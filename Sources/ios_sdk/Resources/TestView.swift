@@ -11,6 +11,7 @@ import UIKit
 @objc(TestView)
 class TestView: UIView {
 
+    @IBOutlet var contentView: UIView!
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -19,5 +20,12 @@ class TestView: UIView {
     }
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+    }
+    
+    private func setUpView(){
+        Bundle.module.loadNibNamed("TestView", owner: self, options: nil)
+        self.addSubview(contentView)
+        contentView.frame = self.bounds
+        contentView.autoresizingMask = [.flexibleHeight,.flexibleWidth]
     }
 }

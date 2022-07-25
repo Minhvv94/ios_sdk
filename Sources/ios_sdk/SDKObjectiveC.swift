@@ -22,9 +22,16 @@ public class SDKObjectiveC: UIView {
     }
     
     @objc open func  getSDK() {
-        print(" ios sdk getSDK")
+        if let topVC = UIApplication.topViewController() {
+            let rect = CGRect(x: 0, y: 0, width: 480, height: 800)
+            let newView = LoginView(frame: rect)
+            newView.backgroundColor = UIColor.black
+            topVC.view.addSubview(newView)
+        }
+        print("getSDK")
     }
    
-    @objc open func login(frame: CGRect){
+    @objc open func login(){
+        print("login")
     }
 }

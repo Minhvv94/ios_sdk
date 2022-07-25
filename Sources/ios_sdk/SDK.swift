@@ -17,14 +17,20 @@ public struct SDK {
     
     public func login(topView : UIViewController ){
      
-        print("login")
-        topView.view.backgroundColor = UIColor.red
+
+        
+        if let topVC = UIApplication.topViewController() {
+            let rect = CGRect(x: 0, y: 0, width: 480, height: 800)
+            let newView = LoginView(frame: rect)
+            newView.backgroundColor = UIColor.blue
+           topVC.view.addSubview(newView)
+        }
         
         
-        let rect = CGRect(x: 0, y: 0, width: 480, height: 800)
-        let newView = LoginView(frame: rect)
-        newView.backgroundColor = UIColor.blue
-        topView.view.addSubview(newView)
+//        let rect = CGRect(x: 0, y: 0, width: 480, height: 800)
+//        let newView = LoginView(frame: rect)
+//        newView.backgroundColor = UIColor.blue
+//        topView.view.addSubview(newView)
         
 //        let loginView = LoginView.fromNib(named: "LoginView");
 //        loginView.translatesAutoresizingMaskIntoConstraints = false;

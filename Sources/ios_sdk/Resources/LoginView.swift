@@ -17,10 +17,10 @@ class LoginView: UIView {
         super.init(frame: frame)
         setUpView()
     }
-    @objc init(frame: CGRect, editAccess: Int) {
-        super.init(frame:frame)
-        setUpView()
-    }
+//    @objc init(frame: CGRect, editAccess: Int) {
+//        super.init(frame:frame)
+//        setUpView()
+//    }
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setUpView()

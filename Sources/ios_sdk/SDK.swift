@@ -15,15 +15,12 @@ public struct SDK {
     public init() {
     }
     
-    public func login(topView : UIViewController ){
-     
-
-        
+    public func login(){
         if let topVC = UIApplication.topViewController() {
             let rect = CGRect(x: 0, y: 0, width: 480, height: 800)
             let newView = LoginView(frame: rect)
             newView.backgroundColor = UIColor.blue
-           topVC.view.addSubview(newView)
+            topVC.view.addSubview(newView)
         }
         
         

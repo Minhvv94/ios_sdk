@@ -19,7 +19,9 @@ class LoginView: UIView {
 
     
     @IBAction func btnClose(_ sender: Any) {
-        contentView.viewWithTag(100)
+        if let viewC = contentView.viewWithTag(100) {
+            viewC.removeFromSuperview()
+        }
     }
     @IBAction func btnLogin(_ sender: Any) {
         print("user name : \(txtUserName)")

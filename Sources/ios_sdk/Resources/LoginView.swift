@@ -14,9 +14,6 @@ class LoginView: UIView {
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var txtPass: UITextField!
     @IBOutlet weak var txtUserName: UITextField!
-    let topVC = UIApplication.topViewController();
-    
-
     
     @IBAction func btnClose(_ sender: Any) {
         //contentView.removeAllSubviews();
@@ -30,14 +27,9 @@ class LoginView: UIView {
         print("password : \(txtPass.text)")
         
     }
-    
-    
-  
-
+    // bắt sự kiên bấm vào màn hình
     @objc func checkAction(sender : UITapGestureRecognizer) {
-        // Do what you want
-        
-        print("click")
+        // ản bàn phím
         endEditing(true)
     }
     
@@ -55,6 +47,7 @@ class LoginView: UIView {
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight,.flexibleWidth]
     
+        // bấm vào view
         let gesture = UITapGestureRecognizer(target: self, action:  #selector(checkAction))
         addGestureRecognizer(gesture)
     }

@@ -20,7 +20,6 @@ class LoginView: UIView {
     
     @IBAction func btnClose(_ sender: Any) {
         //contentView.removeAllSubviews();
-
         print(self.tag)
         if (self.tag == 100) {
             self.removeFromSuperview()
@@ -45,7 +44,7 @@ class LoginView: UIView {
         self.addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight,.flexibleWidth]
-        //contentView.endEditing(true)
+        contentView.bindToKeyboard()
 
     }
 }

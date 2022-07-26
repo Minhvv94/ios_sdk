@@ -22,6 +22,9 @@ class LoginView: UIView {
         //contentView.removeAllSubviews();
 
         for subview in self.subviews{
+            
+            
+            print(subview.tag)
             if (subview.tag == 100) {
                subview.removeFromSuperview()
             }

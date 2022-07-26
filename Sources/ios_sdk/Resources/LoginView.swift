@@ -21,13 +21,9 @@ class LoginView: UIView {
     @IBAction func btnClose(_ sender: Any) {
         //contentView.removeAllSubviews();
 
-        for subview in self.subviews{
-            
-            
-            print(subview.tag)
-            if (subview.tag == 100) {
-               subview.removeFromSuperview()
-            }
+        print(self.tag)
+        if (self.tag == 100) {
+            self.removeFromSuperview()
         }
     }
     @IBAction func btnLogin(_ sender: Any) {

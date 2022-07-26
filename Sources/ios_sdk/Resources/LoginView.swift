@@ -41,7 +41,7 @@ class LoginView: UIView {
         self.addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight,.flexibleWidth]
-        contentView.endEditing(true)
+        //contentView.endEditing(true)
 
     }
 }

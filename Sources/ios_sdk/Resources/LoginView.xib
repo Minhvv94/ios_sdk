@@ -217,7 +217,7 @@
                 </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="uVM-nw-dV9"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <accessibility key="accessibilityConfiguration">
                 <accessibilityTraits key="traits" image="YES"/>
             </accessibility>

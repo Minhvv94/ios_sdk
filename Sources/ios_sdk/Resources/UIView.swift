@@ -28,34 +28,12 @@ import UIKit
 
 extension UIView {
 
-    private var hideKeybordOnTapIdentifier: String { return "hideKeybordOnTapIdentifier" }
-
-    private var hideKeybordOnTapGestureRecognizer: TapGestureRecognizer? {
-        let hideKeyboardGesture = TapGestureRecognizer(target: self, action: #selector(UIView.hideKeyboard),
-                                                       identifier: hideKeybordOnTapIdentifier)
-        if let gestureRecognizers = self.gestureRecognizers {
-            for gestureRecognizer in gestureRecognizers {
-                if let tapGestureRecognizer = gestureRecognizer as? TapGestureRecognizer,
-                    tapGestureRecognizer == hideKeyboardGesture {
-                    return tapGestureRecognizer
-                }
-            }
-        }
-        return nil
-    }
-
-    @objc private func hideKeyboard() { endEditing(true) }
-
-    var hideKeyboardOnTap: Bool {
-        set {
-            let hideKeyboardGesture = TapGestureRecognizer(target: self, action: #selector(hideKeyboard),
-                                                           identifier: hideKeybordOnTapIdentifier)
-            if let hideKeybordOnTapGestureRecognizer = hideKeybordOnTapGestureRecognizer {
-                removeGestureRecognizer(hideKeybordOnTapGestureRecognizer)
-                if gestureRecognizers?.count == 0 { gestureRecognizers = nil }
-            }
-            if newValue { addGestureRecognizer(hideKeyboardGesture) }
-        }
-        get { return hideKeybordOnTapGestureRecognizer == nil ? false : true }
-    }
+    
+    
+    func addTapGesture(tapNumber: Int, target: Any, action: Selector) {
+        let tap = UITapGestureRecognizer(target: target, action: action)
+        tap.numberOfTapsRequired = tapNumber
+        addGestureRecognizer(tap)
+        isUserInteractionEnabled = true
+      }
 }

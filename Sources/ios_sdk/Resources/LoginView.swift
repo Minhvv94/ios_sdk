@@ -31,6 +31,15 @@ class LoginView: UIView {
         
     }
     
+    
+  
+
+    @objc func checkAction(sender : UITapGestureRecognizer) {
+        // Do what you want
+        
+        print("click")
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setUpView()
@@ -44,8 +53,9 @@ class LoginView: UIView {
         self.addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight,.flexibleWidth]
-        self.bindToKeyboard()
-
+    
+        let gesture = UITapGestureRecognizer(target: self, action:  #selector(checkAction))
+        addGestureRecognizer(gesture)
     }
     
 

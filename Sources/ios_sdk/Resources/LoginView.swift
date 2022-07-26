@@ -38,6 +38,7 @@ class LoginView: UIView {
         // Do what you want
         
         print("click")
+        endEditing(true)
     }
     
     override init(frame: CGRect) {

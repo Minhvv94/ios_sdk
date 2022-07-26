@@ -27,6 +27,9 @@ public class SDKObjectiveC: UIView {
             let screenFrame = topVC.view.frame
             let windowWidth = screenFrame.width
             let windowHeight = screenFrame.height
+             print("width : \(windowWidth) ")
+            
+            print("height : \(windowHeight) ")
             let rect = CGRect(x: 0, y: 0, width: windowWidth , height: windowHeight)
             let newView = LoginView(frame: rect)
             topVC.view.addSubview(newView)

@@ -14,16 +14,14 @@ class LoginView: UIView {
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var txtPass: UITextField!
     @IBOutlet weak var txtUserName: UITextField!
-    
+    let topVC = UIApplication.topViewController();
     
 
     
     @IBAction func btnClose(_ sender: Any) {
         //contentView.removeFromSuperview();
-        
-        let topVC = UIApplication.topViewController(){
-            topVC.view.removeFromSuperview();
-        }
+        topVC?.view.removeFromSuperview();
+
         
     }
     @IBAction func btnLogin(_ sender: Any) {

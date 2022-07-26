@@ -19,7 +19,7 @@ class LoginView: UIView {
 
     
     @IBAction func btnClose(_ sender: Any) {
-        self.view.viewWithTag(100)
+        contentView.viewWithTag(100)
     }
     @IBAction func btnLogin(_ sender: Any) {
         print("user name : \(txtUserName)")

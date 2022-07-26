@@ -28,6 +28,7 @@ class LoginView: UIView {
     @IBAction func btnLogin(_ sender: Any) {
         print("user name : \(txtUserName)")
         print("password : \(txtPass)")
+        
     }
     
     
@@ -44,7 +45,12 @@ class LoginView: UIView {
         self.addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight,.flexibleWidth]
-        contentView.bindToKeyboard()
+        self.bindToKeyboard()
 
     }
+    
+    deinit{
+        self.unbindToKeyboard()
+    }
+    
 }

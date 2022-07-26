@@ -256,6 +256,9 @@
                 <constraint firstItem="aOw-UF-KoW" firstAttribute="centerX" secondItem="COC-2D-Odd" secondAttribute="centerX" id="zES-HN-DZG"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="uVM-nw-dV9" id="qQc-et-WoJ"/>
+            </connections>
             <point key="canvasLocation" x="93.75" y="139.13043478260872"/>
         </view>
     </objects>

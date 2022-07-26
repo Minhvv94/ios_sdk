@@ -28,33 +28,34 @@ import UIKit
 
 extension UIView {
 
-    func bindToKeyboard() {
-        NotificationCenter.default.addObserver(
-            self,
-            selector: #selector(UIView.keyboardWillChange(notification:)),
-            name: UIResponder.keyboardWillChangeFrameNotification,
-            object: nil
-        )
+    private var hideKeybordOnTapIdentifier: String { return "hideKeybordOnTapIdentifier" }
+
+    private var hideKeybordOnTapGestureRecognizer: TapGestureRecognizer? {
+        let hideKeyboardGesture = TapGestureRecognizer(target: self, action: #selector(UIView.hideKeyboard),
+                                                       identifier: hideKeybordOnTapIdentifier)
+        if let gestureRecognizers = self.gestureRecognizers {
+            for gestureRecognizer in gestureRecognizers {
+                if let tapGestureRecognizer = gestureRecognizer as? TapGestureRecognizer,
+                    tapGestureRecognizer == hideKeyboardGesture {
+                    return tapGestureRecognizer
+                }
+            }
+        }
+        return nil
     }
 
-    func unbindToKeyboard() {
-        NotificationCenter.default.removeObserver(
-            self,
-            name: UIResponder.keyboardWillChangeFrameNotification,
-            object: nil
-        )
+    @objc private func hideKeyboard() { endEditing(true) }
+
+    var hideKeyboardOnTap: Bool {
+        set {
+            let hideKeyboardGesture = TapGestureRecognizer(target: self, action: #selector(hideKeyboard),
+                                                           identifier: hideKeybordOnTapIdentifier)
+            if let hideKeybordOnTapGestureRecognizer = hideKeybordOnTapGestureRecognizer {
+                removeGestureRecognizer(hideKeybordOnTapGestureRecognizer)
+                if gestureRecognizers?.count == 0 { gestureRecognizers = nil }
+            }
+            if newValue { addGestureRecognizer(hideKeyboardGesture) }
+        }
+        get { return hideKeybordOnTapGestureRecognizer == nil ? false : true }
     }
-
-    @objc func keyboardWillChange(notification: Notification) {
-        let duration = notification.userInfo![UIResponder.keyboardAnimationDurationUserInfoKey] as! Double
-        let curve = notification.userInfo![UIResponder.keyboardAnimationCurveUserInfoKey] as! UInt
-        let curFrame = (notification.userInfo![UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
-        let targetFrame = (notification.userInfo![UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
-        let deltaY = targetFrame.origin.y - curFrame.origin.y
-
-        UIView.animateKeyframes(withDuration: duration, delay: 0.0, options: UIView.KeyframeAnimationOptions(rawValue: curve), animations: {
-            self.frame.origin.y += deltaY
-        })
-    }
-
 }

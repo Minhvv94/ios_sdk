@@ -19,7 +19,11 @@ class LoginView: UIView {
 
     
     @IBAction func btnClose(_ sender: Any) {
-        contentView.removeFromSuperview();
+        //contentView.removeFromSuperview();
+        
+        let topVC = UIApplication.topViewController(){
+            topVC.view.removeFromSuperview();
+        }
         
     }
     @IBAction func btnLogin(_ sender: Any) {

@@ -19,10 +19,7 @@ class LoginView: UIView {
 
     
     @IBAction func btnClose(_ sender: Any) {
-        //contentView.removeFromSuperview();
-        topVC?.view.removeFromSuperview();
-
-        
+        self.view.viewWithTag(100)
     }
     @IBAction func btnLogin(_ sender: Any) {
         print("user name : \(txtUserName)")

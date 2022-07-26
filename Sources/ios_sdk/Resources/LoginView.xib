@@ -12,6 +12,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginView" customModule="ios_sdk">
             <connections>
                 <outlet property="contentView" destination="Ivz-FY-9Q5" id="CFZ-9z-KHU"/>
+                <outlet property="txtPass" destination="oVo-yc-zom" id="sdn-1N-cv4"/>
+                <outlet property="txtUserName" destination="oVo-yc-zom" id="PEC-8q-rbT"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -113,6 +115,9 @@
                             <state key="normal" title="Đăng nhập" backgroundImage="BgWhiteCorner">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
+                            <connections>
+                                <action selector="btnLogin:" destination="-1" eventType="touchUpInside" id="6ag-yR-NGd"/>
+                            </connections>
                         </button>
                     </subviews>
                 </stackView>

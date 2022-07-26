@@ -14,6 +14,7 @@
                 <outlet property="contentView" destination="Ivz-FY-9Q5" id="CFZ-9z-KHU"/>
                 <outlet property="txtPass" destination="oVo-yc-zom" id="sdn-1N-cv4"/>
                 <outlet property="txtUserName" destination="oVo-yc-zom" id="PEC-8q-rbT"/>
+                <outletCollection property="btnContentView" destination="Ivz-FY-9Q5" collectionClass="NSMutableArray" id="8iZ-jh-O4x"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

@@ -12,9 +12,12 @@ import UIKit
 class LoginView: UIView {
 
     @IBOutlet var contentView: UIView!
-    
     @IBOutlet weak var txtPass: UITextField!
     @IBOutlet weak var txtUserName: UITextField!
+    
+    
+
+    
     @IBAction func btnClose(_ sender: Any) {
         contentView.removeFromSuperview();
         
@@ -23,13 +26,14 @@ class LoginView: UIView {
         print("user name : \(txtUserName)")
         print("password : \(txtPass)")
     }
+    
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setUpView()
     }
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setUpView()
     }
     
     private func setUpView(){
@@ -37,5 +41,7 @@ class LoginView: UIView {
         self.addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight,.flexibleWidth]
+        contentView.endEditing(true)
+
     }
 }

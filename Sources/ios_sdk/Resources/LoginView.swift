@@ -20,8 +20,8 @@ class LoginView: UIView {
         
     }
     @IBAction func btnLogin(_ sender: Any) {
-        print("user name : "\(txtUserName))
-        print("password : "\(txtPass))
+        print("user name : \(txtUserName)")
+        print("password : \(txtPass)")
     }
     override init(frame: CGRect) {
         super.init(frame: frame)

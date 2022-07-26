@@ -13,6 +13,10 @@ class LoginView: UIView {
 
     @IBOutlet var contentView: UIView!
     
+    @IBAction func btnClose(_ sender: Any) {
+        contentView.removeFromSuperview();
+        
+    }
     //@IBOutlet var contentView: UIView!
     override init(frame: CGRect) {
         super.init(frame: frame)

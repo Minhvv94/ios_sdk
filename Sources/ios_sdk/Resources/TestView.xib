@@ -20,9 +20,6 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <viewLayoutGuide key="safeArea" id="fi9-TN-vbW"/>
             <color key="backgroundColor" systemColor="systemGreenColor"/>
-            <connections>
-                <outletCollection property="gestureRecognizers" destination="fi9-TN-vbW" id="jZY-QZ-IZL"/>
-            </connections>
             <point key="canvasLocation" x="271" y="151"/>
         </view>
     </objects>

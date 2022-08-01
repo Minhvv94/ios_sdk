@@ -11,9 +11,9 @@ public class AppInfo: NSObject {
     
     static let shared = AppInfo()
     
-    var firebaseConfigFile : String? = nil
-    var client_id : String? = nil
-    var client_secret : String? = nil
+    public var firebaseConfigFile : String? = nil
+    public var client_id : String? = nil
+    public var client_secret : String? = nil
     var platformOS : String? = nil
     var packageId : String? = nil
     var version : String = ""

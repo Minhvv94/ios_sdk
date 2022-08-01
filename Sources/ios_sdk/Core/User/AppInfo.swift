@@ -7,27 +7,27 @@
 
 import Foundation
 @objc
-public class AppInfo: NSObject {
+public protocol AppInfo {
     
-    static let shared = AppInfo()
+//    static let shared = AppInfo()
     
-    public var firebaseConfigFile : String? = nil
-    public var client_id : String? = nil
-    public var client_secret : String? = nil
-    var platformOS : String? = nil
-    var packageId : String? = nil
-    var version : String = ""
+    var firebaseConfigFile : String{ get set }
+    var client_id : String{ get set }
+    var client_secret : String{ get set }
+    var platformOS : String{ get set }
+    var packageId : String{ get set }
+    var version : String{ get set }
     /*Information about appsflyer */
-    var afDevKey : String? = nil
-    var afAppId : String? = nil
-    var googleWebClient : String? = nil
-    var locale : String? = nil
-    var hotLinkHomepage : String? = nil
-    var hotLinkFanpage : String? = nil
-    var hotLinkGroup : String? = nil
-    var hotLinkChat : String = ""
-    var hotline : String? = nil
-    var achievedLevels: NSArray? = nil
-    var achievedVips: NSArray? = nil
+    var afDevKey : String{ get set }
+    var afAppId : String{ get set }
+    var googleWebClient : String{ get set }
+    var locale : String{ get set }
+    var hotLinkHomepage : String{ get set }
+    var hotLinkFanpage : String{ get set }
+    var hotLinkGroup : String{ get set }
+    var hotLinkChat : String{ get set }
+    var hotline : String{ get set }
+    var achievedLevels: NSArray{ get set }
+    var achievedVips: NSArray{ get set }
     
 }

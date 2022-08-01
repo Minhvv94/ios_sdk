@@ -62,5 +62,9 @@ class LoginView: UIView {
     @IBAction func btnGoogle(_ sender: Any) {
     }
     @IBAction func btnPlayNow(_ sender: Any) {
+        // get device ID
+        
+        let deviceId = Utils.shared.getUUID()
+        print("deviceId : \(deviceId)")
     }
 }

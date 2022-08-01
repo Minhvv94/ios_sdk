@@ -8,8 +8,7 @@
 import Foundation
 import UIKit
 
-@objc(SDKObjectiveC)
-public class SDKObjectiveC: UIView {
+public class SDKObjectiveC: UIView, SDKProtocol {
     
     override init(frame: CGRect) {
         super.init(frame: frame)

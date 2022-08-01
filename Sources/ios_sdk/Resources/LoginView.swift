@@ -53,5 +53,14 @@ class LoginView: UIView {
     }
     
 
-    
+    @IBAction func btnForget(_ sender: Any) {
+    }
+    @IBAction func btnRegister(_ sender: Any) {
+    }
+    @IBAction func btnFacebook(_ sender: Any) {
+    }
+    @IBAction func btnGoogle(_ sender: Any) {
+    }
+    @IBAction func btnPlayNow(_ sender: Any) {
+    }
 }

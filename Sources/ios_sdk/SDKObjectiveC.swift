@@ -8,7 +8,8 @@
 import Foundation
 import UIKit
 
-public class SDKObjectiveC: UIView, SDKProtocol {
+
+public class SDKObjectiveC:  UIView , SDKProtocol{
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -20,7 +21,7 @@ public class SDKObjectiveC: UIView, SDKProtocol {
         super.init(coder: aDecoder)
     }
     
-    @objc open func  login() {
+    public func login() {
         if let topVC = UIApplication.topViewController() {
             
             let screenFrame = topVC.view.frame

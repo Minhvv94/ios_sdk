@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
-@objc protocol SDKProtocol {
-    @objc func login()
+@objc(SDKProtocol)
+public protocol SDKProtocol {
+    func login()
 }

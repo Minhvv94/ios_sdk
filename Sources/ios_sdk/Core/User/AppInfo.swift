@@ -6,6 +6,7 @@
 //
 
 import Foundation
+@objc
 struct AppInfo  {
     
     static let shared = AppInfo()

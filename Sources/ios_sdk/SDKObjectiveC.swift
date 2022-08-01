@@ -9,17 +9,17 @@ import Foundation
 import UIKit
 
 
-public class SDKObjectiveC:  UIView , SDKProtocol{
+extension SDKObjectiveC where Self:  UIView {
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    init(frame: CGRect) {
+        self.init(frame: frame)
     }
-    @objc init(frame: CGRect, editAccess: Int) {
-        super.init(frame:frame)
+    init(frame: CGRect, editAccess: Int) {
+        self.init(frame:frame)
     }
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
+//    required init?(coder aDecoder: NSCoder) {
+//        Self.init(coder: aDecoder)
+//    }
     
     public func login() {
         if let topVC = UIApplication.topViewController() {

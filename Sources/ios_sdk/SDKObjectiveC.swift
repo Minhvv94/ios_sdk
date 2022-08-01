@@ -9,6 +9,13 @@ import Foundation
 import UIKit
 
 
+@objc(SDKObjectiveC)
+
+public protocol SDKObjectiveC {
+    func login()
+}
+
+
 extension SDKObjectiveC where Self:  UIView {
     
     init(frame: CGRect) {

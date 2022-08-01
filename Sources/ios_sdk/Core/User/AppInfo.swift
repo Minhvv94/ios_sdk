@@ -7,7 +7,7 @@
 
 import Foundation
 @objc
-struct AppInfo  {
+public class AppInfo: NSObject {
     
     static let shared = AppInfo()
     

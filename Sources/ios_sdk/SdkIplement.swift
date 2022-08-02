@@ -20,7 +20,7 @@ public class SdkIplement: UIView, SdkI {
         super.init(coder: aDecoder)
     }
     
-    @objc func loginTest() {
+    @objc open func loginTest() {
         print("login")
     }
 }

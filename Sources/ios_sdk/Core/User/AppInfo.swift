@@ -58,7 +58,7 @@ public class AppInfo :NSObject{
         defaults?.set(appId, forKey: AppInfo.KEY_APP_ID)
     }
     
-    @objc func updateData(model: AppInfo?) {
+    @objc public func updateData(model: AppInfo?) {
         setfirebaseConfigFile(firebaseConfigFile: model?.firebaseConfigFile ?? "")
         setClientId(clientId: model?.client_id ?? "")
         setClientSecret(clientSecret: model?.client_secret ?? "")

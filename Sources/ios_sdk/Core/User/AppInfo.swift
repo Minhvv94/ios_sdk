@@ -10,7 +10,6 @@ import Foundation
 public class AppInfo :NSObject{
     
     @objc static let shared = AppInfo()
-    @objc var category_data:String = ""
     @objc var firebaseConfigFile : String=""
     @objc var client_id : String=""
     @objc var client_secret : String=""

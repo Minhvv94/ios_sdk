@@ -8,8 +8,7 @@
 import Foundation
 import UIKit
 
-@objc(SdkIplement)
-public class SdkIplement: UIView, SdkI {
+public class SdkIplement: UIView, ISdk {
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -20,7 +19,7 @@ public class SdkIplement: UIView, SdkI {
         super.init(coder: aDecoder)
     }
     
-    @objc open func loginTest() {
+    @objc func loginTest() {
         print("login")
     }
 }

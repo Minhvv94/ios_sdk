@@ -68,10 +68,9 @@ class LoginView: UIView {
         // get device ID
         
         let deviceId = Utils.shared.getUUID()
+    
         
-        self.appInfo = AppInfo()
-        
-        print("client_id : \(self.appInfo.getClientId())")
+        print("client_id : \(AppInfo.shared.getClientId())")
         print("deviceId : \(deviceId)")
     }
 }

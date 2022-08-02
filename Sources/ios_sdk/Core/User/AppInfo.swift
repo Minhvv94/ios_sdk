@@ -39,37 +39,37 @@ public class AppInfo :NSObject{
     
     var defaults: UserDefaults?;
     //getToken
-    func setfirebaseConfigFile(firebaseConfigFile: String) {
+    @objc public func setfirebaseConfigFile(firebaseConfigFile: String) {
         defaults?.set(firebaseConfigFile, forKey: AppInfo.KEY_FIREBASE_CONFIG_FILE)
     }
     func getfirebaseConfigFile() -> String? {
         return defaults?.string(forKey: AppInfo.KEY_FIREBASE_CONFIG_FILE)
     }
-    func setClientId(clientId: String) {
+    @objc public func setClientId(clientId: String) {
         defaults?.set(clientId, forKey: AppInfo.KEY_CLIENT_ID)
     }
     func getClientId() -> String? {
         return defaults?.string(forKey: AppInfo.KEY_CLIENT_ID)
     }
-    func setClientSecret(clientSecret: String) {
+    @objc public func setClientSecret(clientSecret: String) {
         defaults?.set(clientSecret, forKey: AppInfo.KEY_CLIENT_SECRET)
     }
     func getClientSecret() -> String? {
         return defaults?.string(forKey: AppInfo.KEY_CLIENT_SECRET)
     }
-    func setPlatformOS(platformOS: String) {
+    @objc public func setPlatformOS(platformOS: String) {
         defaults?.set(platformOS, forKey: AppInfo.KEY_PLATFORM_OS)
     }
     func getPlatformOS() -> String? {
         return defaults?.string(forKey: AppInfo.KEY_PLATFORM_OS)
     }
-    func setVersionId(versionId: String) {
+    @objc public func setVersionId(versionId: String) {
         defaults?.set(versionId, forKey: AppInfo.KEY_VERSION)
     }
     func getVersionId() -> String? {
         return defaults?.string(forKey: AppInfo.KEY_VERSION)
     }
-    func setAppId(appId: String) {
+    @objc public func setAppId(appId: String) {
         defaults?.set(appId, forKey: AppInfo.KEY_APP_ID)
     }
     func getAppId() -> String? {
@@ -79,6 +79,7 @@ public class AppInfo :NSObject{
 
     
     @objc open func  updateData(model: AppInfo?) {
+        
         setfirebaseConfigFile(firebaseConfigFile: model?.firebaseConfigFile ?? "")
         setClientId(clientId: model?.client_id ?? "")
         setClientSecret(clientSecret: model?.client_secret ?? "")

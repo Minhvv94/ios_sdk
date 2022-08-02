@@ -9,25 +9,25 @@ import Foundation
 @objc(AppInfo)
 public class AppInfo :NSObject{
     
-    public static let shared = AppInfo()
-    @objc public var category_data:String = ""
+    @objc static let shared = AppInfo()
+    @objc var category_data:String = ""
     @objc var firebaseConfigFile : String=""
-    var client_id : String=""
-    var client_secret : String=""
-    var platformOS : String=""
-    var packageId : String=""
-    var version : String=""
+    @objc var client_id : String=""
+    @objc var client_secret : String=""
+    @objc var platformOS : String=""
+    @objc var packageId : String=""
+    @objc var version : String=""
     /*Information about appsflyer */
-    var afDevKey : String=""
-    var afAppId : String=""
-    var googleWebClient : String=""
-    var locale : String=""
-    var hotLinkHomepage : String=""
-    var hotLinkFanpage : String=""
-    var hotLinkGroup : String=""
-    var hotLinkChat : String=""
-    var hotline : String=""
-    var achievedLevels: NSArray=[]
-    var achievedVips: NSArray=[]
+    @objc var afDevKey : String=""
+    @objc var afAppId : String=""
+    @objc var googleWebClient : String=""
+    @objc var locale : String=""
+    @objc var hotLinkHomepage : String=""
+    @objc var hotLinkFanpage : String=""
+    @objc var hotLinkGroup : String=""
+    @objc var hotLinkChat : String=""
+    @objc var hotline : String=""
+    @objc var achievedLevels: NSArray=[]
+    @objc var achievedVips: NSArray=[]
     
 }

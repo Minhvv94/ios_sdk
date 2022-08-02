@@ -8,28 +8,22 @@
 import Foundation
 import UIKit
 
-
 @objc(SDKObjectiveC)
-
-public protocol SDKObjectiveC {
-    func login()
-}
-
-
-extension SDKObjectiveC where Self:  UIView {
+public class SDKObjectiveC: UIView {
     
-    init(frame: CGRect) {
-        self.init(frame: frame)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
     }
-    init(frame: CGRect, editAccess: Int) {
-        self.init(frame:frame)
+    @objc init(frame: CGRect, editAccess: Int) {
+        super.init(frame:frame)
     }
-//    required init?(coder aDecoder: NSCoder) {
-//        Self.init(coder: aDecoder)
-//    }
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
     
-    public func login() {
+    @objc open func  login() {
         if let topVC = UIApplication.topViewController() {
+            
             let screenFrame = topVC.view.frame
             let windowWidth = screenFrame.width
             let windowHeight = screenFrame.height

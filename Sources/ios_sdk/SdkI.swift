@@ -7,8 +7,6 @@
 
 import Foundation
 
-@objc(SdkI)
 protocol SdkI{
-    
     func login()
 }

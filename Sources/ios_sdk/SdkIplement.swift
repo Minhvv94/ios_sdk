@@ -7,11 +7,9 @@
 
 import Foundation
 
-public class SdkIplement: SdkI {
+@objc
+public class SdkIplement: NSObject, SdkI {
     func login() {
         print("login")
     }
-    
-    
-    
 }

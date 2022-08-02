@@ -42,21 +42,41 @@ public class AppInfo :NSObject{
     func setfirebaseConfigFile(firebaseConfigFile: String) {
         defaults?.set(firebaseConfigFile, forKey: AppInfo.KEY_FIREBASE_CONFIG_FILE)
     }
+    func getfirebaseConfigFile() -> String? {
+        return defaults?.string(forKey: AppInfo.KEY_FIREBASE_CONFIG_FILE)
+    }
     func setClientId(clientId: String) {
         defaults?.set(clientId, forKey: AppInfo.KEY_CLIENT_ID)
+    }
+    func getClientId() -> String? {
+        return defaults?.string(forKey: AppInfo.KEY_CLIENT_ID)
     }
     func setClientSecret(clientSecret: String) {
         defaults?.set(clientSecret, forKey: AppInfo.KEY_CLIENT_SECRET)
     }
+    func getClientSecret() -> String? {
+        return defaults?.string(forKey: AppInfo.KEY_CLIENT_SECRET)
+    }
     func setPlatformOS(platformOS: String) {
         defaults?.set(platformOS, forKey: AppInfo.KEY_PLATFORM_OS)
+    }
+    func getPlatformOS() -> String? {
+        return defaults?.string(forKey: AppInfo.KEY_PLATFORM_OS)
     }
     func setVersionId(versionId: String) {
         defaults?.set(versionId, forKey: AppInfo.KEY_VERSION)
     }
+    func getVersionId() -> String? {
+        return defaults?.string(forKey: AppInfo.KEY_VERSION)
+    }
     func setAppId(appId: String) {
         defaults?.set(appId, forKey: AppInfo.KEY_APP_ID)
     }
+    func getAppId() -> String? {
+        return defaults?.string(forKey: AppInfo.KEY_APP_ID)
+    }
+    
+
     
     @objc open func  updateData(model: AppInfo?) {
         setfirebaseConfigFile(firebaseConfigFile: model?.firebaseConfigFile ?? "")

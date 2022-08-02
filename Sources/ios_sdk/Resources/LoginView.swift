@@ -25,6 +25,7 @@ class LoginView: UIView {
         }
     }
     @IBAction func btnLogin(_ sender: Any) {
+        
         print("user name : \(txtUserName.text)")
         print("password : \(txtPass.text)")
         
@@ -70,7 +71,7 @@ class LoginView: UIView {
         
         self.appInfo = AppInfo()
         
-        print("client_id : \(self.appInfo.client_id)")
+        print("client_id : \(self.appInfo.getClientId())")
         print("deviceId : \(deviceId)")
     }
 }

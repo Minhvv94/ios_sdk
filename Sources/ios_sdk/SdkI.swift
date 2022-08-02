@@ -8,5 +8,5 @@
 import Foundation
 
 protocol SdkI{
-    func login()
+    func loginTest()
 }

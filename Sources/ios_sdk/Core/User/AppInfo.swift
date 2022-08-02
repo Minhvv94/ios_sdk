@@ -86,6 +86,8 @@ public class AppInfo :NSObject{
         setPlatformOS(platformOS: model?.platformOS ?? "")
         setVersionId(versionId: model?.version ?? "")
         setAppId(appId: model?.afAppId ?? "")
+        
+        print("getClientId : \(getClientId())")
     }
     
 }

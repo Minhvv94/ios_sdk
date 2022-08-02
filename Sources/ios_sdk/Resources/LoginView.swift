@@ -14,6 +14,8 @@ class LoginView: UIView {
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var txtPass: UITextField!
     @IBOutlet weak var txtUserName: UITextField!
+
+    var appInfo : AppInfo!
     
     @IBAction func btnClose(_ sender: Any) {
         //contentView.removeAllSubviews();
@@ -65,6 +67,8 @@ class LoginView: UIView {
         // get device ID
         
         let deviceId = Utils.shared.getUUID()
+        
+        print("client_id : \(appInfo.client_id)")
         print("deviceId : \(deviceId)")
     }
 }

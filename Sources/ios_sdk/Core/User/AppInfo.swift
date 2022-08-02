@@ -8,8 +8,15 @@
 import Foundation
 @objc(AppInfo)
 public class AppInfo :NSObject{
+    static let KEY_FIREBASE_CONFIG_FILE = "KEY_FIREBASE_CONFIG_FILE"
+    static let KEY_CLIENT_ID = "KEY_CLIENT_ID"
+    static let KEY_CLIENT_SECRET = "KEY_CLIENT_SECRET"
+    static let KEY_PLATFORM_OS = "KEY_PLATFORM_OS"
+    static let KEY_PACKAGE_ID = "KEY_PACKAGE_ID"
+    static let KEY_VERSION = "KEY_VERSION"
+    static let KEY_APP_ID = "KEY_APP_ID"
     
-    @objc public static let shared = AppInfo()
+    static let shared = AppInfo()
     @objc public var firebaseConfigFile : String=""
     @objc public var client_id : String=""
     @objc public var client_secret : String=""
@@ -28,5 +35,36 @@ public class AppInfo :NSObject{
     @objc public var hotline : String=""
     @objc public var achievedLevels: NSArray=[]
     @objc public var achievedVips: NSArray=[]
+    
+    
+    var defaults: UserDefaults?;
+    //getToken
+    func setfirebaseConfigFile(firebaseConfigFile: String) {
+        defaults?.set(firebaseConfigFile, forKey: AppInfo.KEY_FIREBASE_CONFIG_FILE)
+    }
+    func setClientId(clientId: String) {
+        defaults?.set(clientId, forKey: AppInfo.KEY_CLIENT_ID)
+    }
+    func setClientSecret(clientSecret: String) {
+        defaults?.set(clientSecret, forKey: AppInfo.KEY_CLIENT_SECRET)
+    }
+    func setPlatformOS(platformOS: String) {
+        defaults?.set(platformOS, forKey: AppInfo.KEY_PLATFORM_OS)
+    }
+    func setVersionId(versionId: String) {
+        defaults?.set(versionId, forKey: AppInfo.KEY_VERSION)
+    }
+    func setAppId(appId: String) {
+        defaults?.set(appId, forKey: AppInfo.KEY_APP_ID)
+    }
+    
+    @objc func updateData(model: AppInfo?) {
+        setfirebaseConfigFile(firebaseConfigFile: model?.firebaseConfigFile ?? "")
+        setClientId(clientId: model?.client_id ?? "")
+        setClientSecret(clientSecret: model?.client_secret ?? "")
+        setPlatformOS(platformOS: model?.platformOS ?? "")
+        setVersionId(versionId: model?.version ?? "")
+        setAppId(appId: model?.afAppId ?? "")
+    }
     
 }

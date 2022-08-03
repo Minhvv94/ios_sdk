@@ -80,7 +80,7 @@ class LoginView: UIView {
             Repository().getGameCheckMaintain(request_app_package: AppInfo.shared.packageId, request_channel: AppInfo.shared.platformOS, request_version: AppInfo.shared.version, callBack: { (response) in
                 if response.isSuccess(){
                     let data = JsonParserManager.getMaitainCheckerJson(jsonString: response.rawData ?? "")
-                    print("message : \(data?.messageMaintain)")
+                    print("message : \(data?.data?.messageMaintain)")
                 }
             })
             

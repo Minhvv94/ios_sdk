@@ -9,7 +9,7 @@ import Foundation
 class MaitainCheckerJson: Codable {
     
     let code: Int?
-    let data: Datu?
+    let data: DatMaitainChecker?
     let message: String?
     let IsSuccessed : Bool?
     let HaveError: Bool?
@@ -26,7 +26,7 @@ class MaitainCheckerJson: Codable {
         case token_expired = "token_expired"
     }
     
-    init(code: Int?, data: Datu?, message: String?, IsSuccessed: Bool?, HaveError : Bool?,
+    init(code: Int?, data: DatMaitainChecker?, message: String?, IsSuccessed: Bool?, HaveError : Bool?,
          redirectUrl: String?, token_expired: Bool?) {
         self.code = code
         self.data = data
@@ -39,7 +39,7 @@ class MaitainCheckerJson: Codable {
 }
 
 
-class Datu: Codable {
+class DatMaitainChecker: Codable {
     let isMaintained: Bool?
     let messageMaintain: String?
     let enableGoogleLogin: Bool?

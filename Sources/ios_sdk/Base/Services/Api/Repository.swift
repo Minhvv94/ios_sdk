@@ -31,8 +31,8 @@ class Repository: BaseRepository {
         let url = "\(URLConst.PATH_GAME_CHECK_MAINTAIN)"
         var params = Dictionary<String, Any>.init()
         params["appPackage"] = request_app_package
-        params["version"] = request_channel
-        params["platform"] = request_version
+        params["version"] = request_version
+        params["platform"] = request_channel
         return self.callGetMethod(url: url, parameters: params, onComplete: callBack)
     }
     

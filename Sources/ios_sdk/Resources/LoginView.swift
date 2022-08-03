@@ -15,7 +15,7 @@ class LoginView: UIView {
     @IBOutlet weak var txtPass: UITextField!
     @IBOutlet weak var txtUserName: UITextField!
     var userDefault = UserDefaults.standard
-    var appInfo : AppInfo!
+    
     
     @IBAction func btnClose(_ sender: Any) {
         //contentView.removeAllSubviews();

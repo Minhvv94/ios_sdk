@@ -8,6 +8,7 @@
 import Foundation
 @objc(AppInfo)
 public class AppInfo : NSObject{
+    
     static let KEY_FIREBASE_CONFIG_FILE = "KEY_FIREBASE_CONFIG_FILE"
     static let KEY_CLIENT_ID = "KEY_CLIENT_ID"
     static let KEY_CLIENT_SECRET = "KEY_CLIENT_SECRET"
@@ -36,7 +37,7 @@ public class AppInfo : NSObject{
     @objc public var achievedVips: NSArray=[]
 
     var userDefault = UserDefaults.standard
-    public static let shared = AppInfo()
+    @objc public static let shared = AppInfo()s
 
     
     @objc public func updateData(firebaseConfigFile: String?, client_id: String?, client_secret: String?, platformOS : String?,

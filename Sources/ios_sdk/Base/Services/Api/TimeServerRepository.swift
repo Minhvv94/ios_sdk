@@ -19,6 +19,16 @@ class TimeServerRepository {
         return callGetMethod(url: url, parameters: params, onComplete: callBack)
     }
     
+    func getGameCheckMaintain(request_app_package: String, request_channel: String , request_version: String,
+                           callBack: @escaping (ApiResponse<BaseResponse>) -> ()) -> () {
+        let url = "\(URLConst.PATH_GAME_CHECK_MAINTAIN)"
+        var params = Dictionary<String, Any>.init()
+        params["appPackage"] = request_app_package
+        params["version"] = request_channel
+        params["platform"] = request_version
+        return self.callGetMethod(url: url, parameters: params, onComplete: callBack)
+    }
+    
     
     let ERROR_NETWORK_MESSAGE = "Có lỗi xảy ra trong quá trình kết nối đến máy chủ."
     let ERROR_DATA_MESSAGE = "Có lỗi trong quá trình xử lý dữ liệu."

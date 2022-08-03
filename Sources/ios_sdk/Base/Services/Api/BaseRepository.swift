@@ -101,7 +101,8 @@ class BaseRepository {
             header = ["token" : token,
                       "Accept":"application/json"]
         }else{
-            header = ["Accept":"application/json"]
+            header = ["Accept":"application/json",
+                      "Content-Type" :"application/json"]
         }
         AF.request(url, method: httpMethod, parameters: parameters, headers: header).responseJSON(completionHandler: {response in
 

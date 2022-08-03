@@ -98,7 +98,8 @@ class BaseRepository {
         
         var header: HTTPHeaders?
         if let token = UserManager.shared.getToken() {
-            header = ["token" : token]
+            header = ["token" : token,
+                      "Accept":"application/json"]
         }
         AF.request(url, method: httpMethod, parameters: parameters, headers: header).responseJSON(completionHandler: {response in
 

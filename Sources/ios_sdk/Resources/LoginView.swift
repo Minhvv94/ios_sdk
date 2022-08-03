@@ -14,7 +14,7 @@ class LoginView: UIView {
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var txtPass: UITextField!
     @IBOutlet weak var txtUserName: UITextField!
-
+    var userDefault = UserDefaults.standard
     var appInfo : AppInfo!
     
     @IBAction func btnClose(_ sender: Any) {
@@ -69,7 +69,7 @@ class LoginView: UIView {
         
         let deviceId = Utils.shared.getUUID()
 //        let clentId = UserDefaults.standard.string(forKey: AppInfo.KEY_CLIENT_ID)  ?? ""
-        let decoded  = appInfo.userDefault.object(forKey: AppInfo.AppInforKey) as! Data
+        let decoded  = userDefault.object(forKey: AppInfo.AppInforKey) as! Data
         let decodedGroups = NSKeyedUnarchiver.unarchiveObject(with: decoded) as! AppInfo
         //print("deviceId : \(clentId)")
         print("client id  : \(decodedGroups.client_id)")

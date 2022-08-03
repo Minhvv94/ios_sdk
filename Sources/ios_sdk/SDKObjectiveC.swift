@@ -23,23 +23,14 @@ public class SDKObjectiveC: UIView {
     
     @objc open func  login() {
         if let topVC = UIApplication.topViewController() {
-            
-
-            
-            
-            
-            if(AppInfo.shared != nil && AppInfo.shared.packageId != nil){
+            if(AppInfo.shared.packageId != ""){
                 let version = AppInfo.shared.version == "" ? "1.0": AppInfo.shared.version;
-                
-                Repository().getGameCheckMaintain(request_app_package: AppInfo.shared.packageId, request_channel: AppInfo.shared.platformOS, request_version: AppInfo.shared.version, callBack: { (response) in
+                Repository().getGameCheckMaintain(request_app_package: AppInfo.shared.packageId, request_channel: AppInfo.shared.platformOS, request_version: version, callBack: { (response) in
                     if response.isSuccess(){
                         let data = JsonParserManager.getMaitainCheckerJson(jsonString: response.rawData ?? "")
                         if (data?.data?.isMaintained)! {
-                            let alert = UIAlertController(title: "Thông báo", message: data?.data?.messageMaintain, preferredStyle: UIAlertController.Style.alert)
-
-                                    // add an action (button)
-                                    alert.addAction(UIAlertAction(title: "Đồng ý", style: UIAlertAction.Style.default, handler: nil))
-
+                            let message = data?.data?.messageMaintain ?? ""
+                            let alert = CustomeAlert.shared.showAlertOneButtonTapped(title: "Thông báo", message: message, btnTitle: "Đồng ý")
                                     // show the alert
                             topVC.present(alert, animated: true, completion: nil)
                         }else{

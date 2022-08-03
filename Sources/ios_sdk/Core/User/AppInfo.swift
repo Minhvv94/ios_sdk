@@ -93,13 +93,13 @@ public class AppInfo : NSObject{
     
 
     
-    @objc open func  updateData(model: AppInfo?) {
-        setfirebaseConfigFile(firebaseConfigFile: model?.firebaseConfigFile ?? "")
-        setClientId(client_id: model?.client_id ?? "")
-        setClientSecret(client_secret: model?.client_secret ?? "")
-        setPlatformOS(platformOS: model?.platformOS ?? "")
-        setVersionId(versionId: model?.version ?? "")
-        setAppId(appId: model?.afAppId ?? "")
+    @objc open func  updateData() {
+        setfirebaseConfigFile(firebaseConfigFile: self.client_id)
+//        setClientId(client_id: model?.client_id ?? "")
+//        setClientSecret(client_secret: model?.client_secret ?? "")
+//        setPlatformOS(platformOS: model?.platformOS ?? "")
+//        setVersionId(versionId: model?.version ?? "")
+//        setAppId(appId: model?.afAppId ?? "")
     }
     
 }

@@ -94,7 +94,7 @@ public class AppInfo : NSObject{
 
     
     @objc open func  updateData() {
-        setfirebaseConfigFile(firebaseConfigFile: self.client_id)
+        setClientId(client_id: self.client_id)
 //        setClientId(client_id: model?.client_id ?? "")
 //        setClientSecret(client_secret: model?.client_secret ?? "")
 //        setPlatformOS(platformOS: model?.platformOS ?? "")

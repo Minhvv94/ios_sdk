@@ -74,18 +74,7 @@ class LoginView: UIView {
 //        let client = AppInfo.shared.client_id
 //        print("client   : \(client)")
         
-        if(AppInfo.shared != nil && AppInfo.shared.packageId != nil){
-            let version = AppInfo.shared.version == "" ? "1.0": AppInfo.shared.version;
-            
-            Repository().getGameCheckMaintain(request_app_package: AppInfo.shared.packageId, request_channel: AppInfo.shared.platformOS, request_version: AppInfo.shared.version, callBack: { (response) in
-                if response.isSuccess(){
-                    let data = JsonParserManager.getMaitainCheckerJson(jsonString: response.rawData ?? "")
-                    print("message : \(data?.data?.messageMaintain)")
-                }
-            })
-            
-            
-        }
+        
         
         
     }

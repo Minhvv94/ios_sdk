@@ -37,7 +37,7 @@ public class AppInfo : NSObject{
     @objc public var achievedVips: NSArray=[]
 
     var userDefault = UserDefaults.standard
-    @objc public static let shared = AppInfo()s
+    @objc public static let shared = AppInfo()
 
     
     @objc public func updateData(firebaseConfigFile: String?, client_id: String?, client_secret: String?, platformOS : String?,

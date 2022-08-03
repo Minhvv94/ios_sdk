@@ -16,7 +16,6 @@ public class AppInfo : NSObject{
     static let KEY_VERSION = "KEY_VERSION"
     static let KEY_APP_ID = "KEY_APP_ID"
     
-    static let shared = AppInfo()
     @objc public var firebaseConfigFile : String=""
     @objc public var client_id : String=""
     @objc public var client_secret : String=""
@@ -36,8 +35,7 @@ public class AppInfo : NSObject{
     @objc public var achievedLevels: NSArray=[]
     @objc public var achievedVips: NSArray=[]
 
-    
-    override init(){}
+
     
     @objc public init(firebaseConfigFile: String?, client_id: String?, client_secret: String?, platformOS : String?,
          packageId : String?, version: String?) {

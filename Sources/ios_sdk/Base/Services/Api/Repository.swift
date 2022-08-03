@@ -26,4 +26,14 @@ class Repository: BaseRepository {
         params["ip"] = appInfo.client_id
         return self.callPostMethod(url: url, parameters: params, onComplete: callBack)
     }
+    
+    func getGameCheckMaintain(request_app_package: String, request_channel: String , request_version: String,
+                           callBack: @escaping (ApiResponse<BaseResponse>) -> ()) -> () {
+        let url = "\(URLConst.PATH_GAME_CHECK_MAINTAIN)"
+        var params = Dictionary<String, Any>.init()
+        params["request_app_package"] = request_app_package
+        params["request_channel"] = request_channel
+        params["request_version"] = request_version
+        return self.callGetMethod(url: url, parameters: params, onComplete: callBack)
+    }
 }

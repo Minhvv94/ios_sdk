@@ -37,43 +37,45 @@ public class AppInfo :NSObject{
     @objc public var achievedVips: NSArray=[]
     
     
-    var defaults: UserDefaults?;
+//    var defaults: UserDefaults?;
+//    static var userSessionKey = "com.vtvlive.vn"
+    var userDefault = UserDefaults.standard
     //getToken
     @objc public func setfirebaseConfigFile(firebaseConfigFile: String) {
-        defaults?.set(firebaseConfigFile, forKey: AppInfo.KEY_FIREBASE_CONFIG_FILE)
+        userDefault.set(firebaseConfigFile, forKey: AppInfo.KEY_FIREBASE_CONFIG_FILE)
     }
     func getfirebaseConfigFile() -> String? {
-        return defaults?.string(forKey: AppInfo.KEY_FIREBASE_CONFIG_FILE)
+        return userDefault.string(forKey: AppInfo.KEY_FIREBASE_CONFIG_FILE)
     }
     @objc public func setClientId(client_id: String) {
-        defaults?.set(client_id, forKey: AppInfo.KEY_CLIENT_ID)
+        userDefault.set(client_id, forKey: AppInfo.KEY_CLIENT_ID)
     }
-    func getClientId() -> String? {
-        return defaults?.string(forKey: AppInfo.KEY_CLIENT_ID)
+    public func getClientId() -> String? {
+        return userDefault.string(forKey: AppInfo.KEY_CLIENT_ID)
     }
     @objc public func setClientSecret(client_secret: String) {
-        defaults?.set(client_secret, forKey: AppInfo.KEY_CLIENT_SECRET)
+        userDefault.set(client_secret, forKey: AppInfo.KEY_CLIENT_SECRET)
     }
     func getClientSecret() -> String? {
-        return defaults?.string(forKey: AppInfo.KEY_CLIENT_SECRET)
+        return userDefault.string(forKey: AppInfo.KEY_CLIENT_SECRET)
     }
     @objc public func setPlatformOS(platformOS: String) {
-        defaults?.set(platformOS, forKey: AppInfo.KEY_PLATFORM_OS)
+        userDefault.set(platformOS, forKey: AppInfo.KEY_PLATFORM_OS)
     }
     func getPlatformOS() -> String? {
-        return defaults?.string(forKey: AppInfo.KEY_PLATFORM_OS)
+        return userDefault.string(forKey: AppInfo.KEY_PLATFORM_OS)
     }
     @objc public func setVersionId(versionId: String) {
-        defaults?.set(versionId, forKey: AppInfo.KEY_VERSION)
+        userDefault.set(versionId, forKey: AppInfo.KEY_VERSION)
     }
     func getVersionId() -> String? {
-        return defaults?.string(forKey: AppInfo.KEY_VERSION)
+        return userDefault.string(forKey: AppInfo.KEY_VERSION)
     }
     @objc public func setAppId(appId: String) {
-        defaults?.set(appId, forKey: AppInfo.KEY_APP_ID)
+        userDefault.set(appId, forKey: AppInfo.KEY_APP_ID)
     }
     func getAppId() -> String? {
-        return defaults?.string(forKey: AppInfo.KEY_APP_ID)
+        return userDefault.string(forKey: AppInfo.KEY_APP_ID)
     }
     
 
@@ -87,7 +89,12 @@ public class AppInfo :NSObject{
         setVersionId(versionId: model?.version ?? "")
         setAppId(appId: model?.afAppId ?? "")
         
-        print("getClientId : \(getClientId())")
     }
+    
+//    @objc open func save(model: AppInfo?){
+//        userDefault.set(model, forKey: AppInfo.userSessionKey)
+//    }
+    
+    
     
 }

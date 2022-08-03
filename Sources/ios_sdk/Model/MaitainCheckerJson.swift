@@ -18,16 +18,16 @@ class MaitainCheckerJson: Codable {
     enum CodingKeys: String, CodingKey {
         case isMaintained = "isMaintained"
         case messageMaintain = "messageMaintain"
-        case messenableGoogleLoginage = "messenableGoogleLoginage"
+        case enableGoogleLogin = "enableGoogleLogin"
         case enableFacebookLogin = "enableFacebookLogin"
         case enableAppleLogin = "enableAppleLogin"
         
     }
     
-    init(isMaintained: Bool?, messageMaintain: String?, messenableGoogleLoginage: Bool?, enableFacebookLogin: Bool?, enableAppleLogin: Bool?) {
+    init(isMaintained: Bool?, messageMaintain: String?, enableGoogleLogin: Bool?, enableFacebookLogin: Bool?, enableAppleLogin: Bool?) {
         self.isMaintained = isMaintained
         self.messageMaintain = messageMaintain
-        self.messenableGoogleLoginage = messenableGoogleLoginage
+        self.enableGoogleLogin = enableGoogleLogin
         self.enableFacebookLogin = enableFacebookLogin
         self.enableAppleLogin = enableAppleLogin
     }

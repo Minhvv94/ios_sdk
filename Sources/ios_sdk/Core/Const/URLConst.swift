@@ -16,5 +16,5 @@ enum URLConst {
     
     static let REFRESH_TOKEN = ApiConst.BASE_URL + "authen-service/refreshtoken"
     
-    static let PATH_GAME_CHECK_MAINTAIN = ApiConst.BASE_URL+ "/sdk-api/service/app-config"
+    static let PATH_GAME_CHECK_MAINTAIN = ApiConst.BASE_URL + "/sdk-api/service/app-config"
 }

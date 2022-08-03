@@ -23,7 +23,7 @@ class Utils: NSObject {
     
     func getUUID() -> String? {
         let keychain = KeychainAccess()
-        let uuidKey = PACKAGE_ID
+        let uuidKey = ApiConst.PACKAGE_ID
         if let uuid = try? keychain.queryKeychainData(itemKey: uuidKey), uuid != nil {
             return uuid
         }

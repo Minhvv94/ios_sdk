@@ -35,9 +35,11 @@ public class AppInfo : NSObject{
     @objc public var achievedLevels: NSArray=[]
     @objc public var achievedVips: NSArray=[]
 
+    var userDefault = UserDefaults.standard
+    static let shared = AppInfo()
 
     
-    @objc public init(firebaseConfigFile: String?, client_id: String?, client_secret: String?, platformOS : String?,
+    @objc public func updateData(firebaseConfigFile: String?, client_id: String?, client_secret: String?, platformOS : String?,
          packageId : String?, version: String?) {
         self.firebaseConfigFile = firebaseConfigFile ?? ""
         self.client_id = client_id ?? ""
@@ -48,9 +50,6 @@ public class AppInfo : NSObject{
     }
     
     
-//    var defaults: UserDefaults?;
-    static var AppInforKey = "com.vtvlive.vn"
-    var userDefault = UserDefaults.standard
     //getToken
     @objc public func setfirebaseConfigFile(firebaseConfigFile: String) {
         userDefault.set(firebaseConfigFile, forKey: AppInfo.KEY_FIREBASE_CONFIG_FILE)
@@ -89,15 +88,13 @@ public class AppInfo : NSObject{
         return userDefault.string(forKey: AppInfo.KEY_APP_ID) ?? ""
     }
     
-
-    
-    @objc open func  updateData() {
+    @objc open func save() {
         setClientId(client_id: self.client_id)
-//        setClientId(client_id: model?.client_id ?? "")
-//        setClientSecret(client_secret: model?.client_secret ?? "")
-//        setPlatformOS(platformOS: model?.platformOS ?? "")
-//        setVersionId(versionId: model?.version ?? "")
-//        setAppId(appId: model?.afAppId ?? "")
+        setClientSecret(client_secret: self.client_secret)
+        setfirebaseConfigFile(firebaseConfigFile: self.firebaseConfigFile)
+        setPlatformOS(platformOS: self.platformOS)
+        setVersionId(versionId: self.version)
+        setAppId(appId: self.afAppId)
     }
     
 }

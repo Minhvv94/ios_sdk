@@ -7,6 +7,24 @@
 import Foundation
 struct ApiConst {
     static let BASE_URL = "https://dev-id.vplay.vn/api-core/v1"
+    static let PROD_BASE_ID = "https://id.vplay.vn/";
+    static let DEV_BASE_ID = "https://dev-id.vplay.vn/";
+
+    static let PROD_BASE_GAME_HUB = "https://hub.vplay.vn/";//@"https://sdk-api.vplay.vn/";
+    static let DEV_BASE_GAME_HUB = "https://dev-hub.vplay.vn/";
+
+    static let PROD_BASE_PAYMENT = "https://id.vplay.vn/";
+    static let DEV_BASE_PAYMENT = "https://dev-id.vplay.vn/";
+
+    static let PROD_BASE_WEB_ID = "https://id.vplay.vn/";
+    static let DEV_BASE_WEB_ID = "https://dev-id.vplay.vn/";
+
+    static let APPLE_BASE_ID = "https://appleid.apple.com/";
+    static let PATH_APPLE_REVOKE = "auth/revoke";
+    
+    
+    
+    
     static let STATUS_SUCCESS = 0
     static let STATUS_ERROR = 1
     

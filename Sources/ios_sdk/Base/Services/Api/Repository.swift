@@ -31,9 +31,9 @@ class Repository: BaseRepository {
                            callBack: @escaping (ApiResponse<BaseResponse>) -> ()) -> () {
         let url = "\(URLConst.PATH_GAME_CHECK_MAINTAIN)"
         var params = Dictionary<String, Any>.init()
-        params["request_app_package"] = request_app_package
-        params["request_channel"] = request_channel
-        params["request_version"] = request_version
+        params["appPackage"] = request_app_package
+        params["version"] = request_channel
+        params["platform"] = request_version
         return self.callGetMethod(url: url, parameters: params, onComplete: callBack)
     }
 }

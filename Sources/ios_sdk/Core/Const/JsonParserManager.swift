@@ -16,5 +16,13 @@ class JsonParserManager {
         }
         return nil
     }
+    
+    static func getMaitainCheckerJson(jsonString: String) -> MaitainCheckerJson? {
+        if let jsonData = jsonString.data(using: .utf8) {
+            let data = try? JSONDecoder().decode(MaitainCheckerJson.self, from: jsonData)
+            return data;
+        }
+        return nil
+    }
 
 }

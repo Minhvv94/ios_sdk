@@ -13,28 +13,21 @@ class MaitainCheckerJson: Codable {
     let message: String?
     let IsSuccessed : Bool?
     let HaveError: Bool?
-    let redirectUrl: String?
-    let token_expired: Bool?
     
     enum CodingKeys: String, CodingKey {
-        case code = "status"
+        case code = "code"
         case data = "data"
         case message = "message"
         case IsSuccessed = "IsSuccessed"
         case HaveError = "HaveError"
-        case redirectUrl = "redirectUrl"
-        case token_expired = "token_expired"
     }
     
-    init(code: Int?, data: DatMaitainChecker?, message: String?, IsSuccessed: Bool?, HaveError : Bool?,
-         redirectUrl: String?, token_expired: Bool?) {
+    init(code: Int?, data: DatMaitainChecker?, message: String?, IsSuccessed: Bool?, HaveError : Bool?) {
         self.code = code
         self.data = data
         self.message = message
         self.IsSuccessed  = IsSuccessed
         self.HaveError = HaveError
-        self.redirectUrl = redirectUrl
-        self.token_expired = token_expired
     }
 }
 

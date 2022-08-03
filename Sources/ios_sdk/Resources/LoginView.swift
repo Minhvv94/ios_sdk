@@ -68,8 +68,11 @@ class LoginView: UIView {
         // get device ID
         
         let deviceId = Utils.shared.getUUID()
-        let clentId = UserDefaults.standard.string(forKey: AppInfo.KEY_CLIENT_ID)  ?? ""
-    
-        print("deviceId : \(clentId)")
+//        let clentId = UserDefaults.standard.string(forKey: AppInfo.KEY_CLIENT_ID)  ?? ""
+        let decoded  = appInfo.userDefault.object(forKey: AppInfo.AppInforKey) as! Data
+        let decodedGroups = NSKeyedUnarchiver.unarchiveObject(with: decoded) as! AppInfo
+        //print("deviceId : \(clentId)")
+        print("client id  : \(decodedGroups.client_id)")
+        
     }
 }

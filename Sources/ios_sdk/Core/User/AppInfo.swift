@@ -7,7 +7,7 @@
 
 import Foundation
 @objc(AppInfo)
-public class AppInfo :NSObject{
+public class AppInfo : NSObject{
     static let KEY_FIREBASE_CONFIG_FILE = "KEY_FIREBASE_CONFIG_FILE"
     static let KEY_CLIENT_ID = "KEY_CLIENT_ID"
     static let KEY_CLIENT_SECRET = "KEY_CLIENT_SECRET"
@@ -35,6 +35,19 @@ public class AppInfo :NSObject{
     @objc public var hotline : String=""
     @objc public var achievedLevels: NSArray=[]
     @objc public var achievedVips: NSArray=[]
+
+    
+    override init(){}
+    
+    @objc public init(firebaseConfigFile: String?, client_id: String?, client_secret: String?, platformOS : String?,
+         packageId : String?, version: String?) {
+        self.firebaseConfigFile = firebaseConfigFile ?? ""
+        self.client_id = client_id ?? ""
+        self.client_secret = client_secret ?? ""
+        self.platformOS = platformOS ?? ""
+        self.packageId = packageId ?? ""
+        self.version = version ?? ""
+    }
     
     
 //    var defaults: UserDefaults?;
@@ -87,9 +100,6 @@ public class AppInfo :NSObject{
         setPlatformOS(platformOS: model?.platformOS ?? "")
         setVersionId(versionId: model?.version ?? "")
         setAppId(appId: model?.afAppId ?? "")
-    }
-    @objc open func  saveUpdateData(model: AppInfo?) {
-        userDefault.set(model, forKey: AppInfo.AppInforKey)
     }
     
 }

@@ -24,13 +24,7 @@ public class SDKObjectiveC: UIView {
     @objc open func  login() {
         if let topVC = UIApplication.topViewController() {
             
-//            let screenFrame = topVC.view.frame
-//            let windowWidth = screenFrame.width
-//            let windowHeight = screenFrame.height
-//            let rect = CGRect(x: 0, y: 0, width: windowWidth , height: windowHeight)
-//            let newView = LoginView(frame: rect)
-//            newView.tag = 100
-//            topVC.view.addSubview(newView)
+
             
             
             
@@ -48,6 +42,14 @@ public class SDKObjectiveC: UIView {
 
                                     // show the alert
                             topVC.present(alert, animated: true, completion: nil)
+                        }else{
+                                        let screenFrame = topVC.view.frame
+                                        let windowWidth = screenFrame.width
+                                        let windowHeight = screenFrame.height
+                                        let rect = CGRect(x: 0, y: 0, width: windowWidth , height: windowHeight)
+                                        let newView = LoginView(frame: rect)
+                                        newView.tag = 100
+                                        topVC.view.addSubview(newView)
                         }
                     }
                 })

@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class FloatingButtonView: UIView {
+class FloatingButtonView: UIImageView {
     // properties
     private let removeLabel: UILabel = {
         let label = UILabel(frame: .zero)

@@ -22,7 +22,9 @@ public class SDKObjectiveC: UIView {
     }
     private let buttonView: FloatingButtonView = {
         let button = FloatingButtonView()
-        let image = UIImage(named: "BtnDashboard.png")
+        
+        let imageName = Bundle.module.path(forResource: "BtnDashboard", ofType: "png")
+        let image = UIImage(named: imageName!)
         let imageView = UIImageView(image: image!)
         imageView.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
         button.addSubview(imageView)

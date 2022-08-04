@@ -59,6 +59,9 @@ public class SDKObjectiveC: UIView {
     
     @objc open func dashBoard(){
         if let topVC = UIApplication.topViewController() {
+            if (self.tag == 101) {
+                self.removeFromSuperview()
+            }
             buttonView.frame = CGRect(x: 0, y: 100, width: 50, height: 50)
             buttonView.tapBlock = {
                 self.showAlert("Click the button")
@@ -66,6 +69,7 @@ public class SDKObjectiveC: UIView {
             buttonView.removeBlock = {
                 self.showAlert("Remove the button")
             }
+            buttonView.tag = 101
             topVC.view.addSubview(buttonView)
         }
     }

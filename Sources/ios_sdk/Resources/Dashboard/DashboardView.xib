@@ -22,7 +22,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
-                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JB9-Td-Vgs" userLabel="Main">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JB9-Td-Vgs" userLabel="Main">
                     <rect key="frame" x="0.0" y="0.0" width="672" height="414"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
@@ -36,8 +36,8 @@
                 <constraint firstAttribute="leading" secondItem="LOU-JY-YS9" secondAttribute="leading" id="JBZ-tL-ksf"/>
                 <constraint firstItem="JB9-Td-Vgs" firstAttribute="width" secondItem="fIE-7L-Q9m" secondAttribute="width" multiplier="0.75" id="RGC-fn-yPH"/>
                 <constraint firstAttribute="trailing" secondItem="LOU-JY-YS9" secondAttribute="trailing" id="Tsk-jP-SAI"/>
-                <constraint firstItem="JB9-Td-Vgs" firstAttribute="bottom" secondItem="fIE-7L-Q9m" secondAttribute="bottom" id="pkq-NE-NmR"/>
-                <constraint firstItem="5dV-uk-La7" firstAttribute="leading" secondItem="JB9-Td-Vgs" secondAttribute="leading" id="vMB-Ru-Krk"/>
+                <constraint firstItem="JB9-Td-Vgs" firstAttribute="leading" secondItem="fIE-7L-Q9m" secondAttribute="leading" id="UQh-Ts-vSc"/>
+                <constraint firstAttribute="bottom" secondItem="JB9-Td-Vgs" secondAttribute="bottom" id="pkq-NE-NmR"/>
             </constraints>
             <point key="canvasLocation" x="186" y="159"/>
         </view>

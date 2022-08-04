@@ -20,6 +20,11 @@ public class SDKObjectiveC: UIView {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
+    private let buttonView: FloatingButtonView = {
+        let button = FloatingButtonView()
+        button.backgroundColor = UIColor.red
+        return button
+    }()
     
     @objc open func  login() {
         if let topVC = UIApplication.topViewController() {
@@ -50,4 +55,27 @@ public class SDKObjectiveC: UIView {
         }
         print("login")
     }
+    
+    
+    @objc open func dashBoard(){
+        if let topVC = UIApplication.topViewController() {
+            buttonView.frame = CGRect(x: 0, y: 100, width: 50, height: 50)
+            buttonView.tapBlock = {
+                self.showAlert("Click the button")
+            }
+            buttonView.removeBlock = {
+                self.showAlert("Remove the button")
+            }
+            topVC.view.addSubview(buttonView)
+        }
+    }
+    private func showAlert(_ title: String) {
+        if let topVC = UIApplication.topViewController() {
+            let alert = UIAlertController(title: title, message: nil, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            topVC.present(alert, animated: true, completion: nil)
+        }
+        
+    }
+
 }

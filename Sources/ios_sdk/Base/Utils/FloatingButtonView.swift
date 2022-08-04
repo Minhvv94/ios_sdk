@@ -6,7 +6,8 @@
 //
 
 import Foundation
-@objc(FloatingButtonView)
+import UIKit
+
 class FloatingButtonView: UIView {
     // properties
     private let removeLabel: UILabel = {

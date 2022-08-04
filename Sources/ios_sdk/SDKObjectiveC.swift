@@ -71,8 +71,8 @@ public class SDKObjectiveC: UIView {
             buttonView.frame = CGRect(x: 0, y: 100, width: 50, height: 50)
             buttonView.tapBlock = {
                 print("xoá buttonView  : \(self.buttonView.tag)")
-                if (topVC.view.tag == 101) {
-                    topVC.view.removeFromSuperview()
+                if (self.tag == 101) {
+                    self.removeFromSuperview()
                 }
                 
 //                let rect = CGRect(x: 0, y: 0, width: windowWidth , height: windowHeight)

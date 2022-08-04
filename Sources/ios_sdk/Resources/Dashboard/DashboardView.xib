@@ -24,28 +24,34 @@
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JB9-Td-Vgs" userLabel="Main">
-                    <rect key="frame" x="0.0" y="0.0" width="681" height="414"/>
+                    <rect key="frame" x="0.0" y="0.0" width="672" height="414"/>
                     <subviews>
-                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ujp-ku-uQE" userLabel="Header">
-                            <rect key="frame" x="0.0" y="0.0" width="681" height="74"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ujp-ku-uQE" userLabel="Header">
+                            <rect key="frame" x="0.0" y="0.0" width="672" height="74"/>
                             <color key="backgroundColor" systemColor="systemOrangeColor"/>
                         </view>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="Ujp-ku-uQE" firstAttribute="leading" secondItem="JB9-Td-Vgs" secondAttribute="leading" id="6a3-AW-ocr"/>
+                        <constraint firstAttribute="trailing" secondItem="Ujp-ku-uQE" secondAttribute="trailing" id="D6R-VM-SdY"/>
+                        <constraint firstItem="Ujp-ku-uQE" firstAttribute="top" secondItem="JB9-Td-Vgs" secondAttribute="top" id="Q6X-nz-rmZ"/>
+                        <constraint firstAttribute="bottom" secondItem="Ujp-ku-uQE" secondAttribute="bottom" constant="340" id="myF-qV-EK7"/>
+                        <constraint firstItem="Ujp-ku-uQE" firstAttribute="width" secondItem="JB9-Td-Vgs" secondAttribute="width" id="nZJ-xp-nhy"/>
+                    </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="5dV-uk-La7"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="JB9-Td-Vgs" firstAttribute="top" secondItem="fIE-7L-Q9m" secondAttribute="top" id="3ji-iW-iGw"/>
                 <constraint firstAttribute="bottom" secondItem="LOU-JY-YS9" secondAttribute="bottom" id="7m2-3Q-GIL"/>
                 <constraint firstAttribute="top" secondItem="LOU-JY-YS9" secondAttribute="top" id="HWK-41-rW4"/>
                 <constraint firstAttribute="leading" secondItem="LOU-JY-YS9" secondAttribute="leading" id="JBZ-tL-ksf"/>
-                <constraint firstItem="JB9-Td-Vgs" firstAttribute="bottom" secondItem="5dV-uk-La7" secondAttribute="bottom" multiplier="0.8" id="O57-8w-Yks"/>
-                <constraint firstItem="JB9-Td-Vgs" firstAttribute="top" secondItem="5dV-uk-La7" secondAttribute="top" id="RyX-i3-dcq"/>
+                <constraint firstItem="JB9-Td-Vgs" firstAttribute="width" secondItem="fIE-7L-Q9m" secondAttribute="width" multiplier="0.75" id="RGC-fn-yPH"/>
                 <constraint firstAttribute="trailing" secondItem="LOU-JY-YS9" secondAttribute="trailing" id="Tsk-jP-SAI"/>
-                <constraint firstItem="5dV-uk-La7" firstAttribute="trailing" secondItem="JB9-Td-Vgs" secondAttribute="trailing" id="hcZ-s5-pvA"/>
-                <constraint firstItem="5dV-uk-La7" firstAttribute="leading" secondItem="JB9-Td-Vgs" secondAttribute="leading" id="p7t-o8-EYT"/>
+                <constraint firstItem="JB9-Td-Vgs" firstAttribute="bottom" secondItem="fIE-7L-Q9m" secondAttribute="bottom" id="pkq-NE-NmR"/>
+                <constraint firstItem="5dV-uk-La7" firstAttribute="leading" secondItem="JB9-Td-Vgs" secondAttribute="leading" id="vMB-Ru-Krk"/>
             </constraints>
             <point key="canvasLocation" x="186" y="159"/>
         </view>

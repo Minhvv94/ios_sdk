@@ -28,10 +28,13 @@ let package = Package(
             name: "ios_sdk",
             dependencies: ["Alamofire", "SwiftyJSON", "RxSwift"],
             resources: [
+                .process("Assets.xcassets"),
                 Resource
                 .process("Login/LoginView.xib"),
                 Resource
-                .process("Dashboard/DashboardView.xib")
+                .process("Dashboard/DashboardView.xib"),
+                
+
             ]
         ),
             //dependencies: ["SwiftyJSON", "RxSwift"]),

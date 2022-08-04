@@ -16,14 +16,14 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>22</integer>
+			<integer>25</integer>
 		</dict>
 		<key>Playground (Playground) 11.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>23</integer>
+			<integer>26</integer>
 		</dict>
 		<key>Playground (Playground) 12.xcscheme</key>
 		<dict>
@@ -240,7 +240,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>13</integer>
+			<integer>14</integer>
 		</dict>
 		<key>Playground (Playground) 40.xcscheme</key>
 		<dict>
@@ -317,7 +317,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>14</integer>
+			<integer>15</integer>
 		</dict>
 		<key>Playground (Playground) 50.xcscheme</key>
 		<dict>
@@ -331,28 +331,28 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>13</integer>
+			<integer>18</integer>
 		</dict>
 		<key>Playground (Playground) 7.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>14</integer>
+			<integer>19</integer>
 		</dict>
 		<key>Playground (Playground) 8.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>15</integer>
+			<integer>20</integer>
 		</dict>
 		<key>Playground (Playground) 9.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>21</integer>
+			<integer>24</integer>
 		</dict>
 		<key>Playground (Playground).xcscheme</key>
 		<dict>
@@ -373,14 +373,14 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>25</integer>
+			<integer>22</integer>
 		</dict>
 		<key>Rx (Playground) 11.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>26</integer>
+			<integer>23</integer>
 		</dict>
 		<key>Rx (Playground) 12.xcscheme</key>
 		<dict>
@@ -667,28 +667,28 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>18</integer>
+			<integer>13</integer>
 		</dict>
 		<key>Rx (Playground) 7.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>19</integer>
+			<integer>16</integer>
 		</dict>
 		<key>Rx (Playground) 8.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>20</integer>
+			<integer>17</integer>
 		</dict>
 		<key>Rx (Playground) 9.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>24</integer>
+			<integer>21</integer>
 		</dict>
 		<key>Rx (Playground).xcscheme</key>
 		<dict>

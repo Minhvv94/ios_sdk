@@ -13,7 +13,7 @@ class FloatingButtonView: UIView {
     private let removeLabel: UILabel = {
         let label = UILabel(frame: .zero)
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Kéo vào chỗ này để ẩn"
+        label.text = "..."
         label.textAlignment = .center
         return label
     }()

@@ -71,6 +71,7 @@ public class SDKObjectiveC: UIView {
             buttonView.frame = CGRect(x: 0, y: 100, width: 50, height: 50)
             buttonView.tapBlock = {
                 print("xoá buttonView  : \(self.buttonView.tag)")
+                print("xoá buttonView  : \(self.tag)")
                 if (self.tag == 101) {
                     print("xoá buttonView ")
                     self.removeFromSuperview()
@@ -84,6 +85,7 @@ public class SDKObjectiveC: UIView {
 
         }
     }
+    
     private func showAlert(_ title: String) {
         if let topVC = UIApplication.topViewController() {
             let alert = UIAlertController(title: title, message: nil, preferredStyle: .alert)

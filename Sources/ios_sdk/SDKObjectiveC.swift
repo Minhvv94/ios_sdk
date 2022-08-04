@@ -42,6 +42,8 @@ public class SDKObjectiveC: UIView {
                                         newView.tag = 100
                                         topVC.view.addSubview(newView)
                         }
+                    }else{
+                        
                     }
                 })
             }

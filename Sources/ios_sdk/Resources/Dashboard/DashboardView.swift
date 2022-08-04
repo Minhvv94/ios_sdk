@@ -41,6 +41,8 @@ class DashboardView: UIView {
     }
     
     @objc func handleTap(sender: UITapGestureRecognizer) {
-            print("click ")
+        if (self.tag == 102) {
+            self.removeFromSuperview()
+        }
    }
 }

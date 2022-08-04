@@ -33,11 +33,12 @@
                 <constraint firstItem="5dV-uk-La7" firstAttribute="bottom" secondItem="LOU-JY-YS9" secondAttribute="bottom" id="7m2-3Q-GIL"/>
                 <constraint firstItem="LOU-JY-YS9" firstAttribute="top" secondItem="5dV-uk-La7" secondAttribute="top" id="HWK-41-rW4"/>
                 <constraint firstItem="LOU-JY-YS9" firstAttribute="leading" secondItem="5dV-uk-La7" secondAttribute="leading" id="JBZ-tL-ksf"/>
-                <constraint firstItem="2jj-aJ-7qM" firstAttribute="leading" secondItem="5dV-uk-La7" secondAttribute="leading" constant="284" id="RXs-v5-YBe"/>
+                <constraint firstItem="2jj-aJ-7qM" firstAttribute="leading" secondItem="5dV-uk-La7" secondAttribute="leading" id="RXs-v5-YBe"/>
                 <constraint firstItem="5dV-uk-La7" firstAttribute="trailing" secondItem="LOU-JY-YS9" secondAttribute="trailing" id="Tsk-jP-SAI"/>
-                <constraint firstItem="5dV-uk-La7" firstAttribute="bottom" secondItem="2jj-aJ-7qM" secondAttribute="bottom" constant="122" id="i7r-ZN-Ebd"/>
-                <constraint firstItem="2jj-aJ-7qM" firstAttribute="top" secondItem="5dV-uk-La7" secondAttribute="top" constant="143" id="sGa-ZF-EvQ"/>
-                <constraint firstItem="5dV-uk-La7" firstAttribute="trailing" secondItem="2jj-aJ-7qM" secondAttribute="trailing" constant="284" id="ydJ-Ah-ZgF"/>
+                <constraint firstItem="2jj-aJ-7qM" firstAttribute="height" secondItem="5dV-uk-La7" secondAttribute="height" id="hgq-da-cF0"/>
+                <constraint firstItem="5dV-uk-La7" firstAttribute="bottom" secondItem="2jj-aJ-7qM" secondAttribute="bottom" id="i7r-ZN-Ebd"/>
+                <constraint firstItem="2jj-aJ-7qM" firstAttribute="top" secondItem="5dV-uk-La7" secondAttribute="top" id="sGa-ZF-EvQ"/>
+                <constraint firstItem="5dV-uk-La7" firstAttribute="trailing" secondItem="2jj-aJ-7qM" secondAttribute="trailing" id="ydJ-Ah-ZgF"/>
             </constraints>
             <point key="canvasLocation" x="186" y="159"/>
         </view>

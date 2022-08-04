@@ -59,12 +59,22 @@ public class SDKObjectiveC: UIView {
     
     @objc open func dashBoard(){
         if let topVC = UIApplication.topViewController() {
+            let screenFrame = topVC.view.frame
+            let windowWidth = screenFrame.width
+            let windowHeight = screenFrame.height
             if (self.tag == 101) {
                 self.removeFromSuperview()
             }
             buttonView.frame = CGRect(x: 0, y: 100, width: 50, height: 50)
             buttonView.tapBlock = {
-                self.showAlert("Click the button")
+                
+                if (self.tag == 101) {
+                    self.removeFromSuperview()
+                }
+                let rect = CGRect(x: 0, y: 0, width: windowWidth , height: windowHeight)
+                let dashboardView = DashboardView(frame: rect)
+                dashboardView.tag = 102
+                topVC.view.addSubview(dashboardView)
             }
             buttonView.removeBlock = {
                 self.showAlert("Remove the button")

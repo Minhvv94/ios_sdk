@@ -72,7 +72,7 @@ class FloatingButtonView: UIView {
             superview.addSubview(removeLabel)
             removeLabel.centerXAnchor.constraint(equalTo: superview.centerXAnchor).isActive = true
             removeLabel.topAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.topAnchor, constant: 10).isActive = true
-            removeLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
+            removeLabel.heightAnchor.constraint(equalToConstant: 50).isActive = true
             removeLabel.widthAnchor.constraint(greaterThanOrEqualToConstant: 50).isActive = true
             
             UIView.animate(withDuration: 0.3) {

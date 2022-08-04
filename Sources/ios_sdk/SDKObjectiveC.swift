@@ -67,14 +67,14 @@ public class SDKObjectiveC: UIView {
             }
             buttonView.frame = CGRect(x: 0, y: 100, width: 50, height: 50)
             buttonView.tapBlock = {
-                
-                if (self.tag == 101) {
-                    self.removeFromSuperview()
-                }
-                let rect = CGRect(x: 0, y: 0, width: windowWidth , height: windowHeight)
-                let dashboardView = DashboardView(frame: rect)
-                dashboardView.tag = 102
-                topVC.view.addSubview(dashboardView)
+                self.showAlert("click")
+//                if (self.tag == 101) {
+//                    self.removeFromSuperview()
+//                }
+//                let rect = CGRect(x: 0, y: 0, width: windowWidth , height: windowHeight)
+//                let dashboardView = DashboardView(frame: rect)
+//                dashboardView.tag = 102
+//                topVC.view.addSubview(dashboardView)
             }
             buttonView.removeBlock = {
                 self.showAlert("Remove the button")

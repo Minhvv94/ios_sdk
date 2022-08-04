@@ -22,16 +22,11 @@ public class SDKObjectiveC: UIView {
     }
     private let buttonView: FloatingButtonView = {
         let button = FloatingButtonView()
-        
-        if let path = Bundle.module.path(forResource: "BtnDashboard", ofType: "png"),  let image = UIImage(contentsOfFile: path) {
-            print("\(path)")
-//            let imageName = Bundle.module.path(forResource: "BtnDashboard", ofType: "png")
-//            let image = UIImage(named: imageName!)
-            let imageView = UIImageView(image: image)
-            imageView.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
-            button.addSubview(imageView)
-        }
-        
+        let imageName = "BtnDashboard.png"
+        let image = UIImage(named: imageName, in: Bundle.module, compatibleWith: nil)
+        let imageView = UIImageView(image: image!)
+        imageView.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
+        button.addSubview(imageView)
         return button
     }()
     

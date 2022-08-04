@@ -22,7 +22,7 @@ public class SDKObjectiveC: UIView {
     }
     private let buttonView: FloatingButtonView = {
         let button = FloatingButtonView()
-        button.backgroundColor = UIColor.red
+        button.backgroundColor = UIColor(patternImage: UIImage(named: "BtnDashboard")!)
         return button
     }()
     

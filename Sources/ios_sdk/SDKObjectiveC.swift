@@ -23,8 +23,9 @@ public class SDKObjectiveC: UIView {
     private let buttonView: FloatingButtonView = {
         let button = FloatingButtonView()
         
-        if let path = Bundle.module.path(forResource: "BtnDashboard", ofType: "png"),  let image = UIImage(contentsOfFile: path) {
-            
+        if let path = Bundle.module.path(forResource: "BtnDashboard", ofType: "png"),  let c = UIImage(contentsOfFile: path) {
+            print("\(path)")
+            print("\(image)")
 //            let imageName = Bundle.module.path(forResource: "BtnDashboard", ofType: "png")
 //            let image = UIImage(named: imageName!)
             let imageView = UIImageView(image: image)

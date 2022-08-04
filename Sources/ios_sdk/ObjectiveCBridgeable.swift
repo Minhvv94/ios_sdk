@@ -7,7 +7,7 @@
 
 import Foundation
 @objc public protocol ObjectiveCBridgeable {
-    public var isBridgedToObjectiveC: Bool { get }
+    var isBridgedToObjectiveC: Bool { get }
 }
 
 public extension ObjectiveCBridgeable {

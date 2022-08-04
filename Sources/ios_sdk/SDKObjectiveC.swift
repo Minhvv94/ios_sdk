@@ -70,17 +70,13 @@ public class SDKObjectiveC: UIView {
             
             buttonView.frame = CGRect(x: 0, y: 100, width: 50, height: 50)
             buttonView.tapBlock = {
-                print("xoá buttonView  : \(self.buttonView.tag)")
-                print("xoá buttonView  : \(self.tag)")
                 if (self.buttonView.tag == 101) {
-                    print("xoá buttonView ")
                     self.buttonView.removeFromSuperview()
                 }
-                
-//                let rect = CGRect(x: 0, y: 0, width: windowWidth , height: windowHeight)
-//                let dashboardView = DashboardView(frame: rect)
-//                dashboardView.tag = 102
-//                topVC.view.addSubview(dashboardView)
+                let rect = CGRect(x: 0, y: 0, width: windowWidth , height: windowHeight)
+                let dashboardView = DashboardView(frame: rect)
+                dashboardView.tag = 102
+                topVC.view.addSubview(dashboardView)
             }
 
         }

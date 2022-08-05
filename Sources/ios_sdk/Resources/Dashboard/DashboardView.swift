@@ -17,7 +17,6 @@ class DashboardView: UIView {
     
     @IBOutlet weak var mainView: UIView!
     
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setUpView()
@@ -42,7 +41,7 @@ class DashboardView: UIView {
         mainView.overrideUserInterfaceStyle = .light
         mainView.backgroundColor = .green
         mainView.addSubview(viewPager)
-        
+
         NSLayoutConstraint.activate([
             viewPager.widthAnchor.constraint(equalTo: mainView.widthAnchor),
             viewPager.heightAnchor.constraint(equalTo: mainView.heightAnchor),
@@ -63,10 +62,10 @@ class DashboardView: UIView {
         )
         let view1 = UIView()
         view1.backgroundColor = .red
-        
+
         let view2 = UIView()
         view2.backgroundColor = .blue
-        
+
         viewPager.tabbedView.tabs = [
             AppTabItemView(title: "First"),
             AppTabItemView(title: "Second")

@@ -12,7 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DashboardView">
             <connections>
                 <outlet property="btnBack" destination="LOU-JY-YS9" id="X9U-dx-1ZA"/>
-                <outlet property="contentView" destination="fIE-7L-Q9m" id="pSi-aY-8En"/>
+                <outlet property="dashboardView" destination="fIE-7L-Q9m" id="xmb-LW-m8K"/>
                 <outlet property="mainView" destination="JB9-Td-Vgs" id="3bD-aJ-xeu"/>
             </connections>
         </placeholder>

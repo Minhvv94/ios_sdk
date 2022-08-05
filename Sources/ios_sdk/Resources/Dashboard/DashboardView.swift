@@ -40,14 +40,14 @@ class DashboardView: UIView {
         btnBack.addGestureRecognizer(tapGesture)
         
         mainView.overrideUserInterfaceStyle = .light
-        mainView.backgroundColor = .white
+        mainView.backgroundColor = .green
         mainView.addSubview(viewPager)
         
         NSLayoutConstraint.activate([
-            viewPager.widthAnchor.constraint(equalTo: self.widthAnchor),
-            viewPager.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.7),
-            viewPager.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            viewPager.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor)
+            viewPager.widthAnchor.constraint(equalTo: mainView.widthAnchor),
+            viewPager.heightAnchor.constraint(equalTo: mainView.heightAnchor),
+            viewPager.centerXAnchor.constraint(equalTo: mainView.centerXAnchor),
+            viewPager.topAnchor.constraint(equalTo: mainView.safeAreaLayoutGuide.topAnchor)
         ])
     
     }

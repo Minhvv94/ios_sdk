@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="btnBack" destination="LOU-JY-YS9" id="X9U-dx-1ZA"/>
                 <outlet property="contentView" destination="fIE-7L-Q9m" id="pSi-aY-8En"/>
+                <outlet property="mainView" destination="JB9-Td-Vgs" id="3bD-aJ-xeu"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

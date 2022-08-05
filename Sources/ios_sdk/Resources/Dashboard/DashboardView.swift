@@ -11,10 +11,11 @@ import UIKit
 @objc(DashboardView)
 class DashboardView: UIView {
     
-    @IBOutlet var contentView: UIView!
+    @IBOutlet var dashboardView: UIView!
     
     @IBOutlet weak var btnBack: UIView!
     
+    @IBOutlet weak var mainView: UIView!
     
     
     override init(frame: CGRect) {
@@ -29,18 +30,18 @@ class DashboardView: UIView {
     
     private func setUpView(){
         Bundle.module.loadNibNamed("DashboardView", owner: self, options: nil)
-        self.addSubview(contentView)
-        contentView.frame = self.bounds
-        contentView.autoresizingMask = [.flexibleHeight,.flexibleWidth]
+        self.addSubview(dashboardView)
+        dashboardView.frame = self.bounds
+        dashboardView.autoresizingMask = [.flexibleHeight,.flexibleWidth]
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(sender:)))
                 
                 // 2. add the gesture recognizer to a view
         btnBack.addGestureRecognizer(tapGesture)
         
-        self.overrideUserInterfaceStyle = .light
-        self.backgroundColor = .white
-        self.addSubview(viewPager)
+        mainView.overrideUserInterfaceStyle = .light
+        mainView.backgroundColor = .white
+        mainView.addSubview(viewPager)
         
         NSLayoutConstraint.activate([
             viewPager.widthAnchor.constraint(equalTo: self.widthAnchor),
@@ -56,15 +57,6 @@ class DashboardView: UIView {
             self.removeFromSuperview()
         }
    }
-    
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//
-//        self.navigationItem.title = "ViewPager"
-//
-//        self.navigationController?.navigationBar.standardAppearance.backgroundColor = .systemBlue
-//        self.navigationController?.navigationBar.standardAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-//    }
     lazy var viewPager: ViewPager = {
         let viewPager = ViewPager(
             tabSizeConfiguration: .fillEqually(height: 60, spacing: 0)
@@ -75,18 +67,13 @@ class DashboardView: UIView {
         let view2 = UIView()
         view2.backgroundColor = .blue
         
-        let view3 = UIView()
-        view3.backgroundColor = .orange
-        
         viewPager.tabbedView.tabs = [
             AppTabItemView(title: "First"),
-            AppTabItemView(title: "Second"),
-            AppTabItemView(title: "Third")
+            AppTabItemView(title: "Second")
         ]
         viewPager.pagedView.pages = [
             view1,
-            view2,
-            view3
+            view2
         ]
         viewPager.translatesAutoresizingMaskIntoConstraints = false
         return viewPager

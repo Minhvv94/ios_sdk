@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import UIKit
+
 class DashboardTabPageViewController : TabPageViewController {
     
     override init() {

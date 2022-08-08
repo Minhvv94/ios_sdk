@@ -25,8 +25,9 @@
                     <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JB9-Td-Vgs" userLabel="Main">
+                <view contentMode="scaleToFill" semanticContentAttribute="playback" id="JB9-Td-Vgs" userLabel="Main">
                     <rect key="frame" x="0.0" y="0.0" width="672" height="414"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZLv-qb-QC9" userLabel="Content">
                             <rect key="frame" x="0.0" y="0.0" width="672" height="414"/>
@@ -50,6 +51,7 @@
                         <constraint firstItem="ZLv-qb-QC9" firstAttribute="top" secondItem="JB9-Td-Vgs" secondAttribute="top" id="ouC-QR-FB7"/>
                         <constraint firstItem="FeM-OB-9F7" firstAttribute="centerY" secondItem="JB9-Td-Vgs" secondAttribute="centerY" id="suF-eX-lIa"/>
                     </constraints>
+                    <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="5dV-uk-La7"/>

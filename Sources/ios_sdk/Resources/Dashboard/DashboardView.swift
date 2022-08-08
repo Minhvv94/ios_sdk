@@ -17,6 +17,9 @@ class DashboardView: UIView {
     
     @IBOutlet weak var mainView: UIView!
     
+    
+    let tabPageView : DashboardTabPageViewController
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setUpView()
@@ -40,12 +43,8 @@ class DashboardView: UIView {
         
         
         
-        let vc1 = UIViewController()
-        let vc2 = UIViewController()
-        tabItems = [(vc1, "First"), (vc2, "Second")]
-        mainView.tabBackgroundColor = UIColor.green
-        mainView.tabWidth = view.frame.width / CGFloat(tabItems.count)
-        mainView.hidesTopViewOnSwipeType = .all
+    
+        mainView.addSubview(tabPageView)
 //        let segmentedControl = HMSegmentedControl(sectionTitles: [
 //            "Trending",
 //            "News",

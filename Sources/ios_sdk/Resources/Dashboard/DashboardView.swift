@@ -59,28 +59,28 @@ class DashboardView: UIView {
         
                     // Constrain the container view to the view controller
         let safeLayoutGuide = mainView.safeAreaLayoutGuide
-                    NSLayoutConstraint.activate([
-                        segmentedControlContainerView.topAnchor.constraint(equalTo: safeLayoutGuide.topAnchor),
-                        segmentedControlContainerView.leadingAnchor.constraint(equalTo: safeLayoutGuide.leadingAnchor),
-                        segmentedControlContainerView.widthAnchor.constraint(equalTo: safeLayoutGuide.widthAnchor),
-                        segmentedControlContainerView.heightAnchor.constraint(equalToConstant: Constants.segmentedControlHeight)
-                        ])
+       NSLayoutConstraint.activate([
+            segmentedControlContainerView.topAnchor.constraint(equalTo: safeLayoutGuide.topAnchor),
+            segmentedControlContainerView.leadingAnchor.constraint(equalTo: safeLayoutGuide.leadingAnchor),
+            segmentedControlContainerView.widthAnchor.constraint(equalTo: safeLayoutGuide.widthAnchor),
+            segmentedControlContainerView.heightAnchor.constraint(equalToConstant: Constants.segmentedControlHeight)
+        ])
         
-                    // Constrain the segmented control to the container view
-                    NSLayoutConstraint.activate([
-                        segmentedControl.topAnchor.constraint(equalTo: segmentedControlContainerView.topAnchor),
-                        segmentedControl.leadingAnchor.constraint(equalTo: segmentedControlContainerView.leadingAnchor),
-                        segmentedControl.centerXAnchor.constraint(equalTo: segmentedControlContainerView.centerXAnchor),
-                        segmentedControl.centerYAnchor.constraint(equalTo: segmentedControlContainerView.centerYAnchor)
-                        ])
-        
-                    // Constrain the underline view relative to the segmented control
-                    NSLayoutConstraint.activate([
-                        bottomUnderlineView.bottomAnchor.constraint(equalTo: segmentedControl.bottomAnchor),
-                        bottomUnderlineView.heightAnchor.constraint(equalToConstant: Constants.underlineViewHeight),
-                        leadingDistanceConstraint,
-                        bottomUnderlineView.widthAnchor.constraint(equalTo: segmentedControl.widthAnchor, multiplier: 1 / CGFloat(segmentedControl.numberOfSegments))
-                        ])
+//                    // Constrain the segmented control to the container view
+//                    NSLayoutConstraint.activate([
+//                        segmentedControl.topAnchor.constraint(equalTo: segmentedControlContainerView.topAnchor),
+//                        segmentedControl.leadingAnchor.constraint(equalTo: segmentedControlContainerView.leadingAnchor),
+//                        segmentedControl.centerXAnchor.constraint(equalTo: segmentedControlContainerView.centerXAnchor),
+//                        segmentedControl.centerYAnchor.constraint(equalTo: segmentedControlContainerView.centerYAnchor)
+//                        ])
+//
+//                    // Constrain the underline view relative to the segmented control
+//                    NSLayoutConstraint.activate([
+//                        bottomUnderlineView.bottomAnchor.constraint(equalTo: segmentedControl.bottomAnchor),
+//                        bottomUnderlineView.heightAnchor.constraint(equalToConstant: Constants.underlineViewHeight),
+//                        leadingDistanceConstraint,
+//                        bottomUnderlineView.widthAnchor.constraint(equalTo: segmentedControl.widthAnchor, multiplier: 1 / CGFloat(segmentedControl.numberOfSegments))
+//                        ])
 
     
     }

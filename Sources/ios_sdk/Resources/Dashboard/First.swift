@@ -7,10 +7,9 @@
 
 import Foundation
 import UIKit
-class First: : UIView {
-    
-    var userDefault = UserDefaults.standard
-    
+class First: UIView {
+
+    @IBOutlet weak var contentView: UIView!
     override init(frame: CGRect) {
         super.init(frame: frame)
         setUpView()
@@ -21,9 +20,9 @@ class First: : UIView {
     
     private func setUpView(){
         Bundle.module.loadNibNamed("LoginView", owner: self, options: nil)
-//        self.addSubview(contentView)
-//        contentView.frame = self.bounds
-//        contentView.autoresizingMask = [.flexibleHeight,.flexibleWidth]
+        self.addSubview(contentView)
+        contentView.frame = self.bounds
+        contentView.autoresizingMask = [.flexibleHeight,.flexibleWidth]
     }
 
 }

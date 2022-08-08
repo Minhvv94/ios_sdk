@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FirstViewController">
             <connections>
+                <outlet property="contentView" destination="Gk2-e6-3M1" id="VoZ-4j-X4X"/>
                 <outlet property="view" destination="ggg-FZ-iSs" id="HJZ-Wt-YdY"/>
             </connections>
         </placeholder>

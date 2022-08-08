@@ -16,9 +16,8 @@ class DashboardTabPageViewController : TabPageViewController {
         let windowWidth = self.view.frame.width
         let windowHeight = self.view.frame.height
         let rect = CGRect(x: 0, y: 0, width: windowWidth , height: windowHeight)
-        let vc1 = TestView(frame: rect)
-        let vc2 = TestView(frame: rect)
-        tabItems = [(vc1, "First"), (vc2, "Second")]
+        let vc1 = First(frame: rect)
+        tabItems = [(vc1, "First")]
         option.tabBackgroundColor = UIColor.green
         option.tabWidth = view.frame.width / CGFloat(tabItems.count)
         option.hidesTopViewOnSwipeType = .all

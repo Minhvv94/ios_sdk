@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="btnBack" destination="LOU-JY-YS9" id="X9U-dx-1ZA"/>
                 <outlet property="dashboardView" destination="fIE-7L-Q9m" id="xmb-LW-m8K"/>
+                <outlet property="headerView" destination="bqM-Fv-ZhA" id="bkl-WP-zxG"/>
                 <outlet property="mainView" destination="JB9-Td-Vgs" id="3bD-aJ-xeu"/>
             </connections>
         </placeholder>

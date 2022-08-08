@@ -17,6 +17,7 @@ class DashboardView: UIView {
     
     @IBOutlet weak var mainView: UIView!
     
+    @IBOutlet weak var headerView: UIView!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -57,19 +58,19 @@ class DashboardView: UIView {
                     segmentedControlContainerView.addSubview(segmentedControl)
                     segmentedControlContainerView.addSubview(bottomUnderlineView)
         
-                    // Constrain the container view to the view controller
-        let safeLayoutGuide = mainView.safeAreaLayoutGuide
+    // Constrain the container view to the view controller
+    let safeLayoutGuide = mainView.safeAreaLayoutGuide
        NSLayoutConstraint.activate([
-            segmentedControlContainerView.topAnchor.constraint(equalTo: safeLayoutGuide.topAnchor),
-            segmentedControlContainerView.leadingAnchor.constraint(equalTo: safeLayoutGuide.leadingAnchor),
-            segmentedControlContainerView.widthAnchor.constraint(equalTo: safeLayoutGuide.widthAnchor),
-            segmentedControlContainerView.heightAnchor.constraint(equalToConstant: safeLayoutGuide.heightAnchor)
+            segmentedControlContainerView.topAnchor.constraint(equalTo: mainView.topAnchor),
+            segmentedControlContainerView.leadingAnchor.constraint(equalTo: mainView.leadingAnchor),
+            segmentedControlContainerView.widthAnchor.constraint(equalTo: mainView.widthAnchor),
+            segmentedControlContainerView.heightAnchor.constraint(equalToConstant: headerView.heightAnchor)
         ])
         
 //                    // Constrain the segmented control to the container view
                     NSLayoutConstraint.activate([
                         segmentedControl.topAnchor.constraint(equalTo: segmentedControlContainerView.topAnchor),
-                        segmentedControl.leadingAnchor.constraint(equalTo: segmentedControlContainerView.leadingAnchor),
+                        segmentedControl.leadingAnchor.constraint(equalTo: segmentedControlContainerView.leadingAnchor+10),
                         segmentedControl.centerXAnchor.constraint(equalTo: segmentedControlContainerView.centerXAnchor),
                         segmentedControl.centerYAnchor.constraint(equalTo: segmentedControlContainerView.centerYAnchor)
                         ])

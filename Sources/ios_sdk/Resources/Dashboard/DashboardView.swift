@@ -115,7 +115,7 @@ class DashboardView: UIView {
     
     
     private enum Constants {
-            static let segmentedControlHeight: CGFloat = 40
+            static let segmentedControlHeight: CGFloat = 60
             static let underlineViewColor: UIColor = .blue
             static let underlineViewHeight: CGFloat = 2
         }

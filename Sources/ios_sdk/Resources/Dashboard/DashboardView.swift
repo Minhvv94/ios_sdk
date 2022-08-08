@@ -69,18 +69,18 @@ class DashboardView: UIView {
 //                    // Constrain the segmented control to the container view
                     NSLayoutConstraint.activate([
                         segmentedControl.topAnchor.constraint(equalTo: segmentedControlContainerView.topAnchor),
-                        segmentedControl.leadingAnchor.constraint(equalTo: segmentedControlContainerView.leadingAnchor),
+                        segmentedControl.leadingAnchor.constraint(equalTo: segmentedControlContainerView.leadingAnchor+10),
                         segmentedControl.centerXAnchor.constraint(equalTo: segmentedControlContainerView.centerXAnchor),
                         segmentedControl.centerYAnchor.constraint(equalTo: segmentedControlContainerView.centerYAnchor)
                         ])
 //
 //                    // Constrain the underline view relative to the segmented control
-//                    NSLayoutConstraint.activate([
-//                        bottomUnderlineView.bottomAnchor.constraint(equalTo: segmentedControl.bottomAnchor),
-//                        bottomUnderlineView.heightAnchor.constraint(equalToConstant: Constants.underlineViewHeight),
-//                        leadingDistanceConstraint,
-//                        bottomUnderlineView.widthAnchor.constraint(equalTo: segmentedControl.widthAnchor, multiplier: 1 / CGFloat(segmentedControl.numberOfSegments))
-//                        ])
+                    NSLayoutConstraint.activate([
+                        bottomUnderlineView.topAnchor.constraint(equalTo: segmentedControl.topAnchor),
+                        bottomUnderlineView.heightAnchor.constraint(equalToConstant: Constants.underlineViewHeight),
+                        leadingDistanceConstraint,
+                        bottomUnderlineView.widthAnchor.constraint(equalTo: segmentedControl.widthAnchor, multiplier: 1 / CGFloat(segmentedControl.numberOfSegments))
+                        ])
 
     
     }

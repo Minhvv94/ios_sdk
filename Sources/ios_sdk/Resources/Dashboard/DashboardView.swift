@@ -43,14 +43,14 @@ class DashboardView: UIView {
         mainView.backgroundColor = .white
         mainView.addSubview(viewPager)
         
-        viewPager.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        
-//        NSLayoutConstraint.activate([
-//            viewPager.widthAnchor.constraint(equalTo: mainView.widthAnchor),
-//            viewPager.heightAnchor.constraint(equalTo: mainView.heightAnchor),
-//            viewPager.centerXAnchor.constraint(equalTo: mainView.centerXAnchor),
-//            viewPager.topAnchor.constraint(equalTo: mainView.topAnchor)
-//        ])
+//        viewPager.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+//        
+        NSLayoutConstraint.activate([
+            viewPager.widthAnchor.constraint(equalTo: mainView.widthAnchor),
+            viewPager.heightAnchor.constraint(equalTo: mainView.heightAnchor),
+            viewPager.centerXAnchor.constraint(equalTo: mainView.centerXAnchor),
+            viewPager.topAnchor.constraint(equalTo: mainView.topAnchor)
+        ])
     
     }
     

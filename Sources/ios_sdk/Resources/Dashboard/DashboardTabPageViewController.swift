@@ -12,8 +12,12 @@ class DashboardTabPageViewController : TabPageViewController {
     
     override init() {
         super.init()
-        let vc1 = UIViewController()
-        let vc2 = UIViewController()
+        
+        let windowWidth = self.contentSizeForViewInPopover.width
+        let windowHeight = self.contentSizeForViewInPopover.height
+        let rect = CGRect(x: 0, y: 0, width: windowWidth , height: windowHeight)
+        let vc1 = LoginView(frame: rect)
+        let vc2 = LoginView(frame: rect)
         tabItems = [(vc1, "First"), (vc2, "Second")]
         vc1.view.backgroundColor = UIColor.red
         option.tabBackgroundColor = UIColor.green

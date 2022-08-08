@@ -39,12 +39,11 @@ class DashboardView: UIView {
                 // 2. add the gesture recognizer to a view
         btnBack.addGestureRecognizer(tapGesture)
         
-        mainView.overrideUserInterfaceStyle = .light
-        mainView.backgroundColor = .white
+        
         mainView.addSubview(viewPager)
         
 //        viewPager.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-//        
+//
         NSLayoutConstraint.activate([
             viewPager.widthAnchor.constraint(equalTo: mainView.widthAnchor),
             viewPager.heightAnchor.constraint(equalTo: mainView.heightAnchor),

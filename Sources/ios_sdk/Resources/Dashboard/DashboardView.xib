@@ -31,6 +31,16 @@
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bqM-Fv-ZhA" userLabel="Header">
                             <rect key="frame" x="0.0" y="0.0" width="672" height="74.5"/>
+                            <subviews>
+                                <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="i1D-pq-gaL">
+                                    <rect key="frame" x="0.0" y="8" width="672" height="32"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <segments>
+                                        <segment title="First"/>
+                                        <segment title="Second"/>
+                                    </segments>
+                                </segmentedControl>
+                            </subviews>
                             <color key="backgroundColor" systemColor="systemOrangeColor"/>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZLv-qb-QC9" userLabel="Content">
@@ -73,7 +83,7 @@
                 <constraint firstItem="JB9-Td-Vgs" firstAttribute="leading" secondItem="fIE-7L-Q9m" secondAttribute="leading" id="UQh-Ts-vSc"/>
                 <constraint firstAttribute="bottom" secondItem="JB9-Td-Vgs" secondAttribute="bottom" id="pkq-NE-NmR"/>
             </constraints>
-            <point key="canvasLocation" x="185.49107142857142" y="157.97101449275362"/>
+            <point key="canvasLocation" x="185.49107142857142" y="155.07246376811597"/>
         </view>
     </objects>
     <resources>

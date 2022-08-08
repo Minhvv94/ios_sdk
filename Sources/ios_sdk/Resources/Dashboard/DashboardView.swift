@@ -40,17 +40,17 @@ class DashboardView: UIView {
         btnBack.addGestureRecognizer(tapGesture)
         
 //        mainView.overrideUserInterfaceStyle = .light
-        mainView.addSubview(viewPager)
-
-
-
-        NSLayoutConstraint.activate([
-            viewPager.widthAnchor.constraint(equalTo: mainView.widthAnchor),
-            viewPager.heightAnchor.constraint(equalTo: mainView.heightAnchor),
-            viewPager.centerXAnchor.constraint(equalTo: mainView.centerXAnchor),
-            viewPager.topAnchor.constraint(equalTo: mainView.topAnchor)
-        ])
-        viewPager.translatesAutoresizingMaskIntoConstraints = false
+//        mainView.addSubview(viewPager)
+//
+//
+//
+//        NSLayoutConstraint.activate([
+//            viewPager.widthAnchor.constraint(equalTo: mainView.widthAnchor),
+//            viewPager.heightAnchor.constraint(equalTo: mainView.heightAnchor),
+//            viewPager.centerXAnchor.constraint(equalTo: mainView.centerXAnchor),
+//            viewPager.topAnchor.constraint(equalTo: mainView.topAnchor)
+//        ])
+//        viewPager.translatesAutoresizingMaskIntoConstraints = false
 
     
     }

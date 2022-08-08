@@ -40,7 +40,6 @@ class DashboardView: UIView {
         btnBack.addGestureRecognizer(tapGesture)
         
 //        mainView.overrideUserInterfaceStyle = .light
-        mainView.backgroundColor = .orange
         mainView.addSubview(viewPager)
 
 
@@ -66,7 +65,7 @@ class DashboardView: UIView {
    }
     lazy var viewPager: ViewPager = {
         let viewPager = ViewPager(
-            tabSizeConfiguration: .fillEqually(height: 60, spacing: 0)
+            tabSizeConfiguration: .fillEqually(height: 100, spacing: 0)
         )
         let view1 = UIView()
         view1.backgroundColor = .red

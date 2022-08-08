@@ -44,10 +44,16 @@ class DashboardView: UIView {
         mainView.addSubview(viewPager)
 
         NSLayoutConstraint.activate([
-            viewPager.widthAnchor.constraint(equalTo: mainView.widthAnchor),
-            viewPager.heightAnchor.constraint(equalTo: mainView.heightAnchor),
-            viewPager.centerXAnchor.constraint(equalTo: mainView.centerXAnchor),
-            viewPager.topAnchor.constraint(equalTo: mainView.topAnchor)
+//            viewPager.widthAnchor.constraint(equalTo: mainView.widthAnchor),
+//            viewPager.heightAnchor.constraint(equalTo: mainView.heightAnchor),
+//            viewPager.centerXAnchor.constraint(equalTo: mainView.centerXAnchor),
+//            viewPager.topAnchor.constraint(equalTo: mainView.topAnchor)
+            
+            
+            viewPager.leadingAnchor.constraint(equalTo: mainView.leadingAnchor, constant: 0).isActive = true
+            viewPager.trailingAnchor.constraint(equalTo: mainView.trailingAnchor, constant: 0).isActive = true
+            viewPager.topAnchor.constraint(equalTo: mainView.topAnchor, constant: 0).isActive = true
+            viewPager.bottomAnchor.constraint(equalTo: mainView.bottomAnchor, constant: 0).isActive = true
         ])
     
     }

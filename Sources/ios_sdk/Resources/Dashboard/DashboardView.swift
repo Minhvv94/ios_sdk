@@ -41,6 +41,7 @@ class DashboardView: UIView {
         
 //        mainView.overrideUserInterfaceStyle = .light
         mainView.addSubview(viewPager)
+        mainView.backgroundColor = .orange
 
 
 //        NSLayoutConstraint.activate([
@@ -49,7 +50,7 @@ class DashboardView: UIView {
 //            viewPager.centerXAnchor.constraint(equalTo: mainView.centerXAnchor),
 //            viewPager.topAnchor.constraint(equalTo: mainView.topAnchor)
 //        ])
-        viewPager.translatesAutoresizingMaskIntoConstraints = false
+//        viewPager.translatesAutoresizingMaskIntoConstraints = false
 
         viewPager.leadingAnchor.constraint(equalTo: mainView.leadingAnchor, constant: 0).isActive = true
         viewPager.trailingAnchor.constraint(equalTo: mainView.trailingAnchor, constant: 0).isActive = true
@@ -65,7 +66,8 @@ class DashboardView: UIView {
    }
     lazy var viewPager: ViewPager = {
         let viewPager = ViewPager(
-            tabSizeConfiguration: .fillEqually(height: 100, spacing: 0)
+            tabSizeConfiguration: .fillEqually(height: 50, spacing: 0)
+        
         )
         let view1 = UIView()
         view1.backgroundColor = .red

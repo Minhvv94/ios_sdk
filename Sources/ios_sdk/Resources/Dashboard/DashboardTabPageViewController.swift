@@ -13,13 +13,12 @@ class DashboardTabPageViewController : TabPageViewController {
     override init() {
         super.init()
         
-        let windowWidth = self.contentSizeForViewInPopover.width
-        let windowHeight = self.contentSizeForViewInPopover.height
+        let windowWidth = self.view.frame.width
+        let windowHeight = self.view.frame.height
         let rect = CGRect(x: 0, y: 0, width: windowWidth , height: windowHeight)
-        let vc1 = LoginView(frame: rect)
-        let vc2 = LoginView(frame: rect)
+        let vc1 = TestView(frame: rect)
+        let vc2 = TestView(frame: rect)
         tabItems = [(vc1, "First"), (vc2, "Second")]
-        vc1.view.backgroundColor = UIColor.red
         option.tabBackgroundColor = UIColor.green
         option.tabWidth = view.frame.width / CGFloat(tabItems.count)
         option.hidesTopViewOnSwipeType = .all

@@ -63,7 +63,7 @@ class DashboardView: UIView {
             segmentedControlContainerView.topAnchor.constraint(equalTo: safeLayoutGuide.topAnchor),
             segmentedControlContainerView.leadingAnchor.constraint(equalTo: safeLayoutGuide.leadingAnchor),
             segmentedControlContainerView.widthAnchor.constraint(equalTo: safeLayoutGuide.widthAnchor),
-            segmentedControlContainerView.heightAnchor.constraint(equalToConstant: Constants.segmentedControlHeight)
+            segmentedControlContainerView.heightAnchor.constraint(equalToConstant: safeLayoutGuide.heightAnchor)
         ])
         
 //                    // Constrain the segmented control to the container view

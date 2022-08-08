@@ -70,7 +70,7 @@ class DashboardView: UIView {
 //                    // Constrain the segmented control to the container view
                     NSLayoutConstraint.activate([
                         segmentedControl.topAnchor.constraint(equalTo: segmentedControlContainerView.topAnchor),
-                        segmentedControl.leadingAnchor.constraint(equalTo: segmentedControlContainerView.leadingAnchor+10),
+                        segmentedControl.leadingAnchor.constraint(equalTo: segmentedControlContainerView.leadingAnchor),
                         segmentedControl.centerXAnchor.constraint(equalTo: segmentedControlContainerView.centerXAnchor),
                         segmentedControl.centerYAnchor.constraint(equalTo: segmentedControlContainerView.centerYAnchor)
                         ])

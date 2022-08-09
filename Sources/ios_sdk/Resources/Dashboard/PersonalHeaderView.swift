@@ -11,6 +11,8 @@ import UIKit
 
 class PersonalHeaderView: UIView {
 
+    @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var btnAvatar: UIImageView!
     override init(frame: CGRect) {
         super.init(frame: frame)
         setUpView()

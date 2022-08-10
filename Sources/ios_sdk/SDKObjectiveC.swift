@@ -7,19 +7,19 @@
 
 import Foundation
 import UIKit
+protocol IosSdk {
+    func login()
+    func dashBoard()
+    func listProduct()
+}
+
+
+
+
 
 @objc(SDKObjectiveC)
-public class SDKObjectiveC: UIView, Product {
-    
-    
-    @objc open func operation() -> String {
-        print(" Hi")
-        return " hi"
-    }
-    
-    
-    var creator: Creator?
-    
+public class SDKObjectiveC: UIView, IosSdk {
+
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -39,7 +39,7 @@ public class SDKObjectiveC: UIView, Product {
         return button
     }()
     
-    @objc open func  login() {
+    @objc open func login() {
         if let topVC = UIApplication.topViewController() {
             if(AppInfo.shared.packageId != ""){
                 let version = AppInfo.shared.version == "" ? "1.0": AppInfo.shared.version;
@@ -73,7 +73,6 @@ public class SDKObjectiveC: UIView, Product {
     
     
     @objc open func dashBoard(){
-        print("aaaaaaaaaaa \(creator?.someOperation())")
         if let topVC = UIApplication.topViewController() {
             let screenFrame = topVC.view.frame
             let windowWidth = screenFrame.width
@@ -107,7 +106,9 @@ public class SDKObjectiveC: UIView, Product {
         }
     }
     
-
+    @objc open func listProduct() {
+        
+    }
 
 }
 

@@ -6,16 +6,16 @@
 //
 
 import Foundation
-class ConcreteProduct1: Product {
+open class ConcreteProduct1: Product {
 
-    func operation() -> String {
+    public func operation() -> String {
         return "{Result of the ConcreteProduct1}"
     }
 }
 
-class ConcreteProduct2: Product {
+open class ConcreteProduct2: Product {
 
-    func operation() -> String {
+    public func operation() -> String {
         return "{in ra cai  ConcreteProduct2}"
     }
 }

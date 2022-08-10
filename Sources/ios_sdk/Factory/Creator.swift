@@ -6,14 +6,14 @@
 //
 
 import Foundation
-protocol Creator {
+public protocol Creator {
     func factoryMethod() -> Product
     func someOperation() -> String
 }
 
 extension Creator {
 
-   func someOperation() -> String {
+    public func someOperation() -> String {
         let product = factoryMethod()
         return "Creator: " + product.operation()
     }

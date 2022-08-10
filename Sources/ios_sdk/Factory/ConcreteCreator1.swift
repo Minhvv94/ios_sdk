@@ -6,13 +6,13 @@
 //
 
 import Foundation
-class ConcreteCreator1: Creator {
+open class ConcreteCreator1: Creator {
     public func factoryMethod() -> Product {
         return ConcreteProduct1()
     }
 }
 
-class ConcreteCreator2:  Creator {
+open  class ConcreteCreator2:  Creator {
     public func factoryMethod() -> Product {
         return ConcreteProduct2()
     }

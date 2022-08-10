@@ -9,7 +9,9 @@ import Foundation
 import UIKit
 
 @objc(SDKObjectiveC)
-public class SDKObjectiveC: UIView, Product {
+public class SDKObjectiveC: UIView {
+    
+    var creator: Creator?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -55,6 +57,8 @@ public class SDKObjectiveC: UIView, Product {
                         
                     }
                 })
+                
+                
             }
         }
         print("login")
@@ -62,6 +66,7 @@ public class SDKObjectiveC: UIView, Product {
     
     
     @objc open func dashBoard(){
+        print(creator?.someOperation())
         if let topVC = UIApplication.topViewController() {
             let screenFrame = topVC.view.frame
             let windowWidth = screenFrame.width
@@ -84,6 +89,7 @@ public class SDKObjectiveC: UIView, Product {
             }
 
         }
+        
     }
     
     private func showAlert(_ title: String) {
@@ -94,13 +100,7 @@ public class SDKObjectiveC: UIView, Product {
         }
     }
     
-//    @objc open func test(creator: Creator) {
-////        print("\n"
-////            + creator.someOperation())
-//    }
 
-    @objc open func operation() -> String {
-        return "{Result of the ConcreteProduct1}"
-    }
+
 }
 

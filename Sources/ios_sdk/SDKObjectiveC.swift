@@ -12,7 +12,7 @@ import UIKit
 public class SDKObjectiveC: UIView, Product {
     
     
-    public func operation() -> String {
+    @objc open func operation() -> String {
         print(" Hi")
         return " hi"
     }

@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 @objc(SDKObjectiveC)
-public class SDKObjectiveC: UIView {
+public class SDKObjectiveC: UIView, Product {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -92,7 +92,15 @@ public class SDKObjectiveC: UIView {
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             topVC.present(alert, animated: true, completion: nil)
         }
-        
     }
+    
+//    @objc open func test(creator: Creator) {
+////        print("\n"
+////            + creator.someOperation())
+//    }
 
+    @objc open func operation() -> String {
+        return "{Result of the ConcreteProduct1}"
+    }
 }
+

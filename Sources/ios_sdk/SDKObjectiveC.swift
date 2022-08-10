@@ -9,7 +9,14 @@ import Foundation
 import UIKit
 
 @objc(SDKObjectiveC)
-public class SDKObjectiveC: UIView {
+public class SDKObjectiveC: UIView, Product {
+    
+    
+    public func operation() -> String {
+        print(" Hi")
+        return " hi"
+    }
+    
     
     var creator: Creator?
     

@@ -6,6 +6,6 @@
 //
 
 import Foundation
-protocol Product {
+@objc protocol Product {
     func operation() -> String
 }

@@ -66,7 +66,7 @@ public class SDKObjectiveC: UIView {
     
     
     @objc open func dashBoard(){
-        print(creator?.someOperation())
+        print("aaaaaaaaaaa \(creator?.someOperation())")
         if let topVC = UIApplication.topViewController() {
             let screenFrame = topVC.view.frame
             let windowWidth = screenFrame.width

@@ -28,9 +28,9 @@ let package = Package(
             dependencies: ["Alamofire", "SwiftyJSON", "RxSwift"],
             resources: [
                 Resource.process("Assets.xcassets"),
-                Resource.process("Login/LoginView.xib"),
-                Resource.process("Dashboard/DashboardView.xib"),
-                Resource.process("Dashboard/PersonalHeaderView.xib"),
+                Resource.process("Resources/Login/LoginView.xib"),
+                Resource.process("Resources/Dashboard/DashboardView.xib"),
+                Resource.process("Resources/Dashboard/PersonalHeaderView.xib"),
                 
                 
 

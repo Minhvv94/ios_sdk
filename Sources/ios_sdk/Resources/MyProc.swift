@@ -17,7 +17,7 @@ import Foundation
 
 public extension MyProc
 {
-    public func myFunc()
+    func myFunc()
     {
         print("Extension Version")
     }

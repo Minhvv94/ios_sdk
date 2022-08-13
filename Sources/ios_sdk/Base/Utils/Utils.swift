@@ -24,7 +24,7 @@ class Utils: NSObject {
     func getUUID() -> String? {
         let keychain = KeychainAccess()
         let uuidKey = ApiConst.PACKAGE_ID
-        if let uuid = try? keychain.queryKeychainData(itemKey: uuidKey), uuid != nil {
+        if let uuid = try? keychain.queryKeychainData(itemKey: uuidKey) {
             return uuid
         }
         guard let newId = UIDevice.current.identifierForVendor?.uuidString else {

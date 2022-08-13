@@ -25,9 +25,7 @@ class LoginView: UIView {
         }
     }
     @IBAction func btnLogin(_ sender: Any) {
-        
-        print("user name : \(txtUserName.text)")
-        print("password : \(txtPass.text)")
+    
         
     }
     // bắt sự kiên bấm vào màn hình

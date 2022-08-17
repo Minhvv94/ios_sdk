@@ -46,10 +46,10 @@ class DashboardView: UIView {
         mainView.addSubview(segmentedControl)
 
 
-        segmentedControl.backgroundColor = #colorLiteral(red: 0.7683569193, green: 0.9300123453, blue: 0.9995251894, alpha: 1)
+        segmentedControl.backgroundColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
         segmentedControl.translatesAutoresizingMaskIntoConstraints = false
         segmentedControl.selectionIndicatorPosition = .bottom
-        segmentedControl.selectionIndicatorColor = #colorLiteral(red: 0.1142767668, green: 0.3181744218, blue: 0.4912756383, alpha: 1)
+        segmentedControl.selectionIndicatorColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         
         segmentedControl.titleTextAttributes = [
             NSAttributedString.Key.foregroundColor : #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1),
@@ -66,13 +66,13 @@ class DashboardView: UIView {
             print(self.segmentedControl.selectedSegmentIndex)
             if(self.segmentedControl.selectedSegmentIndex == 0){
                 self.segmentedControl.setSelectedSegmentIndex(0, animated: false)
-                print("hi 0")
+                contentView.backgroundColor = UIColor.orange
             }else if(self.segmentedControl.selectedSegmentIndex == 1){
                 self.segmentedControl.setSelectedSegmentIndex(1, animated: false)
-                print("hi 1")
+                contentView.backgroundColor = UIColor.black
             }else{
                 self.segmentedControl.setSelectedSegmentIndex(2, animated: false)
-                print("hi 2")
+                contentView.backgroundColor = UIColor.red
             }
 //            self.segmentedControl.setSelectedSegmentIndex(index, animated: false)
         }

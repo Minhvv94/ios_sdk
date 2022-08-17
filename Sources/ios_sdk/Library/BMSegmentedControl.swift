@@ -114,18 +114,6 @@ class BMSegmentedControl: UIControl {
         let height = bounds.height
         let iconX = getIconX(width, textWidth: evaluateStringWidth(text))
         let x = width * CGFloat(index)
-        
-//        switch orientation {
-//        case .leftRight:
-//            let evaluateIconX = x + iconX
-//            let iconRect = CGRect(x: evaluateIconX, y: 0, width: 16, height: height)
-//            return iconRect
-//        case .topDown:
-//            let centre: CGFloat = x + ((width - 16) / 2)
-//            let iconRect = CGRect(x: centre, y: 7, width: 16, height: 16)
-//            return iconRect
-//        }
-        
         let evaluateIconX = x + iconX
         let iconRect = CGRect(x: evaluateIconX, y: 0, width: 16, height: height)
         return iconRect
@@ -137,21 +125,6 @@ class BMSegmentedControl: UIControl {
         let textX = getTextX(width, textWidth: evaluateStringWidth(text))
         let xPosition = CGFloat(index) * width
         let evaluateTextX = xPosition + textX
-        
-//        switch orientation {
-//        case .leftRight:
-//            let textRect = CGRect(x: evaluateTextX, y: 0, width: width, height: height)
-//            return textRect
-//        case .topDown:
-//            let centre = evaluateTextX - 13
-//            let textRect: CGRect?
-//            if withIcon {
-//                textRect = CGRect(x: centre, y: 18, width: width, height: 25)
-//            } else {
-//                textRect = CGRect(x: centre, y: 0, width: width, height: height)
-//            }
-//            return textRect!
-//        }
         let textRect = CGRect(x: evaluateTextX, y: 0, width: width, height: height)
         return textRect
     }
@@ -318,13 +291,6 @@ class BMSegmentedControl: UIControl {
         UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.8, options: [], animations: {
             
             var labelFrame = self.selectedLabel.bounds
-            
-//            if self.componentOrientation == ComponentOrientation.topDown {
-//                labelFrame.origin.x = self.selectedLabel.frame.origin.x - iconX + 4 + 13
-//            } else {
-//                labelFrame.origin.x = self.selectedLabel.frame.origin.x - iconX + 4
-//            }
-            
             labelFrame.origin.x = self.selectedLabel.frame.origin.x - iconX
             
             labelFrame.origin.y = 4

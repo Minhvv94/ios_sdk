@@ -191,9 +191,16 @@ class BMSegmentedControl: UIControl {
         
         return x + 8
     }
+    
+    private lazy var bottomUnderlineView: UIView = {
+        let underlineView = UIView()
+        underlineView.backgroundColor = UIColor.white
+        underlineView.translatesAutoresizingMaskIntoConstraints = false
+        return underlineView
+    }()
     private lazy var leadingDistanceConstraint: NSLayoutConstraint = {
-            return thumbView.leftAnchor.constraint(equalTo: thumbView.leftAnchor)
-        }()
+            return bottomUnderlineView.leftAnchor.constraint(equalTo: thumbView.leftAnchor)
+    }()
     internal override func layoutSubviews() {
         super.layoutSubviews()
         
@@ -222,6 +229,13 @@ class BMSegmentedControl: UIControl {
             leadingDistanceConstraint,
             thumbView.widthAnchor.constraint(equalTo: thumbView.widthAnchor, multiplier: 1 / CGFloat(items.count))
         ])
+        
+        NSLayoutConstraint.activate([
+                    bottomUnderlineView.bottomAnchor.constraint(equalTo:  thumbView.bottomAnchor),
+                    bottomUnderlineView.heightAnchor.constraint(equalToConstant: 2),
+                    leadingDistanceConstraint,
+                    bottomUnderlineView.widthAnchor.constraint(equalTo: thumbView.widthAnchor, multiplier: 1 / CGFloat(items.count))
+                    ])
         
         thumbView.backgroundColor = thumbColor
         thumbView.layer.cornerRadius = 5

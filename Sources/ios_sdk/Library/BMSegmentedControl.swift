@@ -223,15 +223,15 @@ class BMSegmentedControl: UIControl {
         }
         
         
-        NSLayoutConstraint.activate([
-            thumbView.bottomAnchor.constraint(equalTo: thumbView.bottomAnchor),
-            thumbView.heightAnchor.constraint(equalToConstant: 5),
-            leadingDistanceConstraint,
-            thumbView.widthAnchor.constraint(equalTo: thumbView.widthAnchor, multiplier: 1 / CGFloat(items.count))
-        ])
+//        NSLayoutConstraint.activate([
+//            thumbView.bottomAnchor.constraint(equalTo: thumbView.bottomAnchor),
+//            thumbView.heightAnchor.constraint(equalToConstant: 5),
+//            leadingDistanceConstraint,
+//            thumbView.widthAnchor.constraint(equalTo: thumbView.widthAnchor, multiplier: 1 / CGFloat(items.count))
+//        ])
         
         NSLayoutConstraint.activate([
-                    bottomUnderlineView.bottomAnchor.constraint(equalTo:  thumbView.bottomAnchor),
+                    bottomUnderlineView.topAnchor.constraint(equalTo:  thumbView.topAnchor),
                     bottomUnderlineView.heightAnchor.constraint(equalToConstant: 2),
                     leadingDistanceConstraint,
                     bottomUnderlineView.widthAnchor.constraint(equalTo: thumbView.widthAnchor, multiplier: 1 / CGFloat(items.count))

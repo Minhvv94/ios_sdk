@@ -10,7 +10,7 @@ import UIKit
 
 @objc(DashboardView)
 class DashboardView: UIView {
-    let segmentedControl = HMSegmentedControl(items: ["One", "Two", "Three"])
+    let segmentedControl = HMSegmentedControl(items: ["Cá nhân", "Tin tức"])
     @IBOutlet var dashboardView: UIView!
     
     @IBOutlet weak var btnBack: UIView!
@@ -61,9 +61,9 @@ class DashboardView: UIView {
             NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 17)
         ]
         
+        self.segmentedControl.setSelectedSegmentIndex(0, animated: false)
+        
         segmentedControl.indexChangedHandler = { index in
-//            print(index)
-            print(self.segmentedControl.selectedSegmentIndex)
             if(self.segmentedControl.selectedSegmentIndex == 0){
                 self.segmentedControl.setSelectedSegmentIndex(0, animated: false)
                 self.contentView.backgroundColor = UIColor.orange
@@ -71,10 +71,9 @@ class DashboardView: UIView {
                 self.segmentedControl.setSelectedSegmentIndex(1, animated: false)
                 self.contentView.backgroundColor = UIColor.black
             }else{
-                self.segmentedControl.setSelectedSegmentIndex(2, animated: false)
-                self.contentView.backgroundColor = UIColor.red
+                self.segmentedControl.setSelectedSegmentIndex(0, animated: false)
+                self.contentView.backgroundColor = UIColor.orange
             }
-//            self.segmentedControl.setSelectedSegmentIndex(index, animated: false)
         }
         
         
@@ -99,19 +98,19 @@ class DashboardView: UIView {
     }
 
 
-
-    @objc func action(_ sender: HMSegmentedControl) {
-//        if (contentView.tag == 103) {
-//            contentView.removeFromSuperview()
+//
+//    @objc func action(_ sender: HMSegmentedControl) {
+////        if (contentView.tag == 103) {
+////            contentView.removeFromSuperview()
+////        }
+//        if sender.selectedSegmentIndex == 0 {
+//            contentView.backgroundColor = UIColor.orange
+//        }else{
+//            contentView.backgroundColor = UIColor.black
 //        }
-        if sender.selectedSegmentIndex == 0 {
-            contentView.backgroundColor = UIColor.orange
-        }else{
-            contentView.backgroundColor = UIColor.black
-        }
-        print("sender: \(sender.selectedSegmentIndex)")
-    }
-    
+//        print("sender: \(sender.selectedSegmentIndex)")
+//    }
+//
     
  
     func addPersonal(){

@@ -76,7 +76,7 @@ class DashboardView: UIView {
                 self.contentView.backgroundColor = UIColor.orange
             }
         }
-        segmentedControl.frame = CGRect(x: 0, y: 0, width: self.headerView.bounds.size.width*0.7, height: self.headerView.bounds.size.height)
+        segmentedControl.frame = CGRect(x: 0, y: 0, width: self.headerView.bounds.size.width, height: self.headerView.bounds.size.height)
         
         
 //        NSLayoutConstraint.activate([

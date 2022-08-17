@@ -126,12 +126,12 @@ class HMSegmentedControl: UIControl {
             selectionIndicatorWidthConstraint = selectionIndicator.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 1.0 / CGFloat(items.count))
         }
         
-//        NSLayoutConstraint.activate([
-//            selectionIndicatorWidthConstraint!,
-//            selectionIndicator.heightAnchor.constraint(equalToConstant: selectionIndicatorHeight),
-//            selectionIndicatorPositionConstraint,
-//            selectionIndicatorLeadingConstraint!
-//            ])
+        NSLayoutConstraint.activate([
+            selectionIndicatorWidthConstraint!,
+            selectionIndicator.heightAnchor.constraint(equalToConstant: selectionIndicatorHeight),
+            selectionIndicatorPositionConstraint,
+            selectionIndicatorLeadingConstraint!
+            ])
         
         super.updateConstraints()
     }

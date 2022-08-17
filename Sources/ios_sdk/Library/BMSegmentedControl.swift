@@ -24,6 +24,10 @@ class BMSegmentedControl: UIControl {
     fileprivate var selectedImgIcon = UIImageView()
     
     fileprivate var withIcon: Bool = true
+    var selectionIndicatorHeight: CGFloat = 5.0
+    var selectionIndicatorLeadingConstraint: NSLayoutConstraint?
+    var selectionIndicatorWidthConstraint: NSLayoutConstraint?
+    
     
     fileprivate func setOrientation(_ orientation: ComponentOrientation) {
         switch orientation {
@@ -269,6 +273,17 @@ class BMSegmentedControl: UIControl {
         return false
     }
     
+    var selectionIndicatorColor: UIColor = .black {
+        didSet {
+            self.selectionIndicator.backgroundColor = selectionIndicatorColor
+        }
+    }
+    lazy var selectionIndicator: UIView = {
+        let selectionIndicator = UIView()
+        selectionIndicator.backgroundColor = self.selectionIndicatorColor
+        selectionIndicator.translatesAutoresizingMaskIntoConstraints = false
+        return selectionIndicator
+    }()
     fileprivate func displayNewSelectedIndex() {
         guard selectedIndex < labels.count else {
             return
@@ -276,6 +291,17 @@ class BMSegmentedControl: UIControl {
         
         selectedLabel = labels[selectedIndex]
         selectedLabel.textColor = selectedTextColor
+        
+        let selectionIndicatorPositionConstraint: NSLayoutConstraint
+        
+        selectionIndicatorPositionConstraint = selectionIndicator.topAnchor.constraint(equalTo: thumbView.topAnchor)
+        NSLayoutConstraint.activate([
+            selectionIndicatorWidthConstraint!,
+            selectionIndicator.heightAnchor.constraint(equalToConstant: selectionIndicatorHeight),
+            selectionIndicatorPositionConstraint,
+            selectionIndicatorLeadingConstraint!
+            ])
+        
         
         if withIcon {
             selectedImgIcon = icons[selectedIndex]

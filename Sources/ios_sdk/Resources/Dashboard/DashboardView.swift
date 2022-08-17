@@ -67,24 +67,20 @@ class DashboardView: UIView {
         segmentedControl.indexChangedHandler = { index in
             if(self.segmentedControl.selectedSegmentIndex == 0){
                 self.segmentedControl.setSelectedSegmentIndex(0, animated: false)
+                self.segmentedControl.backgroundColor = UIColor.orange.withAlphaComponent(0.5)
                 self.contentView.backgroundColor = UIColor.orange
             }else if(self.segmentedControl.selectedSegmentIndex == 1){
                 self.segmentedControl.setSelectedSegmentIndex(1, animated: false)
+                self.segmentedControl.selectionIndicatorColor = UIColor.orange.withAlphaComponent(0.5)
                 self.contentView.backgroundColor = UIColor.black
             }else{
                 self.segmentedControl.setSelectedSegmentIndex(0, animated: false)
+                self.segmentedControl.backgroundColor = UIColor.orange.withAlphaComponent(0.5)
                 self.contentView.backgroundColor = UIColor.orange
             }
         }
-//        segmentedControl.frame = CGRect(x: 0, y: 0, width: self.headerView.bounds.size.width, height: self.headerView.bounds.size.height)
         print("width \(self.headerView.bounds.size.width)")
         print("height \(self.headerView.bounds.size.height)")
-//        NSLayoutConstraint.activate([
-//            segmentedControl.widthAnchor.constraint(equalTo: mainView.widthAnchor),
-//            segmentedControl.heightAnchor.constraint(equalTo: headerView.heightAnchor * 0.7),
-//            segmentedControl.centerXAnchor.constraint(equalTo: mainView.centerXAnchor),
-//            segmentedControl.topAnchor.constraint(equalTo: mainView.topAnchor)
-//        ])
         NSLayoutConstraint.activate([
             segmentedControl.topAnchor.constraint(equalTo: headerView.topAnchor),
             segmentedControl.leadingAnchor.constraint(equalTo: headerView.leadingAnchor),
@@ -103,21 +99,6 @@ class DashboardView: UIView {
         segmentedControl.setSelectedSegmentIndex(2, animated: false)
     }
 
-
-//
-//    @objc func action(_ sender: HMSegmentedControl) {
-////        if (contentView.tag == 103) {
-////            contentView.removeFromSuperview()
-////        }
-//        if sender.selectedSegmentIndex == 0 {
-//            contentView.backgroundColor = UIColor.orange
-//        }else{
-//            contentView.backgroundColor = UIColor.black
-//        }
-//        print("sender: \(sender.selectedSegmentIndex)")
-//    }
-//
-    
  
     func addPersonal(){
         let windowWidth = contentView.bounds.width

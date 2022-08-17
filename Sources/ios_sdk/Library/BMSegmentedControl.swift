@@ -222,21 +222,6 @@ class BMSegmentedControl: UIControl {
             thumbView.frame = selectedFrame
         }
         
-        
-//        NSLayoutConstraint.activate([
-//            thumbView.bottomAnchor.constraint(equalTo: thumbView.bottomAnchor),
-//            thumbView.heightAnchor.constraint(equalToConstant: 5),
-//            leadingDistanceConstraint,
-//            thumbView.widthAnchor.constraint(equalTo: thumbView.widthAnchor, multiplier: 1 / CGFloat(items.count))
-//        ])
-        
-        NSLayoutConstraint.activate([
-                    bottomUnderlineView.topAnchor.constraint(equalTo:  self.topAnchor),
-                    bottomUnderlineView.heightAnchor.constraint(equalToConstant: 2),
-                    bottomUnderlineView.leftAnchor.constraint(equalTo: self.leftAnchor),
-                    bottomUnderlineView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 1 / CGFloat(items.count))
-                    ])
-        
         thumbView.backgroundColor = thumbColor
         thumbView.layer.cornerRadius = 5
         
@@ -321,7 +306,9 @@ class BMSegmentedControl: UIControl {
             labelFrame.origin.y = 4
             labelFrame.size.width = self.selectedLabel.frame.width
             labelFrame.size.height = self.bounds.height
-            
+            let label = UILabel(frame: CGRect(x: 0, y: 0, width: 10, height: 100))
+            label.backgroundColor = UIColor.white
+            self.thumbView.addSubview(label)
             self.thumbView.frame = self.setDefaultSelectionPoint(self.selectedIndex)
             
         }, completion: nil)

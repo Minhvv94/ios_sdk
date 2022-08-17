@@ -24,10 +24,6 @@ class BMSegmentedControl: UIControl {
     fileprivate var selectedImgIcon = UIImageView()
     
     fileprivate var withIcon: Bool = true
-    var selectionIndicatorHeight: CGFloat = 5.0
-    var selectionIndicatorLeadingConstraint: NSLayoutConstraint?
-    var selectionIndicatorWidthConstraint: NSLayoutConstraint?
-    
     
     fileprivate func setOrientation(_ orientation: ComponentOrientation) {
         switch orientation {
@@ -118,6 +114,7 @@ class BMSegmentedControl: UIControl {
         let height = bounds.height
         let iconX = getIconX(width, textWidth: evaluateStringWidth(text))
         let x = width * CGFloat(index)
+        
         let evaluateIconX = x + iconX
         let iconRect = CGRect(x: evaluateIconX, y: 0, width: 16, height: height)
         return iconRect
@@ -273,17 +270,6 @@ class BMSegmentedControl: UIControl {
         return false
     }
     
-    var selectionIndicatorColor: UIColor = .black {
-        didSet {
-            self.selectionIndicator.backgroundColor = selectionIndicatorColor
-        }
-    }
-    lazy var selectionIndicator: UIView = {
-        let selectionIndicator = UIView()
-        selectionIndicator.backgroundColor = self.selectionIndicatorColor
-        selectionIndicator.translatesAutoresizingMaskIntoConstraints = false
-        return selectionIndicator
-    }()
     fileprivate func displayNewSelectedIndex() {
         guard selectedIndex < labels.count else {
             return
@@ -291,18 +277,6 @@ class BMSegmentedControl: UIControl {
         
         selectedLabel = labels[selectedIndex]
         selectedLabel.textColor = selectedTextColor
-        
-        let selectionIndicatorPositionConstraint: NSLayoutConstraint
-        selectionIndicatorLeadingConstraint = selectionIndicator.leadingAnchor.constraint(equalTo: thumbView.leadingAnchor)
-        selectionIndicatorWidthConstraint = selectionIndicator.widthAnchor.constraint(equalTo: thumbView.widthAnchor)
-        selectionIndicatorPositionConstraint = selectionIndicator.topAnchor.constraint(equalTo: thumbView.topAnchor)
-        NSLayoutConstraint.activate([
-            selectionIndicatorWidthConstraint!,
-            selectionIndicator.heightAnchor.constraint(equalToConstant: selectionIndicatorHeight),
-            selectionIndicatorPositionConstraint,
-            selectionIndicatorLeadingConstraint!
-            ])
-        
         
         if withIcon {
             selectedImgIcon = icons[selectedIndex]

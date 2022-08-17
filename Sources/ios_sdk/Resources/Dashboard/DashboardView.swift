@@ -67,8 +67,8 @@ class DashboardView: UIView {
                             UIImage(named: "IconNews.png", in: Bundle.module, compatibleWith: nil)!],
             backgroundColor: UIColor.clear,
             thumbColor: UIColor(hex: "#eb5e62"),
-            textColor: UIColor(hex: "#808080"),
-            selectedTextColor: UIColor(hex: "#808080"),
+            textColor: UIColor(hex: "#FFFFFF"),
+            selectedTextColor: UIColor(hex: "#FFFFFF"),
             orientation: ComponentOrientation.topDown)
 
         segmentedControl.selectedIndex = 0

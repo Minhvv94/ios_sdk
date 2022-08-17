@@ -93,14 +93,14 @@ class DashboardView: UIView {
         ]
         
         segmentedControl.indexChangedHandler = { index in
-            print(index)
-//            print(self.segmentedControl.selectedSegmentIndex)
-//            self.segmentedControl.selectedSegmentIndex = 1
+//            print(index)
+            print(self.segmentedControl.selectedSegmentIndex)
+            self.segmentedControl.setSelectedSegmentIndex(index, animated: false)
         }
         
                 NSLayoutConstraint.activate([
                     segmentedControl.widthAnchor.constraint(equalTo: mainView.widthAnchor),
-                    segmentedControl.heightAnchor.constraint(equalToConstant: 50),
+                    segmentedControl.heightAnchor.constraint(equalTo: headerView.heightAnchor),
                     segmentedControl.centerXAnchor.constraint(equalTo: mainView.centerXAnchor),
                     segmentedControl.topAnchor.constraint(equalTo: mainView.topAnchor)
                 ])

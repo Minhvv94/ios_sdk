@@ -5,17 +5,7 @@
 //  Created by Minh Vu on 14/08/2022.
 //
 
-import Foundation
 import UIKit
-
-// TODO:
-//  * Add IBInspectable stuff
-//  * UIAppearance support
-//  * Set proper access control for propeties and functions
-//  * Add scroll view
-//  * Ability to add and remove items after initialization
-//  * Add delegate callback to configure each button for a state (method should have index, state and button)
-//  * Move selection indicator to its own private class with all of its properties
 
 class HMSegmentedControl: UIControl {
     enum SelectionIndicatorPosition {

@@ -68,7 +68,7 @@ class DashboardView: UIView {
             backgroundColor: UIColor.clear,
             thumbColor: UIColor(hex: "#eb5e62"),
             textColor: UIColor(hex: "#808080"),
-            selectedTextColor: UIColor(hex: "#FFFFFF"),
+            selectedTextColor: UIColor(hex: "#808080"),
             orientation: ComponentOrientation.topDown)
 
         segmentedControl.selectedIndex = 0

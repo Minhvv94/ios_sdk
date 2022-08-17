@@ -10,7 +10,7 @@ import UIKit
 
 @objc(DashboardView)
 class DashboardView: UIView {
-    let segmentedControl = HMSegmentedControl(items: ["Cá nhân", "Tin tức"])
+    
     @IBOutlet var dashboardView: UIView!
     
     @IBOutlet weak var btnBack: UIView!
@@ -42,46 +42,38 @@ class DashboardView: UIView {
                 // 2. add the gesture recognizer to a view
         btnBack.addGestureRecognizer(tapGesture)
         
-        mainView.overrideUserInterfaceStyle = .light
-        mainView.addSubview(segmentedControl)
-
-        segmentedControl.backgroundColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
-        segmentedControl.translatesAutoresizingMaskIntoConstraints = false
-        segmentedControl.selectionIndicatorPosition = .top
-        segmentedControl.selectionIndicatorColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        segmentedControl.backgroundColor = UIColor.white.withAlphaComponent(0.7)
-        segmentedControl.titleTextAttributes = [
-            NSAttributedString.Key.foregroundColor : #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1),
-            NSAttributedString.Key.font : UIFont.systemFont(ofSize: 17)
-        ]
+//        mainView.overrideUserInterfaceStyle = .light
+//        mainView.addSubview(viewPager)
+//
+//
+//
+//        NSLayoutConstraint.activate([
+//            viewPager.widthAnchor.constraint(equalTo: mainView.widthAnchor),
+//            viewPager.heightAnchor.constraint(equalTo: mainView.heightAnchor),
+//            viewPager.centerXAnchor.constraint(equalTo: mainView.centerXAnchor),
+//            viewPager.topAnchor.constraint(equalTo: mainView.topAnchor)
+//        ])
+//        viewPager.translatesAutoresizingMaskIntoConstraints = false
         
-        segmentedControl.selectedTitleTextAttributes = [
-            NSAttributedString.Key.foregroundColor : #colorLiteral(red: 0.05439098924, green: 0.1344551742, blue: 0.1884709597, alpha: 1),
-            NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 17),
-        ]
-        // set mac dinh là tap dau tien
-        self.segmentedControl.setSelectedSegmentIndex(0, animated: false)
-
         
-        segmentedControl.indexChangedHandler = { index in
-            if(self.segmentedControl.selectedSegmentIndex == 0){
-                self.segmentedControl.setSelectedSegmentIndex(0, animated: false)
+        let screen = mainView.bounds
+        let segmentedControl = BMSegmentedControl.init(
+            withIcon: CGRect(x: 0, y: 0, width: screen.width, height: headerView.bounds.height),
+            items: ["Happy", "Normal"],
+            icons: [UIImage(named: "IconPersonal.png", in: Bundle.module, compatibleWith: nil)!,
+                    UIImage(named: "IconNews.png", in: Bundle.module, compatibleWith: nil)!],
+            selectedIcons: [UIImage(named: "IconPersonal.png", in: Bundle.module, compatibleWith: nil)!,
+                            UIImage(named: "IconNews.png", in: Bundle.module, compatibleWith: nil)!],
+            backgroundColor: UIColor(red: 230/255, green: 230/255, blue: 230/255, alpha: 1),
+            thumbColor: UIColor.init(hex: "#54C3EF"),
+            textColor: UIColor(hex: "#808080"),
+            selectedTextColor: UIColor(hex: "#FFFFFF"),
+            orientation: ComponentOrientation.topDown)
 
-            }else if(self.segmentedControl.selectedSegmentIndex == 1){
-                self.segmentedControl.setSelectedSegmentIndex(1, animated: false)
-
-            }else{
-                self.segmentedControl.setSelectedSegmentIndex(0, animated: false)
-
-            }
-        }
-
-        NSLayoutConstraint.activate([
-            segmentedControl.topAnchor.constraint(equalTo: headerView.topAnchor),
-            segmentedControl.leadingAnchor.constraint(equalTo: headerView.leadingAnchor),
-            segmentedControl.widthAnchor.constraint(equalToConstant: headerView.bounds.width * 0.7 ),
-            segmentedControl.heightAnchor.constraint(equalToConstant: headerView.bounds.height)
-        ])
+        segmentedControl.selectedIndex = 0
+        contentView.backgroundColor = UIColor.orange
+        segmentedControl.addTarget(self, action: #selector(self.action(_:)), for: .valueChanged)
+        headerView.addSubview(segmentedControl)
     }
 
     
@@ -90,10 +82,22 @@ class DashboardView: UIView {
             self.removeFromSuperview()
         }
    }
-    func viewDidAppear(_ animated: Bool) {
-        segmentedControl.setSelectedSegmentIndex(2, animated: false)
-    }
+    
 
+
+    @objc func action(_ sender: BMSegmentedControl) {
+        if (contentView.tag == 103) {
+            contentView.removeFromSuperview()
+        }
+        if sender.selectedIndex == 0 {
+            contentView.backgroundColor = UIColor.orange
+        }else{
+            contentView.backgroundColor = UIColor.black
+        }
+        print("sender: \(sender.selectedIndex)")
+    }
+    
+    
  
     func addPersonal(){
         let windowWidth = contentView.bounds.width

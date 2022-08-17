@@ -191,7 +191,9 @@ class BMSegmentedControl: UIControl {
         
         return x + 8
     }
-    
+    private lazy var leadingDistanceConstraint: NSLayoutConstraint = {
+            return thumbView.leftAnchor.constraint(equalTo: thumbView.leftAnchor)
+        }()
     internal override func layoutSubviews() {
         super.layoutSubviews()
         
@@ -212,6 +214,14 @@ class BMSegmentedControl: UIControl {
         } else {
             thumbView.frame = selectedFrame
         }
+        
+        
+        NSLayoutConstraint.activate([
+            thumbView.bottomAnchor.constraint(equalTo: thumbView.bottomAnchor),
+            thumbView.heightAnchor.constraint(equalToConstant: 0.5),
+            leadingDistanceConstraint,
+            thumbView.widthAnchor.constraint(equalTo: thumbView.widthAnchor, multiplier: 1 / CGFloat(items.count))
+        ])
         
         thumbView.backgroundColor = thumbColor
         thumbView.layer.cornerRadius = 5

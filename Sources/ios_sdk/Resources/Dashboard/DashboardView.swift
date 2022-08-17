@@ -56,6 +56,7 @@ class DashboardView: UIView {
 //        viewPager.translatesAutoresizingMaskIntoConstraints = false
         
         
+        headerView.backgroundColor = UIColor(hex: "#e13f45")
         let screen = mainView.bounds
         let segmentedControl = BMSegmentedControl.init(
             withIcon: CGRect(x: 0, y: 0, width: screen.width * 0.7, height: headerView.bounds.height),

@@ -231,10 +231,10 @@ class BMSegmentedControl: UIControl {
 //        ])
         
         NSLayoutConstraint.activate([
-                    bottomUnderlineView.topAnchor.constraint(equalTo:  thumbView.topAnchor),
+                    bottomUnderlineView.topAnchor.constraint(equalTo:  self.topAnchor),
                     bottomUnderlineView.heightAnchor.constraint(equalToConstant: 2),
-                    leadingDistanceConstraint,
-                    bottomUnderlineView.widthAnchor.constraint(equalTo: thumbView.widthAnchor, multiplier: 1 / CGFloat(items.count))
+                    bottomUnderlineView.leftAnchor.constraint(equalTo: self.leftAnchor),
+                    bottomUnderlineView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 1 / CGFloat(items.count))
                     ])
         
         thumbView.backgroundColor = thumbColor

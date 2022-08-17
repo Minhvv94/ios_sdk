@@ -48,7 +48,7 @@ class DashboardView: UIView {
 
         segmentedControl.backgroundColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
         segmentedControl.translatesAutoresizingMaskIntoConstraints = false
-        segmentedControl.selectionIndicatorPosition = .bottom
+        segmentedControl.selectionIndicatorPosition = .top
         segmentedControl.selectionIndicatorColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         
         segmentedControl.titleTextAttributes = [
@@ -67,15 +67,12 @@ class DashboardView: UIView {
         segmentedControl.indexChangedHandler = { index in
             if(self.segmentedControl.selectedSegmentIndex == 0){
                 self.segmentedControl.setSelectedSegmentIndex(0, animated: false)
-                self.segmentedControl.backgroundColor = UIColor.orange.withAlphaComponent(0.5)
                 self.contentView.backgroundColor = UIColor.orange
             }else if(self.segmentedControl.selectedSegmentIndex == 1){
                 self.segmentedControl.setSelectedSegmentIndex(1, animated: false)
-                self.segmentedControl.selectionIndicatorColor = UIColor.orange.withAlphaComponent(0.5)
                 self.contentView.backgroundColor = UIColor.black
             }else{
                 self.segmentedControl.setSelectedSegmentIndex(0, animated: false)
-                self.segmentedControl.backgroundColor = UIColor.orange.withAlphaComponent(0.5)
                 self.contentView.backgroundColor = UIColor.orange
             }
         }

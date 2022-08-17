@@ -42,6 +42,34 @@ class DashboardView: UIView {
                 // 2. add the gesture recognizer to a view
         btnBack.addGestureRecognizer(tapGesture)
         
+        segmentedControl.backgroundColor = #colorLiteral(red: 0.7683569193, green: 0.9300123453, blue: 0.9995251894, alpha: 1)
+                segmentedControl.translatesAutoresizingMaskIntoConstraints = false
+                segmentedControl.selectionIndicatorPosition = .bottom
+                segmentedControl.selectionIndicatorColor = #colorLiteral(red: 0.1142767668, green: 0.3181744218, blue: 0.4912756383, alpha: 1)
+                
+                segmentedControl.titleTextAttributes = [
+                    NSForegroundColorAttributeName : #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1),
+                    NSFontAttributeName : UIFont.systemFont(ofSize: 17)
+                ]
+                
+                segmentedControl.selectedTitleTextAttributes = [
+                    NSForegroundColorAttributeName : #colorLiteral(red: 0.05439098924, green: 0.1344551742, blue: 0.1884709597, alpha: 1),
+                    NSFontAttributeName : UIFont.boldSystemFont(ofSize: 17)
+                ]
+                
+                segmentedControl.indexChangedHandler = { index in
+                    print(index)
+        //            print(self.segmentedControl.selectedSegmentIndex)
+        //            self.segmentedControl.selectedSegmentIndex = 1
+                }
+                
+                NSLayoutConstraint.activate(
+                    [segmentedControl.leftAnchor.constraint(equalTo: mainView.leftAnchor),
+                     segmentedControl.heightAnchor.constraint(equalToConstant: 50),
+                     segmentedControl.rightAnchor.constraint(equalTo: mainView.rightAnchor),
+                     segmentedControl.topAnchor.constraint(equalTo: mainView.topAnchor, constant: 40)]
+                )
+        
 
     }
     @objc func handleTap(sender: UITapGestureRecognizer) {

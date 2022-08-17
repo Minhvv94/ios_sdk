@@ -60,8 +60,9 @@ class DashboardView: UIView {
             NSAttributedString.Key.foregroundColor : #colorLiteral(red: 0.05439098924, green: 0.1344551742, blue: 0.1884709597, alpha: 1),
             NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 17)
         ]
-        
+        // set mac dinh là tap dau tien
         self.segmentedControl.setSelectedSegmentIndex(0, animated: false)
+        self.contentView.backgroundColor = UIColor.orange
         
         segmentedControl.indexChangedHandler = { index in
             if(self.segmentedControl.selectedSegmentIndex == 0){

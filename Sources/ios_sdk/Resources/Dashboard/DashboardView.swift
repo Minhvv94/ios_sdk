@@ -100,7 +100,7 @@ class DashboardView: UIView {
         
                 NSLayoutConstraint.activate([
                     segmentedControl.widthAnchor.constraint(equalTo: mainView.widthAnchor),
-                    segmentedControl.heightAnchor.constraint(equalTo: mainView.heightAnchor),
+                    segmentedControl.heightAnchor.constraint(equalToConstant: 50),
                     segmentedControl.centerXAnchor.constraint(equalTo: mainView.centerXAnchor),
                     segmentedControl.topAnchor.constraint(equalTo: mainView.topAnchor)
                 ])

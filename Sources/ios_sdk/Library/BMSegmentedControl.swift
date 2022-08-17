@@ -218,7 +218,7 @@ class BMSegmentedControl: UIControl {
         
         NSLayoutConstraint.activate([
             thumbView.bottomAnchor.constraint(equalTo: thumbView.bottomAnchor),
-            thumbView.heightAnchor.constraint(equalToConstant: 0.5),
+            thumbView.heightAnchor.constraint(equalToConstant: 5),
             leadingDistanceConstraint,
             thumbView.widthAnchor.constraint(equalTo: thumbView.widthAnchor, multiplier: 1 / CGFloat(items.count))
         ])

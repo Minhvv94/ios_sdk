@@ -62,18 +62,18 @@ class DashboardView: UIView {
         ]
         // set mac dinh là tap dau tien
         self.segmentedControl.setSelectedSegmentIndex(0, animated: false)
-        self.contentView.backgroundColor = UIColor.orange
+
         
         segmentedControl.indexChangedHandler = { index in
             if(self.segmentedControl.selectedSegmentIndex == 0){
                 self.segmentedControl.setSelectedSegmentIndex(0, animated: false)
-                self.contentView.backgroundColor = UIColor.orange
+
             }else if(self.segmentedControl.selectedSegmentIndex == 1){
                 self.segmentedControl.setSelectedSegmentIndex(1, animated: false)
-                self.contentView.backgroundColor = UIColor.black
+
             }else{
                 self.segmentedControl.setSelectedSegmentIndex(0, animated: false)
-                self.contentView.backgroundColor = UIColor.orange
+
             }
         }
         print("width \(self.headerView.bounds.size.width)")

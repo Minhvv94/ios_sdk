@@ -45,7 +45,6 @@ class DashboardView: UIView {
         mainView.overrideUserInterfaceStyle = .light
         mainView.addSubview(segmentedControl)
 
-
         segmentedControl.backgroundColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
         segmentedControl.translatesAutoresizingMaskIntoConstraints = false
         segmentedControl.selectionIndicatorPosition = .top
@@ -58,7 +57,7 @@ class DashboardView: UIView {
         
         segmentedControl.selectedTitleTextAttributes = [
             NSAttributedString.Key.foregroundColor : #colorLiteral(red: 0.05439098924, green: 0.1344551742, blue: 0.1884709597, alpha: 1),
-            NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 17)
+            NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 17),
         ]
         // set mac dinh là tap dau tien
         self.segmentedControl.setSelectedSegmentIndex(0, animated: false)
@@ -76,8 +75,7 @@ class DashboardView: UIView {
 
             }
         }
-        print("width \(self.headerView.bounds.size.width)")
-        print("height \(self.headerView.bounds.size.height)")
+
         NSLayoutConstraint.activate([
             segmentedControl.topAnchor.constraint(equalTo: headerView.topAnchor),
             segmentedControl.leadingAnchor.constraint(equalTo: headerView.leadingAnchor),

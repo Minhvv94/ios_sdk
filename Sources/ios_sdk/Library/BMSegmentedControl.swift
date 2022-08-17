@@ -349,13 +349,6 @@ class BMSegmentedControl: UIControl {
         let text = items[selectedIndex]
         let labelWidth = self.bounds.width / CGFloat(items.count)
         let iconX = getTextX(labelWidth, textWidth: evaluateStringWidth(text))
-        
-//        if self.componentOrientation == ComponentOrientation.topDown {
-//            selectedFrame.origin.x = self.selectedLabel.frame.origin.x - iconX + 4 + 13
-//        } else {
-//            selectedFrame.origin.x = self.selectedLabel.frame.origin.x - iconX + 4
-//        }
-        
         selectedFrame.origin.x = self.selectedLabel.frame.origin.x - iconX
         
         selectedFrame.origin.y = 0

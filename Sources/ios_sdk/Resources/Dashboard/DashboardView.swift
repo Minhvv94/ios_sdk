@@ -76,7 +76,7 @@ class DashboardView: UIView {
                 self.contentView.backgroundColor = UIColor.orange
             }
         }
-        segmentedControl.frame = CGRect(x: 0, y: 0, width: self.headerView.bounds.size.width, height: self.headerView.bounds.size.height)
+//        segmentedControl.frame = CGRect(x: 0, y: 0, width: self.headerView.bounds.size.width, height: self.headerView.bounds.size.height)
         print("width \(self.headerView.bounds.size.width)")
         print("height \(self.headerView.bounds.size.height)")
 //        NSLayoutConstraint.activate([
@@ -85,7 +85,12 @@ class DashboardView: UIView {
 //            segmentedControl.centerXAnchor.constraint(equalTo: mainView.centerXAnchor),
 //            segmentedControl.topAnchor.constraint(equalTo: mainView.topAnchor)
 //        ])
-        
+        NSLayoutConstraint.activate([
+            segmentedControl.topAnchor.constraint(equalTo: headerView.topAnchor),
+            segmentedControl.leadingAnchor.constraint(equalTo: headerView.leadingAnchor),
+            segmentedControl.widthAnchor.constraint(equalToConstant: headerView.bounds.width * 0.7 ),
+            segmentedControl.heightAnchor.constraint(equalToConstant: headerView.bounds.height)
+        ])
     }
 
     

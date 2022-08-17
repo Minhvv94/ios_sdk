@@ -59,13 +59,13 @@ class DashboardView: UIView {
         let screen = mainView.bounds
         let segmentedControl = BMSegmentedControl.init(
             withIcon: CGRect(x: 0, y: 0, width: screen.width * 0.7, height: headerView.bounds.height),
-            items: ["Happy", "Normal"],
+            items: ["Cá nhân", "Tin tức"],
             icons: [UIImage(named: "IconPersonal.png", in: Bundle.module, compatibleWith: nil)!,
                     UIImage(named: "IconNews.png", in: Bundle.module, compatibleWith: nil)!],
             selectedIcons: [UIImage(named: "IconPersonal.png", in: Bundle.module, compatibleWith: nil)!,
                             UIImage(named: "IconNews.png", in: Bundle.module, compatibleWith: nil)!],
-            backgroundColor: UIColor(red: 230/255, green: 230/255, blue: 230/255, alpha: 1),
-            thumbColor: UIColor.init(hex: "#54C3EF"),
+            backgroundColor: UIColor.clear,
+            thumbColor: UIColor(hex: "#eb5e62"),
             textColor: UIColor(hex: "#808080"),
             selectedTextColor: UIColor(hex: "#FFFFFF"),
             orientation: ComponentOrientation.topDown)

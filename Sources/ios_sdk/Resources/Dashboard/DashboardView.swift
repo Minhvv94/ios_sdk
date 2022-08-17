@@ -48,13 +48,13 @@ class DashboardView: UIView {
                 segmentedControl.selectionIndicatorColor = #colorLiteral(red: 0.1142767668, green: 0.3181744218, blue: 0.4912756383, alpha: 1)
                 
                 segmentedControl.titleTextAttributes = [
-                    NSForegroundColorAttributeName : #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1),
-                    NSFontAttributeName : UIFont.systemFont(ofSize: 17)
+                    NSAttributedString.Key.foregroundColor : #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1),
+                    NSAttributedString.Key.font : UIFont.systemFont(ofSize: 17)
                 ]
                 
                 segmentedControl.selectedTitleTextAttributes = [
-                    NSForegroundColorAttributeName : #colorLiteral(red: 0.05439098924, green: 0.1344551742, blue: 0.1884709597, alpha: 1),
-                    NSFontAttributeName : UIFont.boldSystemFont(ofSize: 17)
+                    NSAttributedString.Key.foregroundColor : #colorLiteral(red: 0.05439098924, green: 0.1344551742, blue: 0.1884709597, alpha: 1),
+                    NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 17)
                 ]
                 
                 segmentedControl.indexChangedHandler = { index in
@@ -64,10 +64,14 @@ class DashboardView: UIView {
                 }
                 
                 NSLayoutConstraint.activate(
-                    [segmentedControl.leftAnchor.constraint(equalTo: mainView.leftAnchor),
-                     segmentedControl.heightAnchor.constraint(equalToConstant: 50),
-                     segmentedControl.rightAnchor.constraint(equalTo: mainView.rightAnchor),
-                     segmentedControl.topAnchor.constraint(equalTo: mainView.topAnchor, constant: 40)]
+                    [segmentedControl.leadingAnchor.constraint(equalTo: mainView.leadingAnchor, constant: 20),
+                     segmentedControl.centerYAnchor.constraint(equalTo: mainView.centerYAnchor),
+                     segmentedControl.widthAnchor.constraint(equalToConstant: 100),
+                     segmentedControl.heightAnchor.constraint(equalToConstant: 100)]
+//                    segmentedControl.leadingAnchor.constraint(equalTo: mainView.leadingAnchor, constant: 20),
+//                    segmentedControl.centerYAnchor.constraint(equalTo: mainView.centerYAnchor),
+//                    segmentedControl.widthAnchor.constraint(equalToConstant: 110),
+//                    segmentedControl.heightAnchor.constraint(equalToConstant: 165)
                 )
         
 

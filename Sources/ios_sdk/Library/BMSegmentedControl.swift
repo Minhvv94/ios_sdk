@@ -293,7 +293,7 @@ class BMSegmentedControl: UIControl {
         selectedLabel.textColor = selectedTextColor
         
         let selectionIndicatorPositionConstraint: NSLayoutConstraint
-        
+        selectionIndicatorWidthConstraint = selectionIndicator.widthAnchor.constraint(equalTo: thumbView.widthAnchor)
         selectionIndicatorPositionConstraint = selectionIndicator.topAnchor.constraint(equalTo: thumbView.topAnchor)
         NSLayoutConstraint.activate([
             selectionIndicatorWidthConstraint!,

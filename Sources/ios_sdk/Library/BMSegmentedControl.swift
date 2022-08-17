@@ -306,7 +306,7 @@ class BMSegmentedControl: UIControl {
             labelFrame.origin.y = 4
             labelFrame.size.width = self.selectedLabel.frame.width
             labelFrame.size.height = self.bounds.height
-            let label = UILabel(frame: CGRect(x: 0, y: 0, width: 5, height: self.thumbView.bounds.height))
+            let label = UILabel(frame: CGRect(x: 0, y: 0, width: height: self.thumbView.bounds.height, height: 5))
             label.backgroundColor = UIColor.white
             self.thumbView.addSubview(label)
             self.thumbView.frame = self.setDefaultSelectionPoint(self.selectedIndex)

@@ -58,7 +58,7 @@ class DashboardView: UIView {
         
         let screen = mainView.bounds
         let segmentedControl = BMSegmentedControl.init(
-            withIcon: CGRect(x: 0, y: 0, width: screen.width, height: headerView.bounds.height),
+            withIcon: CGRect(x: 0, y: 0, width: screen.width * 0.7, height: headerView.bounds.height),
             items: ["Happy", "Normal"],
             icons: [UIImage(named: "IconPersonal.png", in: Bundle.module, compatibleWith: nil)!,
                     UIImage(named: "IconNews.png", in: Bundle.module, compatibleWith: nil)!],

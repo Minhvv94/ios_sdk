@@ -43,6 +43,7 @@ class DashboardView: UIView {
         btnBack.addGestureRecognizer(tapGesture)
         
         mainView.overrideUserInterfaceStyle = .light
+        mainView.addSubview(segmentedControl)
 //        mainView.addSubview(viewPager)
 //
 //
@@ -75,7 +76,7 @@ class DashboardView: UIView {
 //        segmentedControl.addTarget(self, action: #selector(self.action(_:)), for: .valueChanged)
 //        headerView.addSubview(segmentedControl)
 
-
+        segmentedControl.setSelectedSegmentIndex(2, animated: false)
         segmentedControl.backgroundColor = #colorLiteral(red: 0.7683569193, green: 0.9300123453, blue: 0.9995251894, alpha: 1)
         segmentedControl.translatesAutoresizingMaskIntoConstraints = false
         segmentedControl.selectionIndicatorPosition = .bottom

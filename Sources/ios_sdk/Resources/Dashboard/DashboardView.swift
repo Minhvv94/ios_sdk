@@ -66,13 +66,13 @@ class DashboardView: UIView {
             print(self.segmentedControl.selectedSegmentIndex)
             if(self.segmentedControl.selectedSegmentIndex == 0){
                 self.segmentedControl.setSelectedSegmentIndex(0, animated: false)
-                contentView.backgroundColor = UIColor.orange
+                self.contentView.backgroundColor = UIColor.orange
             }else if(self.segmentedControl.selectedSegmentIndex == 1){
                 self.segmentedControl.setSelectedSegmentIndex(1, animated: false)
-                contentView.backgroundColor = UIColor.black
+                self.contentView.backgroundColor = UIColor.black
             }else{
                 self.segmentedControl.setSelectedSegmentIndex(2, animated: false)
-                contentView.backgroundColor = UIColor.red
+                self.contentView.backgroundColor = UIColor.red
             }
 //            self.segmentedControl.setSelectedSegmentIndex(index, animated: false)
         }

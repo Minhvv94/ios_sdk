@@ -50,7 +50,7 @@ class DashboardView: UIView {
         segmentedControl.translatesAutoresizingMaskIntoConstraints = false
         segmentedControl.selectionIndicatorPosition = .top
         segmentedControl.selectionIndicatorColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        
+        segmentedControl.backgroundColor = UIColor.white.withAlphaComponent(0.7)
         segmentedControl.titleTextAttributes = [
             NSAttributedString.Key.foregroundColor : #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1),
             NSAttributedString.Key.font : UIFont.systemFont(ofSize: 17)

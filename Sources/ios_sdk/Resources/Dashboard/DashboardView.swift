@@ -77,8 +77,8 @@ class DashboardView: UIView {
             }
         }
         segmentedControl.frame = CGRect(x: 0, y: 0, width: self.headerView.bounds.size.width, height: self.headerView.bounds.size.height)
-        
-        
+        print("width \(self.headerView.bounds.size.width)")
+        print("height \(self.headerView.bounds.size.height)")
 //        NSLayoutConstraint.activate([
 //            segmentedControl.widthAnchor.constraint(equalTo: mainView.widthAnchor),
 //            segmentedControl.heightAnchor.constraint(equalTo: headerView.heightAnchor * 0.7),

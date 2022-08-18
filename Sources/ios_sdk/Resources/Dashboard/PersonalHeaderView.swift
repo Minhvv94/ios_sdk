@@ -10,9 +10,14 @@ import UIKit
 
 
 class PersonalHeaderView: UIView {
-
-    @IBOutlet weak var content: UIView!
-    @IBOutlet weak var avaterImage: UIImageView!
+    
+    @IBOutlet var personalHeaderView: PersonalHeaderView!
+    
+    @IBAction func btnHomePage(_ sender: Any) {
+    }
+    
+    @IBAction func btnFanpage(_ sender: Any) {
+    }
     override init(frame: CGRect) {
         super.init(frame: frame)
         setUpView()
@@ -28,8 +33,8 @@ class PersonalHeaderView: UIView {
     
     private func setUpView(){
         Bundle.module.loadNibNamed("PersonalHeaderView", owner: self, options: nil)
-        self.addSubview(content)
-        content.frame = self.bounds
-        content.autoresizingMask = [.flexibleHeight,.flexibleWidth]
+//        self.addSubview(content)
+//        content.frame = self.bounds
+//        content.autoresizingMask = [.flexibleHeight,.flexibleWidth]
     }
 }

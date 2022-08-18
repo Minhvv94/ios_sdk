@@ -11,6 +11,7 @@ import UIKit
 
 class PersonalHeaderView: UIView {
 
+    @IBOutlet weak var content: NSObject!
     @IBOutlet weak var avaterImage: UIImageView!
     override init(frame: CGRect) {
         super.init(frame: frame)

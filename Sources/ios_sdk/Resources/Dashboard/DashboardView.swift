@@ -58,7 +58,7 @@ class DashboardView: UIView {
             orientation: ComponentOrientation.topDown)
 
         segmentedControl.selectedIndex = 0
-        self.addIndividual()
+        self.addPersonal()
         segmentedControl.addTarget(self, action: #selector(self.action(_:)), for: .valueChanged)
         headerView.addSubview(segmentedControl)
     }
@@ -77,7 +77,7 @@ class DashboardView: UIView {
             contentView.removeFromSuperview()
         }
         if sender.selectedIndex == 0 {
-            self.addIndividual()
+            self.addPersonal()
         }else{
             contentView.backgroundColor = UIColor.black
         }

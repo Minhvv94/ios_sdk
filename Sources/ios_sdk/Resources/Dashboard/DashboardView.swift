@@ -100,7 +100,7 @@ class DashboardView: UIView {
         let windowHeight = contentView.bounds.height
         
         let rect = CGRect(x: 0, y: 0, width: windowWidth, height: windowHeight)
-        let personalHeaderView = PersonalHeaderView(frame: rect)
+        let personalHeaderView = TestView(frame: rect)
         personalHeaderView.tag = 110
         contentView.addSubview(personalHeaderView)
     }

@@ -28,7 +28,7 @@ class PersonalView: UIView {
     }
     
     private func setUpView(){
-        Bundle.module.loadNibNamed("PersonalView-landscape", owner: self, options: nil)
+        Bundle.module.loadNibNamed("PersonalViewLandscape", owner: self, options: nil)
         self.addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight,.flexibleWidth]

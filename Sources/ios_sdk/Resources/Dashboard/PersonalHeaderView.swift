@@ -11,13 +11,8 @@ import UIKit
 
 class PersonalHeaderView: UIView {
     
-    @IBOutlet var personalHeaderView: PersonalHeaderView!
+    @IBOutlet var contentHeaderView: UIView!
     
-    @IBAction func btnHomePage(_ sender: Any) {
-    }
-    
-    @IBAction func btnFanpage(_ sender: Any) {
-    }
     override init(frame: CGRect) {
         super.init(frame: frame)
         setUpView()
@@ -33,8 +28,8 @@ class PersonalHeaderView: UIView {
     
     private func setUpView(){
         Bundle.module.loadNibNamed("PersonalHeaderView", owner: self, options: nil)
-//        self.addSubview(content)
-//        content.frame = self.bounds
-//        content.autoresizingMask = [.flexibleHeight,.flexibleWidth]
+        self.addSubview(contentHeaderView)
+        contentHeaderView.frame = self.bounds
+        contentHeaderView.autoresizingMask = [.flexibleHeight,.flexibleWidth]
     }
 }

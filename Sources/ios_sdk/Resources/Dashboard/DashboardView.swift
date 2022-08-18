@@ -95,7 +95,7 @@ class DashboardView: UIView {
         contentView.addSubview(headerView)
         
         
-        let tbPersonal = PersonalView()
+        let tbPersonal = TestView()
         contentView.addSubview(tbPersonal)
         tbPersonal.translatesAutoresizingMaskIntoConstraints = false
         

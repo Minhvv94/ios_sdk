@@ -43,24 +43,24 @@ class DashboardView: UIView {
         btnBack.addGestureRecognizer(tapGesture)
         
         headerView.backgroundColor = UIColor(hex: "#e13f45")
-//        let screen = mainView.bounds
-//        let segmentedControl = BMSegmentedControl.init(
-//            withIcon: CGRect(x: 0, y: 0, width: screen.width, height: headerView.bounds.height),
-//            items: ["Cá nhân", "Tin tức"],
-//            icons: [UIImage(named: "IconPersonal.png", in: Bundle.module, compatibleWith: nil)!,
-//                    UIImage(named: "IconNews.png", in: Bundle.module, compatibleWith: nil)!],
-//            selectedIcons: [UIImage(named: "IconPersonal.png", in: Bundle.module, compatibleWith: nil)!,
-//                            UIImage(named: "IconNews.png", in: Bundle.module, compatibleWith: nil)!],
-//            backgroundColor: UIColor.clear,
-//            thumbColor: UIColor(hex: "#eb5e62"),
-//            textColor: UIColor(hex: "#FFFFFF"),
-//            selectedTextColor: UIColor(hex: "#FFFFFF"),
-//            orientation: ComponentOrientation.topDown)
-//
-//        segmentedControl.selectedIndex = 0
-//        self.addPersonal()
-//        segmentedControl.addTarget(self, action: #selector(self.action(_:)), for: .valueChanged)
-//        headerView.addSubview(segmentedControl)
+        let screen = mainView.bounds
+        let segmentedControl = BMSegmentedControl.init(
+            withIcon: CGRect(x: 0, y: 0, width: screen.width * 1.05, height: headerView.bounds.height),
+            items: ["Cá nhân", "Tin tức"],
+            icons: [UIImage(named: "IconPersonal.png", in: Bundle.module, compatibleWith: nil)!,
+                    UIImage(named: "IconNews.png", in: Bundle.module, compatibleWith: nil)!],
+            selectedIcons: [UIImage(named: "IconPersonal.png", in: Bundle.module, compatibleWith: nil)!,
+                            UIImage(named: "IconNews.png", in: Bundle.module, compatibleWith: nil)!],
+            backgroundColor: UIColor.clear,
+            thumbColor: UIColor(hex: "#eb5e62"),
+            textColor: UIColor(hex: "#FFFFFF"),
+            selectedTextColor: UIColor(hex: "#FFFFFF"),
+            orientation: ComponentOrientation.topDown)
+
+        segmentedControl.selectedIndex = 0
+        self.addPersonal()
+        segmentedControl.addTarget(self, action: #selector(self.action(_:)), for: .valueChanged)
+        headerView.addSubview(segmentedControl)
     }
 
     

@@ -42,6 +42,9 @@ class DashboardView: UIView {
                 // 2. add the gesture recognizer to a view
         btnBack.addGestureRecognizer(tapGesture)
         
+        
+        
+        
         headerView.backgroundColor = UIColor(hex: "#e13f45")
         let screen = mainView.bounds
         let segmentedControl = BMSegmentedControl.init(

@@ -32,15 +32,15 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bqM-Fv-ZhA" userLabel="Header">
-                            <rect key="frame" x="0.0" y="0.0" width="672" height="74.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="640" height="74.5"/>
                             <color key="backgroundColor" systemColor="systemOrangeColor"/>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZLv-qb-QC9" userLabel="Content">
-                            <rect key="frame" x="0.0" y="74.5" width="672" height="339.5"/>
+                            <rect key="frame" x="0.0" y="74.5" width="640" height="339.5"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BtnCloseDashboard" translatesAutoresizingMaskIntoConstraints="NO" id="FeM-OB-9F7" userLabel="btnClose">
-                            <rect key="frame" x="672" y="157.5" width="14.5" height="99"/>
+                            <rect key="frame" x="640" y="157.5" width="14.5" height="99"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="FeM-OB-9F7" secondAttribute="height" multiplier="32:221" id="hEy-fR-CjG"/>
                             </constraints>
@@ -55,10 +55,10 @@
                         <constraint firstItem="FeM-OB-9F7" firstAttribute="height" secondItem="JB9-Td-Vgs" secondAttribute="height" multiplier="0.24" id="Nvw-pZ-gLx"/>
                         <constraint firstItem="ZLv-qb-QC9" firstAttribute="leading" secondItem="JB9-Td-Vgs" secondAttribute="leading" id="bmb-37-y3K"/>
                         <constraint firstItem="FeM-OB-9F7" firstAttribute="leading" secondItem="ZLv-qb-QC9" secondAttribute="trailing" id="gFl-1W-vif"/>
-                        <constraint firstAttribute="trailing" secondItem="ZLv-qb-QC9" secondAttribute="trailing" id="kGz-pi-Fxc"/>
+                        <constraint firstAttribute="trailing" secondItem="ZLv-qb-QC9" secondAttribute="trailing" multiplier="1.05:1" id="kGz-pi-Fxc"/>
                         <constraint firstItem="ZLv-qb-QC9" firstAttribute="top" secondItem="bqM-Fv-ZhA" secondAttribute="bottom" id="ouC-QR-FB7"/>
                         <constraint firstItem="FeM-OB-9F7" firstAttribute="centerY" secondItem="JB9-Td-Vgs" secondAttribute="centerY" id="suF-eX-lIa"/>
-                        <constraint firstAttribute="trailing" secondItem="bqM-Fv-ZhA" secondAttribute="trailing" id="utZ-zY-Uqp"/>
+                        <constraint firstAttribute="trailing" secondItem="bqM-Fv-ZhA" secondAttribute="trailing" multiplier="1.05:1" id="utZ-zY-Uqp"/>
                     </constraints>
                     <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                 </view>

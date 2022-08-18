@@ -42,32 +42,43 @@ class DashboardView: UIView {
                 // 2. add the gesture recognizer to a view
         btnBack.addGestureRecognizer(tapGesture)
         
-        headerView.backgroundColor = UIColor(hex: "#e13f45")
-        let screen = mainView.bounds
-        let segmentedControl = BMSegmentedControl.init(
-            withIcon: CGRect(x: 0, y: 0, width: screen.width, height: headerView.bounds.height),
-            items: ["Cá nhân", "Tin tức"],
-            icons: [UIImage(named: "IconPersonal.png", in: Bundle.module, compatibleWith: nil)!,
-                    UIImage(named: "IconNews.png", in: Bundle.module, compatibleWith: nil)!],
-            selectedIcons: [UIImage(named: "IconPersonal.png", in: Bundle.module, compatibleWith: nil)!,
-                            UIImage(named: "IconNews.png", in: Bundle.module, compatibleWith: nil)!],
-            backgroundColor: UIColor.clear,
-            thumbColor: UIColor(hex: "#eb5e62"),
-            textColor: UIColor(hex: "#FFFFFF"),
-            selectedTextColor: UIColor(hex: "#FFFFFF"),
-            orientation: ComponentOrientation.topDown)
-
-        segmentedControl.selectedIndex = 0
-        self.addPersonal()
-        segmentedControl.addTarget(self, action: #selector(self.action(_:)), for: .valueChanged)
-        headerView.addSubview(segmentedControl)
+//        mainView.overrideUserInterfaceStyle = .light
+//        mainView.addSubview(viewPager)
+//
+//
+//
+//        NSLayoutConstraint.activate([
+//            viewPager.widthAnchor.constraint(equalTo: mainView.widthAnchor),
+//            viewPager.heightAnchor.constraint(equalTo: mainView.heightAnchor),
+//            viewPager.centerXAnchor.constraint(equalTo: mainView.centerXAnchor),
+//            viewPager.topAnchor.constraint(equalTo: mainView.topAnchor)
+//        ])
+//        viewPager.translatesAutoresizingMaskIntoConstraints = false
+        
+//
+//        let screen = mainView.bounds
+//        let segmentedControl = BMSegmentedControl.init(
+//            withIcon: CGRect(x: 0, y: 0, width: screen.width, height: headerView.bounds.height),
+//            items: ["Happy", "Normal"],
+//            icons: [UIImage(named: "IconPersonal.png", in: Bundle.module, compatibleWith: nil)!,
+//                    UIImage(named: "IconNews.png", in: Bundle.module, compatibleWith: nil)!],
+//            selectedIcons: [UIImage(named: "IconPersonal.png", in: Bundle.module, compatibleWith: nil)!,
+//                            UIImage(named: "IconNews.png", in: Bundle.module, compatibleWith: nil)!],
+//            backgroundColor: UIColor(red: 230/255, green: 230/255, blue: 230/255, alpha: 1),
+//            thumbColor: UIColor.init(hex: "#54C3EF"),
+//            textColor: UIColor(hex: "#808080"),
+//            selectedTextColor: UIColor(hex: "#FFFFFF"),
+//            orientation: ComponentOrientation.topDown)
+//
+//        segmentedControl.selectedIndex = 0
+//        contentView.backgroundColor = UIColor.orange
+//        segmentedControl.addTarget(self, action: #selector(self.action(_:)), for: .valueChanged)
+//        headerView.addSubview(segmentedControl)
     }
 
     
     @objc func handleTap(sender: UITapGestureRecognizer) {
-        
-        print("đóng")
-        if (self.tag == 102 || self.tag == 103) {
+        if (self.tag == 102) {
             self.removeFromSuperview()
         }
    }
@@ -79,9 +90,9 @@ class DashboardView: UIView {
             contentView.removeFromSuperview()
         }
         if sender.selectedIndex == 0 {
-//            self.addPersonal()
+            contentView.backgroundColor = UIColor.orange
         }else{
-//            contentView.backgroundColor = UIColor.black
+            contentView.backgroundColor = UIColor.black
         }
         print("sender: \(sender.selectedIndex)")
     }
@@ -91,7 +102,7 @@ class DashboardView: UIView {
     func addPersonal(){
         let windowWidth = contentView.bounds.width
         let windowHeight = contentView.bounds.height
-        let rect = CGRect(x: 0, y: 0, width: windowWidth, height: windowHeight * 0.5)
+        let rect = CGRect(x: 0, y: 0, width: windowWidth , height: windowHeight)
         let newView = PersonalHeaderView(frame: rect)
         newView.tag = 103
         contentView.addSubview(newView)

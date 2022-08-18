@@ -25,21 +25,21 @@
             <subviews>
                 <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LOU-JY-YS9" userLabel="Back">
                     <rect key="frame" x="44" y="0.0" width="808" height="393"/>
-                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" systemColor="tintColor"/>
                 </view>
-                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="161" translatesAutoresizingMaskIntoConstraints="NO" id="Fie-BJ-tfW">
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Fie-BJ-tfW">
                     <rect key="frame" x="44" y="0.0" width="606" height="393"/>
                     <subviews>
                         <view contentMode="scaleToFill" semanticContentAttribute="playback" id="JB9-Td-Vgs" userLabel="Main">
-                            <rect key="frame" x="0.0" y="197" width="429" height="0.0"/>
+                            <rect key="frame" x="0.0" y="197" width="590" height="0.0"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bqM-Fv-ZhA" userLabel="Header">
-                                    <rect key="frame" x="0.0" y="0.0" width="429" height="0.0"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="590" height="0.0"/>
                                     <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZLv-qb-QC9" userLabel="Content">
-                                    <rect key="frame" x="0.0" y="0.0" width="429" height="0.0"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="590" height="0.0"/>
                                     <color key="backgroundColor" systemColor="systemTealColor"/>
                                 </view>
                             </subviews>
@@ -94,6 +94,9 @@
         </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

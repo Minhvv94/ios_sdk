@@ -11,8 +11,7 @@ import UIKit
 
 class PersonalHeaderView: UIView {
     
-    @IBOutlet var contentHeaderView: UIView!
-    
+    @IBOutlet var contentView: UIView!
     override init(frame: CGRect) {
         super.init(frame: frame)
         setUpView()
@@ -27,9 +26,9 @@ class PersonalHeaderView: UIView {
     }
     
     private func setUpView(){
-        Bundle.module.loadNibNamed("PersonalHeaderView", owner: self, options: nil)
-        self.addSubview(contentHeaderView)
-        contentHeaderView.frame = self.bounds
-        contentHeaderView.autoresizingMask = [.flexibleHeight,.flexibleWidth]
+        Bundle.module.loadNibNamed("TestView", owner: self, options: nil)
+        self.addSubview(contentView)
+        contentView.frame = self.bounds
+        contentView.autoresizingMask = [.flexibleHeight,.flexibleWidth]
     }
 }

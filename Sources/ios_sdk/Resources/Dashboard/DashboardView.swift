@@ -103,7 +103,7 @@ class DashboardView: UIView {
             tbPersonal.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: 10),
             tbPersonal.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             tbPersonal.widthAnchor.constraint(equalTo: contentView.widthAnchor),
-            tbPersonal.heightAnchor.constraint(equalToConstant: 320)
+            tbPersonal.heightAnchor.constraint(equalToConstant: 50)
         ])
         
         

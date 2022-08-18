@@ -41,10 +41,7 @@ class DashboardView: UIView {
                 
                 // 2. add the gesture recognizer to a view
         btnBack.addGestureRecognizer(tapGesture)
-        
-        
-        
-        
+
         headerView.backgroundColor = UIColor(hex: "#e13f45")
         let screen = mainView.bounds
         let segmentedControl = BMSegmentedControl.init(
@@ -84,7 +81,7 @@ class DashboardView: UIView {
         if sender.selectedIndex == 0 {
             self.addPersonal()
         }else{
-            contentView.backgroundColor = UIColor.black
+            self.addNews()
         }
         print("sender: \(sender.selectedIndex)")
     }
@@ -100,4 +97,13 @@ class DashboardView: UIView {
         contentView.addSubview(newView)
     }
 
+    func addNews(){
+        let windowWidth = contentView.bounds.width
+        let windowHeight = contentView.bounds.height
+        let rect = CGRect(x: 0, y: 0, width: windowWidth, height: windowHeight * 0.5)
+        let newView = PersonalHeaderView(frame: rect)
+        newView.tag = 103
+        contentView.addSubview(newView)
+    }
+    
 }

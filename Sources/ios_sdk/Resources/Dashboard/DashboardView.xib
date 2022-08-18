@@ -24,23 +24,23 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LOU-JY-YS9" userLabel="Back">
-                    <rect key="frame" x="0.0" y="0.0" width="896" height="475"/>
+                    <rect key="frame" x="44" y="0.0" width="808" height="393"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
-                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Fie-BJ-tfW">
-                    <rect key="frame" x="44" y="0.0" width="786.5" height="454"/>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="161" translatesAutoresizingMaskIntoConstraints="NO" id="Fie-BJ-tfW">
+                    <rect key="frame" x="44" y="0.0" width="606" height="393"/>
                     <subviews>
                         <view contentMode="scaleToFill" semanticContentAttribute="playback" id="JB9-Td-Vgs" userLabel="Main">
-                            <rect key="frame" x="0.0" y="227" width="770.5" height="0.0"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <rect key="frame" x="0.0" y="197" width="429" height="0.0"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bqM-Fv-ZhA" userLabel="Header">
-                                    <rect key="frame" x="0.0" y="0.0" width="770.5" height="0.0"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="429" height="0.0"/>
                                     <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZLv-qb-QC9" userLabel="Content">
-                                    <rect key="frame" x="0.0" y="0.0" width="770.5" height="0.0"/>
-                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="429" height="0.0"/>
+                                    <color key="backgroundColor" systemColor="systemTealColor"/>
                                 </view>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -57,16 +57,14 @@
                             <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xw5-Ty-yAy" userLabel="btnBack">
-                            <rect key="frame" x="770.5" y="172" width="16" height="110.5"/>
-                            <constraints>
-                                <constraint firstAttribute="width" secondItem="Xw5-Ty-yAy" secondAttribute="height" multiplier="32:221" id="Y8E-fy-mpZ"/>
-                            </constraints>
+                            <rect key="frame" x="590" y="141.5" width="16" height="110.5"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" image="BtnCloseDashboard"/>
                         </button>
                     </subviews>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="tintColor" systemColor="systemCyanColor"/>
                     <constraints>
-                        <constraint firstItem="JB9-Td-Vgs" firstAttribute="width" secondItem="Fie-BJ-tfW" secondAttribute="width" multiplier="0.75" id="6MZ-fd-EYB"/>
                         <constraint firstItem="Xw5-Ty-yAy" firstAttribute="centerY" secondItem="JB9-Td-Vgs" secondAttribute="centerY" id="SGm-f0-VAC"/>
                     </constraints>
                 </stackView>
@@ -74,12 +72,13 @@
             <viewLayoutGuide key="safeArea" id="5dV-uk-La7"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="LOU-JY-YS9" secondAttribute="bottom" id="7m2-3Q-GIL"/>
                 <constraint firstItem="5dV-uk-La7" firstAttribute="top" secondItem="Fie-BJ-tfW" secondAttribute="top" id="DKP-4L-6cy"/>
-                <constraint firstAttribute="top" secondItem="LOU-JY-YS9" secondAttribute="top" id="HWK-41-rW4"/>
-                <constraint firstAttribute="leading" secondItem="LOU-JY-YS9" secondAttribute="leading" id="JBZ-tL-ksf"/>
-                <constraint firstAttribute="trailing" secondItem="LOU-JY-YS9" secondAttribute="trailing" id="Tsk-jP-SAI"/>
+                <constraint firstItem="Fie-BJ-tfW" firstAttribute="width" secondItem="LOU-JY-YS9" secondAttribute="width" multiplier="0.75" id="Uyt-Mf-Q3G"/>
+                <constraint firstItem="LOU-JY-YS9" firstAttribute="height" secondItem="5dV-uk-La7" secondAttribute="height" id="Xl6-Ka-RQu"/>
+                <constraint firstItem="LOU-JY-YS9" firstAttribute="centerX" secondItem="5dV-uk-La7" secondAttribute="centerX" id="fWv-CX-zNU"/>
                 <constraint firstItem="5dV-uk-La7" firstAttribute="leading" secondItem="Fie-BJ-tfW" secondAttribute="leading" id="k5Z-oN-E4G"/>
+                <constraint firstItem="LOU-JY-YS9" firstAttribute="centerY" secondItem="5dV-uk-La7" secondAttribute="centerY" id="tLi-O4-sLg"/>
+                <constraint firstItem="LOU-JY-YS9" firstAttribute="width" secondItem="5dV-uk-La7" secondAttribute="width" id="yAr-dl-occ"/>
                 <constraint firstItem="Fie-BJ-tfW" firstAttribute="bottom" secondItem="5dV-uk-La7" secondAttribute="bottom" id="z61-JI-uZf"/>
             </constraints>
             <point key="canvasLocation" x="185.49107142857142" y="155.07246376811597"/>
@@ -87,8 +86,14 @@
     </objects>
     <resources>
         <image name="BtnCloseDashboard" width="16" height="110.5"/>
+        <systemColor name="systemCyanColor">
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

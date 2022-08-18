@@ -11,6 +11,7 @@ import UIKit
 
 class PersonalView: UIView {
     
+    @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var tbPersonal: UITableView!
     override init(frame: CGRect) {
@@ -28,8 +29,8 @@ class PersonalView: UIView {
     
     private func setUpView(){
         Bundle.module.loadNibNamed("PersonalView-landscape", owner: self, options: nil)
-//        self.addSubview(contentView)
-//        contentView.frame = self.bounds
-//        contentView.autoresizingMask = [.flexibleHeight,.flexibleWidth]
+        self.addSubview(contentView)
+        contentView.frame = self.bounds
+        contentView.autoresizingMask = [.flexibleHeight,.flexibleWidth]
     }
 }

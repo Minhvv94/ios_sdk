@@ -35,6 +35,7 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="contentView" destination="-1" id="hSD-ZB-ipI"/>
                 <outlet property="loadingIndicator" destination="WG6-qm-PIX" id="d6p-2F-eWA"/>
                 <outlet property="tbPersonal" destination="q3y-NI-1sz" id="2ZH-F4-2Kz"/>
             </connections>

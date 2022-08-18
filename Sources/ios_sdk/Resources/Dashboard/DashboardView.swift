@@ -29,8 +29,6 @@ class DashboardView: UIView {
         super.init(coder: aDecoder)
     }
     
-    
-    
     private func setUpView(){
         Bundle.module.loadNibNamed("DashboardView", owner: self, options: nil)
         self.addSubview(dashboardView)
@@ -81,7 +79,7 @@ class DashboardView: UIView {
         if sender.selectedIndex == 0 {
             self.addPersonal()
         }else{
-            self.addNews()
+//            self.addNews()
         }
         print("sender: \(sender.selectedIndex)")
     }

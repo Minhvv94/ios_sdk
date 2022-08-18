@@ -36,7 +36,7 @@
                         <constraint firstAttribute="width" constant="180" id="Kfx-nR-guR"/>
                     </constraints>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                    <state key="normal" title="Đổi mật khẩu">
+                    <state key="normal" title="Chuyển đổi tài khoản">
                         <color key="titleColor" systemColor="systemPinkColor"/>
                     </state>
                 </button>
@@ -46,7 +46,7 @@
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="LEv-Dd-p48">
                             <rect key="frame" x="10" y="0.0" width="553" height="163"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OHj-BO-KKQ" userLabel="HomePage">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OHj-BO-KKQ" userLabel="HomePage">
                                     <rect key="frame" x="0.0" y="0.0" width="110.5" height="163"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -54,7 +54,7 @@
                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Foe-RD-Tni" userLabel="Fanpage">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Foe-RD-Tni" userLabel="Fanpage">
                                     <rect key="frame" x="110.5" y="0.0" width="110.5" height="163"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -62,7 +62,7 @@
                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BRj-1J-MvJ" userLabel="Group">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BRj-1J-MvJ" userLabel="Group">
                                     <rect key="frame" x="221" y="0.0" width="111" height="163"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -70,7 +70,7 @@
                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NBV-iA-8Ch" userLabel="Chat">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NBV-iA-8Ch" userLabel="Chat">
                                     <rect key="frame" x="332" y="0.0" width="110.5" height="163"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -78,7 +78,7 @@
                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dJV-id-ibS" userLabel="Hotline">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dJV-id-ibS" userLabel="Hotline">
                                     <rect key="frame" x="442.5" y="0.0" width="110.5" height="163"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -89,7 +89,7 @@
                             </subviews>
                         </stackView>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="LEv-Dd-p48" firstAttribute="leading" secondItem="efE-Dl-1sp" secondAttribute="leading" constant="10" id="5nh-pT-CNs"/>
                         <constraint firstItem="LEv-Dd-p48" firstAttribute="height" secondItem="efE-Dl-1sp" secondAttribute="height" id="E7p-IH-Bad"/>
@@ -123,9 +123,6 @@
         <image name="IconHome" width="29" height="28"/>
         <image name="IconHotline" width="27" height="27"/>
         <image name="avatar-user" width="64" height="64"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

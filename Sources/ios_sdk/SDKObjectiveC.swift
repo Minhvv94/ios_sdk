@@ -83,7 +83,7 @@ public class SDKObjectiveC: UIView, IosSdk {
                 if (self.buttonView.tag == 101) {
                     self.buttonView.removeFromSuperview()
                 }
-                let rect = CGRect(x: 0, y: 0, width: windowWidth * 0.75, height: windowHeight)
+                let rect = CGRect(x: 0, y: 0, width: windowWidth , height: windowHeight)
                 let dashboardView = DashboardView(frame: rect)
                 dashboardView.tag = 102
                 topVC.view.addSubview(dashboardView)

@@ -65,6 +65,8 @@ class DashboardView: UIView {
 
     
     @objc func handleTap(sender: UITapGestureRecognizer) {
+        
+        print("đóng")
         if (self.tag == 102 || self.tag == 103) {
             self.removeFromSuperview()
         }
@@ -77,9 +79,9 @@ class DashboardView: UIView {
             contentView.removeFromSuperview()
         }
         if sender.selectedIndex == 0 {
-            self.addPersonal()
+//            self.addPersonal()
         }else{
-            contentView.backgroundColor = UIColor.black
+//            contentView.backgroundColor = UIColor.black
         }
         print("sender: \(sender.selectedIndex)")
     }

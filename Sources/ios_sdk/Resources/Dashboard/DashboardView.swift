@@ -45,7 +45,7 @@ class DashboardView: UIView {
         headerView.backgroundColor = UIColor(hex: "#e13f45")
         let screen = mainView.bounds
         let segmentedControl = BMSegmentedControl.init(
-            withIcon: CGRect(x: 0, y: 0, width: screen.width * 1.05, height: headerView.bounds.height),
+            withIcon: CGRect(x: 0, y: 0, width: screen.width * 0.9, height: headerView.bounds.height),
             items: ["Cá nhân", "Tin tức"],
             icons: [UIImage(named: "IconPersonal.png", in: Bundle.module, compatibleWith: nil)!,
                     UIImage(named: "IconNews.png", in: Bundle.module, compatibleWith: nil)!],

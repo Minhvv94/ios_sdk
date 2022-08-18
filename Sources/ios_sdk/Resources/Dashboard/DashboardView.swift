@@ -90,19 +90,9 @@ class DashboardView: UIView {
         let windowWidth = contentView.bounds.width
         let windowHeight = contentView.bounds.height
         let rect = CGRect(x: 0, y: 0, width: windowWidth * 0.7, height: windowHeight)
-        let newView = PersonalHeaderView(frame: rect)
+        let newView = TestView(frame: rect)
         newView.tag = 103
         contentView.addSubview(newView)
-    }
-    
-    func addIndividual(){
-        let windowWidth = contentView.bounds.width
-        let windowHeight = contentView.bounds.height
-        
-        let rect = CGRect(x: 0, y: 0, width: windowWidth, height: windowHeight)
-        let personalHeaderView = TestView(frame: rect)
-        personalHeaderView.tag = 110
-        contentView.addSubview(personalHeaderView)
     }
 
 }

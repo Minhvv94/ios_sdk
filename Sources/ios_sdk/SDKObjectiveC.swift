@@ -12,11 +12,6 @@ protocol IosSdk {
     func dashBoard()
     func listProduct()
 }
-
-
-
-
-
 @objc(SDKObjectiveC)
 public class SDKObjectiveC: UIView, IosSdk {
 
@@ -77,9 +72,6 @@ public class SDKObjectiveC: UIView, IosSdk {
             let screenFrame = topVC.view.frame
             let windowWidth = screenFrame.width
             let windowHeight = screenFrame.height
-            
-            print("windowWidth \(windowWidth)")
-            print("windowHeight \(windowHeight)")
             if (self.tag == 101) {
                 self.removeFromSuperview()
             }

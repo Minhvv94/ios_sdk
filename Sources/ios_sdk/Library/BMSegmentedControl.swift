@@ -306,6 +306,7 @@ class BMSegmentedControl: UIControl {
             labelFrame.origin.y = 4
             labelFrame.size.width = self.selectedLabel.frame.width
             labelFrame.size.height = self.bounds.height
+            // them ke trang ở tren
             let label = UILabel(frame: CGRect(x: 0, y: 0, width: self.thumbView.bounds.width, height: 5))
             label.backgroundColor = UIColor.white
             self.thumbView.addSubview(label)

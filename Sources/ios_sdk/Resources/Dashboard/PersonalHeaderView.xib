@@ -9,11 +9,118 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4xF-x2-L4w" customClass="PersonalHeaderView" customModule="ios_sdk">
-            <rect key="frame" x="0.0" y="0.0" width="593" height="261"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+        <view contentMode="scaleToFill" id="RPb-hJ-KNq" customClass="PersonalHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="593" height="262"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar-user.png" translatesAutoresizingMaskIntoConstraints="NO" id="DEE-M9-5uD">
+                    <rect key="frame" x="10" y="10" width="89" height="89"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="DEE-M9-5uD" secondAttribute="height" multiplier="1:1" id="6DR-fJ-Vkd"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="mAE-Ym-xgL" userLabel="Username">
+                    <rect key="frame" x="109" y="42.5" width="294" height="24"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PE2-2v-9Rb">
+                    <rect key="frame" x="403" y="37.5" width="180" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="180" id="0KV-Jk-fYk"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                    <state key="normal" title="Đổi mật khẩu">
+                        <color key="titleColor" red="0.88235294119999996" green="0.2470588235" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="on7-oc-sGH">
+                    <rect key="frame" x="10" y="109" width="573" height="143"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="sls-2S-xTQ">
+                            <rect key="frame" x="10" y="0.0" width="553" height="143"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rml-um-yed" userLabel="HomePage">
+                                    <rect key="frame" x="0.0" y="0.0" width="136" height="143"/>
+                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="20" maxY="0.0"/>
+                                    <state key="normal" title="Trang chủ" image="IconHome">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qrA-is-jyW" userLabel="Fanpage">
+                                    <rect key="frame" x="136" y="0.0" width="124" height="143"/>
+                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="20" maxY="0.0"/>
+                                    <state key="normal" title="Fanpage" image="IconFanpage">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k4k-gQ-KM6" userLabel="Group">
+                                    <rect key="frame" x="260" y="0.0" width="101.5" height="143"/>
+                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="20" maxY="0.0"/>
+                                    <state key="normal" title="Group" image="IconGroup">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gRC-m7-8VA" userLabel="Chat">
+                                    <rect key="frame" x="361.5" y="0.0" width="86" height="143"/>
+                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="20" maxY="0.0"/>
+                                    <state key="normal" title="Chat" image="IconChat">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ye-TT-VAd" userLabel="Hotline">
+                                    <rect key="frame" x="447.5" y="0.0" width="105.5" height="143"/>
+                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="20" maxY="0.0"/>
+                                    <state key="normal" title="Hotline" image="IconHotline">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="sls-2S-xTQ" firstAttribute="leading" secondItem="on7-oc-sGH" secondAttribute="leading" constant="10" id="1S8-FI-SyG"/>
+                        <constraint firstItem="sls-2S-xTQ" firstAttribute="centerY" secondItem="on7-oc-sGH" secondAttribute="centerY" id="A69-Ph-h85"/>
+                        <constraint firstItem="sls-2S-xTQ" firstAttribute="height" secondItem="on7-oc-sGH" secondAttribute="height" id="ClA-Wf-RTF"/>
+                        <constraint firstAttribute="trailing" secondItem="sls-2S-xTQ" secondAttribute="trailing" constant="10" id="Lhn-kZ-0iG"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="mAE-Ym-xgL" firstAttribute="leading" secondItem="DEE-M9-5uD" secondAttribute="trailing" constant="10" id="5MH-AP-qXl"/>
+                <constraint firstAttribute="bottom" secondItem="on7-oc-sGH" secondAttribute="bottom" constant="10" id="EVQ-Gx-Qby"/>
+                <constraint firstItem="PE2-2v-9Rb" firstAttribute="trailing" secondItem="on7-oc-sGH" secondAttribute="trailing" id="FkO-zR-mAh"/>
+                <constraint firstItem="DEE-M9-5uD" firstAttribute="leading" secondItem="RPb-hJ-KNq" secondAttribute="leading" constant="10" id="KFc-uH-kYr"/>
+                <constraint firstItem="on7-oc-sGH" firstAttribute="top" secondItem="DEE-M9-5uD" secondAttribute="bottom" constant="10" id="KW7-6c-Pwi"/>
+                <constraint firstItem="PE2-2v-9Rb" firstAttribute="trailing" secondItem="RPb-hJ-KNq" secondAttribute="trailing" constant="-10" id="NPX-6J-S6r"/>
+                <constraint firstItem="on7-oc-sGH" firstAttribute="leading" secondItem="DEE-M9-5uD" secondAttribute="leading" id="QWn-3A-zeb"/>
+                <constraint firstItem="mAE-Ym-xgL" firstAttribute="centerY" secondItem="DEE-M9-5uD" secondAttribute="centerY" id="SVS-K1-M5f"/>
+                <constraint firstItem="PE2-2v-9Rb" firstAttribute="centerY" secondItem="DEE-M9-5uD" secondAttribute="centerY" id="bo0-1N-L4v"/>
+                <constraint firstItem="DEE-M9-5uD" firstAttribute="top" secondItem="RPb-hJ-KNq" secondAttribute="top" constant="10" id="eJh-5l-d63"/>
+                <constraint firstItem="mAE-Ym-xgL" firstAttribute="trailing" secondItem="PE2-2v-9Rb" secondAttribute="leading" id="sdX-af-gbP"/>
+                <constraint firstItem="DEE-M9-5uD" firstAttribute="height" secondItem="RPb-hJ-KNq" secondAttribute="height" multiplier="0.34" id="vgy-qE-mis"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="323" y="-15"/>
+            <connections>
+                <outlet property="avaterImage" destination="DEE-M9-5uD" id="dHt-kh-IZB"/>
+            </connections>
+            <point key="canvasLocation" x="-1061" y="-726"/>
         </view>
     </objects>
+    <resources>
+        <image name="IconChat" width="28.5" height="27.5"/>
+        <image name="IconFanpage" width="30" height="27"/>
+        <image name="IconGroup" width="30" height="26"/>
+        <image name="IconHome" width="29" height="28"/>
+        <image name="IconHotline" width="27" height="27"/>
+        <image name="avatar-user.png" width="384" height="384"/>
+    </resources>
 </document>

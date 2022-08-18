@@ -42,20 +42,6 @@ class DashboardView: UIView {
                 // 2. add the gesture recognizer to a view
         btnBack.addGestureRecognizer(tapGesture)
         
-//        mainView.overrideUserInterfaceStyle = .light
-//        mainView.addSubview(viewPager)
-//
-//
-//
-//        NSLayoutConstraint.activate([
-//            viewPager.widthAnchor.constraint(equalTo: mainView.widthAnchor),
-//            viewPager.heightAnchor.constraint(equalTo: mainView.heightAnchor),
-//            viewPager.centerXAnchor.constraint(equalTo: mainView.centerXAnchor),
-//            viewPager.topAnchor.constraint(equalTo: mainView.topAnchor)
-//        ])
-//        viewPager.translatesAutoresizingMaskIntoConstraints = false
-        
-        
         headerView.backgroundColor = UIColor(hex: "#e13f45")
         let screen = mainView.bounds
         let segmentedControl = BMSegmentedControl.init(
@@ -72,7 +58,7 @@ class DashboardView: UIView {
             orientation: ComponentOrientation.topDown)
 
         segmentedControl.selectedIndex = 0
-        contentView.backgroundColor = UIColor.orange
+        self.addIndividual()
         segmentedControl.addTarget(self, action: #selector(self.action(_:)), for: .valueChanged)
         headerView.addSubview(segmentedControl)
     }
@@ -91,7 +77,7 @@ class DashboardView: UIView {
             contentView.removeFromSuperview()
         }
         if sender.selectedIndex == 0 {
-            contentView.backgroundColor = UIColor.orange
+            self.addIndividual()
         }else{
             contentView.backgroundColor = UIColor.black
         }
@@ -107,6 +93,17 @@ class DashboardView: UIView {
         let newView = PersonalHeaderView(frame: rect)
         newView.tag = 103
         contentView.addSubview(newView)
+    }
+    
+    func addIndividual(){
+        let screenFrame = contentView.view.frame
+        let windowWidth = screenFrame.width
+        let windowHeight = screenFrame.height
+        
+        let rect = CGRect(x: 0, y: 0, width: windowWidth, height: 200)
+        let personalHeaderView = PersonalHeaderView(frame: rect)
+        personalHeaderView.tag = 110
+        contentView.view.addSubview(personalHeaderView)
     }
 
 }

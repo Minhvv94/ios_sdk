@@ -26,7 +26,7 @@ class PersonalHeaderView: UIView {
     }
     
     private func setUpView(){
-        Bundle.module.loadNibNamed("TestView", owner: self, options: nil)
+        Bundle.module.loadNibNamed("PersonalHeaderView", owner: self, options: nil)
         self.addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight,.flexibleWidth]

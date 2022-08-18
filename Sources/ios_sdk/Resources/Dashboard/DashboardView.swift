@@ -90,9 +90,23 @@ class DashboardView: UIView {
         let windowWidth = contentView.bounds.width
         let windowHeight = contentView.bounds.height
         let rect = CGRect(x: 0, y: 0, width: windowWidth, height: windowHeight * 0.5)
-        let newView = PersonalHeaderView(frame: rect)
-        newView.tag = 103
-        contentView.addSubview(newView)
+        let headerView = PersonalHeaderView(frame: rect)
+        headerView.tag = 103
+        contentView.addSubview(headerView)
+        
+        
+        let tbPersonal = PersonalView()
+        contentView.addSubview(tbPersonal)
+        tbPersonal.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            tbPersonal.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: 10),
+            tbPersonal.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            tbPersonal.widthAnchor.constraint(equalTo: contentView.widthAnchor),
+            tbPersonal.heightAnchor.constraint(equalToConstant: 320)
+        ])
+        
+        
     }
 
     func addNews(){

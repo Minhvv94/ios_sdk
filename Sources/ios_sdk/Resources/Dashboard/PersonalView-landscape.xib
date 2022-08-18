@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="z6t-Tf-AB9" userLabel="Personal View" customClass="PersonalView" customModule="ios_sdk">
+            <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="q3y-NI-1sz">
+                    <rect key="frame" x="0.0" y="44" width="568" height="242"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="WG6-qm-PIX">
+                    <rect key="frame" x="274" y="155" width="20" height="20"/>
+                </activityIndicatorView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Era-67-IBw"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="WG6-qm-PIX" firstAttribute="centerY" secondItem="q3y-NI-1sz" secondAttribute="centerY" id="8LQ-nP-5fm"/>
+                <constraint firstItem="WG6-qm-PIX" firstAttribute="centerX" secondItem="q3y-NI-1sz" secondAttribute="centerX" id="KRF-nC-rBz"/>
+                <constraint firstItem="Era-67-IBw" firstAttribute="trailing" secondItem="q3y-NI-1sz" secondAttribute="trailing" id="Yfi-Bw-kmT"/>
+                <constraint firstItem="q3y-NI-1sz" firstAttribute="leading" secondItem="Era-67-IBw" secondAttribute="leading" id="fUa-vA-aG2"/>
+                <constraint firstItem="Era-67-IBw" firstAttribute="top" secondItem="q3y-NI-1sz" secondAttribute="top" id="sGa-Lr-BiK"/>
+                <constraint firstItem="q3y-NI-1sz" firstAttribute="bottom" secondItem="Era-67-IBw" secondAttribute="bottom" id="xwc-y9-6zI"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="loadingIndicator" destination="WG6-qm-PIX" id="d6p-2F-eWA"/>
+                <outlet property="tbPersonal" destination="q3y-NI-1sz" id="2ZH-F4-2Kz"/>
+            </connections>
+            <point key="canvasLocation" x="216" y="125"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

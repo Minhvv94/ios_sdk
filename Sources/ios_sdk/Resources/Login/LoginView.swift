@@ -31,6 +31,7 @@ class LoginView: UIView {
         endEditing(true)
         
         self.keyboardWillShow()
+        endEditing(false)
     }
     
     override init(frame: CGRect) {
@@ -73,7 +74,7 @@ class LoginView: UIView {
 //            self.layoutBottomContainer.constant -= 50
 //            self.layoutIfNeeded()
 //        }, completion: {_ in
-//        
+//
 //        })
         
         

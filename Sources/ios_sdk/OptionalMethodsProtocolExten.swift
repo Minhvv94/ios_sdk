@@ -6,7 +6,7 @@
 //
 
 import Foundation
-class OptionalMethodsProtocolExten : OptionalMethodsProtocol {
+public class OptionalMethodsProtocolExten : OptionalMethodsProtocol {
     func didChooseItem(at index: Int) {
         print("hi protocol didChooseItem")
     }

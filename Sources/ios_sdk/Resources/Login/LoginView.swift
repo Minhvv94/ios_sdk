@@ -25,10 +25,6 @@ class LoginView: UIView {
             self.removeFromSuperview()
         }
     }
-    @IBAction func btnLogin(_ sender: Any) {
-    
-        
-    }
     // bắt sự kiên bấm vào màn hình
     @objc func checkAction(sender : UITapGestureRecognizer) {
         // ản bàn phím
@@ -37,6 +33,9 @@ class LoginView: UIView {
         self.keyboardWillShow()
     }
     
+    @IBAction func btnLogin(_ sender: Any) {
+        
+    }
     override init(frame: CGRect) {
         super.init(frame: frame)
         setUpView()

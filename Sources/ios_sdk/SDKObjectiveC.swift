@@ -103,7 +103,7 @@ public class SDKObjectiveC: UIView, IosSdk {
     
     @objc open func listProduct() {
         
-        let proto :OptionalMethodsProtocol = OptionalMethodsProtocolExten()
+        let proto :OptionalMethodsProtocol = OptionalMethodsProtocolExten2()
         proto.didDismiss();
         
     }

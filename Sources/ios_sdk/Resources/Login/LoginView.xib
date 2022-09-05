@@ -11,7 +11,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginView" customModule="ios_sdk">
             <connections>
-                <outlet property="btnLogin" destination="7an-8j-ERL" id="8ir-wf-WeM"/>
                 <outlet property="contentView" destination="Ivz-FY-9Q5" id="CFZ-9z-KHU"/>
                 <outlet property="layoutBottomContainer" destination="WtS-8e-L42" id="soP-5H-57U"/>
                 <outlet property="txtPass" destination="oVo-yc-zom" id="sdn-1N-cv4"/>

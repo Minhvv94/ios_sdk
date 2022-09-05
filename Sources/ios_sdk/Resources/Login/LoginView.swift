@@ -69,11 +69,23 @@ class LoginView: UIView {
     
     
     func keyboardWillShow() {
-        UIView.animate(withDuration: 0.25, animations: {
-            self.layoutBottomContainer.constant = CGFloat(-self.offset)
-            self.layoutIfNeeded()
-        }, completion: {_ in
+//        UIView.animate(withDuration: 0.25, animations: {
+//            self.layoutBottomContainer.constant -= 50
+//            self.layoutIfNeeded()
+//        }, completion: {_ in
+//        
+//        })
         
+        
+        UIView.animateKeyframes(withDuration: 2, delay: 0, animations: {
+
+            self.layoutIfNeeded()
+
+            UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.25, animations:{
+                self.layoutBottomContainer.constant -= 50
+            })
+
+    
         })
     }
     

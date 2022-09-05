@@ -8,7 +8,12 @@
 import Foundation
 class OptionalMethodsProtocolExten : OptionalMethodsProtocol {
     func didChooseItem(at index: Int) {
-        print("hi protocol")
+        print("hi protocol didChooseItem")
+    }
+    
+    
+    func didDismiss(){
+        print("hi protocol didDismiss")
     }
     
     

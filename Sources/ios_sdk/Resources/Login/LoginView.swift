@@ -30,7 +30,7 @@ class LoginView: UIView {
         // ản bàn phím
         endEditing(true)
         
-//        self.keyboardWillShow()
+        self.keyboardWillShow()
     }
     
     override init(frame: CGRect) {

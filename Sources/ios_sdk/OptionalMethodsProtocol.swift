@@ -12,5 +12,5 @@ import Foundation
 @objc(OptionalMethodsProtocol)
 protocol OptionalMethodsProtocol {
     func didChooseItem(at index: Int) // Required
-    @objc optional func didDismiss() // Optional
+    @objc func didDismiss() // Optional
 }

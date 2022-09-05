@@ -14,7 +14,7 @@ public class OptionalMethodsProtocolExten : OptionalMethodsProtocol {
     }
     
     
-    @objc open func didDismiss(){
+    @objc func didDismiss(){
         print("hi protocol didDismiss")
     }
     

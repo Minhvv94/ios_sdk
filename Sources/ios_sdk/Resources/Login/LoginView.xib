@@ -11,7 +11,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginView" customModule="ios_sdk">
             <connections>
+                <outlet property="btnLogin" destination="7an-8j-ERL" id="8ir-wf-WeM"/>
                 <outlet property="contentView" destination="Ivz-FY-9Q5" id="CFZ-9z-KHU"/>
+                <outlet property="layoutBottomContainer" destination="WtS-8e-L42" id="soP-5H-57U"/>
                 <outlet property="txtPass" destination="oVo-yc-zom" id="sdn-1N-cv4"/>
                 <outlet property="txtUserName" destination="1FP-1V-iAU" id="lYL-pv-2pF"/>
             </connections>
@@ -116,7 +118,7 @@
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <connections>
-                                <action selector="btnLogin:" destination="-1" eventType="touchUpInside" id="6ag-yR-NGd"/>
+                                <action selector="btnLogin:" destination="-1" eventType="touchUpInside" id="b1O-So-l9b"/>
                             </connections>
                         </button>
                     </subviews>
@@ -258,7 +260,7 @@
                 <constraint firstItem="COC-2D-Odd" firstAttribute="centerY" secondItem="d2W-bG-gdc" secondAttribute="centerY" id="SoY-po-V0c"/>
                 <constraint firstItem="RgZ-qv-1Ua" firstAttribute="trailing" secondItem="d2W-bG-gdc" secondAttribute="trailing" id="UbP-b9-OUb"/>
                 <constraint firstItem="S48-iH-VgD" firstAttribute="leading" secondItem="COC-2D-Odd" secondAttribute="leading" constant="15" id="W3q-DP-9sx"/>
-                <constraint firstItem="d2W-bG-gdc" firstAttribute="centerY" secondItem="uVM-nw-dV9" secondAttribute="centerY" id="WtS-8e-L42"/>
+                <constraint firstItem="d2W-bG-gdc" firstAttribute="centerY" secondItem="uVM-nw-dV9" secondAttribute="centerY" id="WtS-8e-L42" userLabel="Layout Bottom Container"/>
                 <constraint firstItem="RgZ-qv-1Ua" firstAttribute="top" secondItem="d2W-bG-gdc" secondAttribute="top" id="Yeb-Ll-NZ3"/>
                 <constraint firstItem="RgZ-qv-1Ua" firstAttribute="bottom" secondItem="d2W-bG-gdc" secondAttribute="bottom" id="Ygt-O4-lEg"/>
                 <constraint firstItem="COC-2D-Odd" firstAttribute="top" secondItem="d2W-bG-gdc" secondAttribute="top" id="ci9-Ep-ow1"/>

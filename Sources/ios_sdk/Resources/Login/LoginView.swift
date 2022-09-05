@@ -69,17 +69,6 @@ class LoginView: UIView {
     }
     @IBAction func btnPlayNow(_ sender: Any) {
         // get device ID
-        
-//        let deviceId = Utils.shared.getUUID()
-//        let clentId = UserDefaults.standard.string(forKey: AppInfo.KEY_CLIENT_ID)  ?? ""
-//        print("client id  : \(clentId)")
-//
-//        let client = AppInfo.shared.client_id
-//        print("client   : \(client)")
-        
-        
-        
-        
     }
     
     

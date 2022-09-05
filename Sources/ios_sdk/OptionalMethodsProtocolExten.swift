@@ -6,13 +6,15 @@
 //
 
 import Foundation
+
+
 public class OptionalMethodsProtocolExten : OptionalMethodsProtocol {
     func didChooseItem(at index: Int) {
         print("hi protocol didChooseItem")
     }
     
     
-    func didDismiss(){
+    @objc open func didDismiss(){
         print("hi protocol didDismiss")
     }
     

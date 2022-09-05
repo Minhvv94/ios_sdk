@@ -13,6 +13,7 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "ios_sdk",
+            type: .dynamic,
             targets: ["ios_sdk"]),
     ],
     dependencies: [

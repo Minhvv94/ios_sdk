@@ -67,22 +67,11 @@ class LoginView: UIView {
         // get device ID
     }
     
-    
-//    func keyboardWillShow() {
-//        UIView.animateKeyframes(withDuration: 2, delay: 0, animations: {
-//            self.layoutIfNeeded()
-//            UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.25, animations:{
-//                self.layoutBottomContainer.constant -= 50
-//            })
-//        })
-//    }
-    
-    
-    // sự kiện ẩn hiện bản phím
+    // start ===========sự kiện ẩn hiện bản phím
     func registerForKeyboardNotifications ()-> Void   {
-        NotificationCenter.default.addObserver(self,selector: #selector(keyboardWasShown),
+        NotificationCenter.default.addObserver(self,selector: #selector(keyboardWasShownLib(layoutBottomContainer:)),
             name: UIResponder.keyboardDidShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self,selector: #selector(keyboardWillBeHidden),
+        NotificationCenter.default.addObserver(self,selector: #selector(keyboardWillBeHiddenlib(layoutBottomContainer: )),
             name: UIResponder.keyboardDidHideNotification, object: nil)
     }
 
@@ -98,7 +87,6 @@ class LoginView: UIView {
         UIView.animate(withDuration: 0.25, delay: 0, usingSpringWithDamping: 0, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
             self.layoutBottomContainer.constant = -50
         }, completion: nil)
-
     }
 
     @objc func keyboardWillBeHidden () {
@@ -106,4 +94,19 @@ class LoginView: UIView {
             self.layoutBottomContainer.constant = 0
         }, completion: nil)
     }
+    
+    
+    
+    @objc func keyboardWasShownLib (layoutBottomContainer: NSLayoutConstraint) {
+        UIView.animate(withDuration: 0.25, delay: 0, usingSpringWithDamping: 0, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+            layoutBottomContainer.constant = -50
+        }, completion: nil)
+    }
+    @objc func keyboardWillBeHiddenlib (layoutBottomContainer: NSLayoutConstraint) {
+        UIView.animate(withDuration: 0.25, delay: 0, usingSpringWithDamping: 0, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+            layoutBottomContainer.constant = 0
+        }, completion: nil)
+    }
+    
+    // stop ===========sự kiện ẩn hiện bản phím
 }

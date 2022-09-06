@@ -61,9 +61,9 @@ class LoginView: UIView {
     @IBAction func btnGoogle(_ sender: Any) {
     }
     @IBAction func btnPlayNow(_ sender: Any) {
-        TimeServerRepository().getServerTime (callBack: { (response) in
-            print("=================", response)
-        })
+        TimeServerRepository().getServerTime { baseResponse in
+            print(baseResponse.rawData)
+        }
     }
     
     // start ===========sự kiện ẩn hiện bản phím

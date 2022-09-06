@@ -69,9 +69,9 @@ class LoginView: UIView {
     
     // start ===========sự kiện ẩn hiện bản phím
     func registerForKeyboardNotifications ()-> Void   {
-        NotificationCenter.default.addObserver(self,selector: #selector(keyboardWasShownLib(layoutBottomContainer:)),
+        NotificationCenter.default.addObserver(self,selector: #selector(keyboardWasShown),
             name: UIResponder.keyboardDidShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self,selector: #selector(keyboardWillBeHiddenlib(layoutBottomContainer: )),
+        NotificationCenter.default.addObserver(self,selector: #selector(keyboardWillBeHidden),
             name: UIResponder.keyboardDidHideNotification, object: nil)
     }
 
@@ -94,19 +94,5 @@ class LoginView: UIView {
             self.layoutBottomContainer.constant = 0
         }, completion: nil)
     }
-    
-    
-    
-    @objc func keyboardWasShownLib (layoutBottomContainer: NSLayoutConstraint) {
-        UIView.animate(withDuration: 0.25, delay: 0, usingSpringWithDamping: 0, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
-            layoutBottomContainer.constant = -50
-        }, completion: nil)
-    }
-    @objc func keyboardWillBeHiddenlib (layoutBottomContainer: NSLayoutConstraint) {
-        UIView.animate(withDuration: 0.25, delay: 0, usingSpringWithDamping: 0, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
-            layoutBottomContainer.constant = 0
-        }, completion: nil)
-    }
-    
     // stop ===========sự kiện ẩn hiện bản phím
 }

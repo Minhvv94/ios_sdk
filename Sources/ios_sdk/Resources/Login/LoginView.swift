@@ -91,7 +91,7 @@ class LoginView: UIView {
         center.removeObserver(self, name: UIResponder.keyboardDidHideNotification, object: nil)
         center.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
         UIView.animate(withDuration: 0.25, delay: 0, usingSpringWithDamping: 0, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
-            self.layoutBottomContainer.constant = 50
+            self.layoutBottomContainer.constant = 0
         }, completion: nil)
     }
     @objc func keyboardWasShown () {
@@ -103,7 +103,7 @@ class LoginView: UIView {
 
     @objc func keyboardWillBeHidden () {
         UIView.animate(withDuration: 0.25, delay: 0, usingSpringWithDamping: 0, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
-            self.layoutBottomContainer.constant = 50
+            self.layoutBottomContainer.constant = 0
         }, completion: nil)
     }
 }

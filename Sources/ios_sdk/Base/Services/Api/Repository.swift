@@ -36,4 +36,8 @@ class Repository: BaseRepository {
         return self.callGetMethod(url: url, parameters: params, onComplete: callBack)
     }
     
+    func doGetServerTime(){
+        
+    }
+    
 }

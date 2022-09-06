@@ -16,7 +16,6 @@ class LoginView: UIView {
     @IBOutlet weak var txtPass: UITextField!
     @IBOutlet weak var txtUserName: UITextField!
     var userDefault = UserDefaults.standard
-    var offset = 0
     
     @IBAction func btnClose(_ sender: Any) {
         //contentView.removeAllSubviews();
@@ -44,13 +43,11 @@ class LoginView: UIView {
         self.addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight,.flexibleWidth]
-        
-        offset = 0
-    
         // bấm vào view
         let gesture = UITapGestureRecognizer(target: self, action:  #selector(checkAction))
         addGestureRecognizer(gesture)
         
+        // dang ky hien thi ban phim
         self.registerForKeyboardNotifications()
     }
     
@@ -64,7 +61,9 @@ class LoginView: UIView {
     @IBAction func btnGoogle(_ sender: Any) {
     }
     @IBAction func btnPlayNow(_ sender: Any) {
-        // get device ID
+        TimeServerRepository().getServerTime (callBack: { (response) in
+            print("=================", response)
+        })
     }
     
     // start ===========sự kiện ẩn hiện bản phím

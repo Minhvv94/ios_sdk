@@ -82,8 +82,25 @@ class LoginView: UIView {
     
     // sự kiện ẩn hiện bản phím
     func registerForKeyboardNotifications ()-> Void   {
-        NotificationCenter.default.addObserver(self, selector: Selector("keyboardWasShown"), name: UIResponder.keyboardDidShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: Selector("keyboardWillBeHidden"), name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self,selector: #selector(self.keyboardDidShow(notification:)),
+            name: UIResponder.keyboardDidShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self,selector: #selector(self.keyboardDidHide(notification:)),
+            name: UIResponder.keyboardDidHideNotification, object: nil)
+    }
+    
+    
+    //MARK: Methods to manage keybaord
+    @objc func keyboardDidShow(notification: NSNotification) {
+        var info = notification.userInfo
+        let keyBoardSize = info![UIKeyboardFrameEndUserInfoKey] as! CGRect
+        scrollView.contentInset = UIEdgeInsetsMake(0.0, 0.0, keyBoardSize.height, 0.0)
+        scrollView.scrollIndicatorInsets = UIEdgeInsetsMake(0.0, 0.0, keyBoardSize.height, 0.0)
+    }
+
+    @objc func keyboardDidHide(notification: NSNotification) {
+        
+        scrollView.contentInset = UIEdgeInsets.zero
+        scrollView.scrollIndicatorInsets = UIEdgeInsets.zero
     }
 
     func deregisterFromKeyboardNotifications () -> Void {

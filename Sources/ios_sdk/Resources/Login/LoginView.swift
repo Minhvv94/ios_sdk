@@ -95,7 +95,7 @@ class LoginView: UIView {
     }
     @objc func keyboardWasShown () {
         UIView.animate(withDuration: 0.25, delay: 0, usingSpringWithDamping: 0, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
-            self.layoutBottomContainer.constant = 200
+            self.layoutBottomContainer.constant = -50
         }, completion: nil)
 
     }

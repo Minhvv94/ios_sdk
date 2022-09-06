@@ -62,7 +62,7 @@ class LoginView: UIView {
     }
     @IBAction func btnPlayNow(_ sender: Any) {
         TimeServerRepository().getServerTime { baseResponse in
-            print(baseResponse.rawData)
+            print(baseResponse.rawData!)
         }
     }
     

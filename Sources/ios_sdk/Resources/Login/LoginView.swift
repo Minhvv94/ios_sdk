@@ -20,19 +20,18 @@ class LoginView: UIView {
     
     @IBAction func btnClose(_ sender: Any) {
         //contentView.removeAllSubviews();
-        print(self.tag)
         if (self.tag == 100) {
             self.removeFromSuperview()
         }
     }
     // bắt sự kiên bấm vào màn hình
-    @objc func checkAction(sender : UITapGestureRecognizer) {
-        // ản bàn phím
-        endEditing(true)
-        
-        self.keyboardWillShow()
-        endEditing(false)
-    }
+//    @objc func checkAction(sender : UITapGestureRecognizer) {
+//        // ản bàn phím
+//        endEditing(true)
+//
+//        self.keyboardWillShow()
+//        endEditing(false)
+//    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -51,8 +50,10 @@ class LoginView: UIView {
         offset = 0
     
         // bấm vào view
-        let gesture = UITapGestureRecognizer(target: self, action:  #selector(checkAction))
-        addGestureRecognizer(gesture)
+//        let gesture = UITapGestureRecognizer(target: self, action:  #selector(checkAction))
+//        addGestureRecognizer(gesture)
+        
+        self.registerForKeyboardNotifications()
     }
     
 
@@ -69,26 +70,37 @@ class LoginView: UIView {
     }
     
     
-    func keyboardWillShow() {
-//        UIView.animate(withDuration: 0.25, animations: {
-//            self.layoutBottomContainer.constant -= 50
+//    func keyboardWillShow() {
+//        UIView.animateKeyframes(withDuration: 2, delay: 0, animations: {
 //            self.layoutIfNeeded()
-//        }, completion: {_ in
-//
+//            UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.25, animations:{
+//                self.layoutBottomContainer.constant -= 50
+//            })
 //        })
-        
-        
-        UIView.animateKeyframes(withDuration: 2, delay: 0, animations: {
-
-            self.layoutIfNeeded()
-
-            UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.25, animations:{
-                self.layoutBottomContainer.constant -= 50
-            })
-
+//    }
     
-        })
+    
+    // sự kiện ẩn hiện bản phím
+    func registerForKeyboardNotifications ()-> Void   {
+        NotificationCenter.default.addObserver(self, selector: Selector("keyboardWasShown"), name: UIResponder.keyboardDidShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: Selector("keyboardWillBeHidden"), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
-    
-    
+
+    func deregisterFromKeyboardNotifications () -> Void {
+        let center:  NotificationCenter = NotificationCenter.default
+        center.removeObserver(self, name: UIResponder.keyboardDidHideNotification, object: nil)
+        center.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    func keyboardWasShown (notification: NSNotification) {
+        UIView.animate(withDuration: 0.25, delay: 0, usingSpringWithDamping: 0, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+            self.layoutBottomContainer.constant = 50
+        }, completion: nil)
+
+    }
+
+    func keyboardWillBeHidden (notification: NSNotification) {
+        UIView.animate(withDuration: 0.25, delay: 0, usingSpringWithDamping: 0, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+            self.layoutBottomContainer.constant = 0
+        }, completion: nil)
+    }
 }

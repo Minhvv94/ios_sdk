@@ -25,13 +25,11 @@ class LoginView: UIView {
         }
     }
     // bắt sự kiên bấm vào màn hình
-//    @objc func checkAction(sender : UITapGestureRecognizer) {
-//        // ản bàn phím
-//        endEditing(true)
-//
-//        self.keyboardWillShow()
-//        endEditing(false)
-//    }
+    @objc func checkAction(sender : UITapGestureRecognizer) {
+        // ản bàn phím
+        endEditing(true)
+        self.deregisterFromKeyboardNotifications()
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -50,8 +48,8 @@ class LoginView: UIView {
         offset = 0
     
         // bấm vào view
-//        let gesture = UITapGestureRecognizer(target: self, action:  #selector(checkAction))
-//        addGestureRecognizer(gesture)
+        let gesture = UITapGestureRecognizer(target: self, action:  #selector(checkAction))
+        addGestureRecognizer(gesture)
         
         self.registerForKeyboardNotifications()
     }

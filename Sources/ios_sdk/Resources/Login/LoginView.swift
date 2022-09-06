@@ -91,33 +91,34 @@ class LoginView: UIView {
     
     //MARK: Methods to manage keybaord
     @objc func keyboardDidShow(notification: NSNotification) {
-        var info = notification.userInfo
-        let keyBoardSize = info![UIKeyboardFrameEndUserInfoKey] as! CGRect
-        scrollView.contentInset = UIEdgeInsetsMake(0.0, 0.0, keyBoardSize.height, 0.0)
-        scrollView.scrollIndicatorInsets = UIEdgeInsetsMake(0.0, 0.0, keyBoardSize.height, 0.0)
+        print("keyboardDidShow")
+//        var info = notification.userInfo
+//        let keyBoardSize = info![UIResponder.keyboardFrameEndUserInfoKey] as! CGRect
+//        self.contentView.contentInset = UIEdgeInsetsMake(0.0, 0.0, keyBoardSize.height, 0.0)
+//        self.contentView.scrollIndicatorInsets = UIEdgeInsetsMake(0.0, 0.0, keyBoardSize.height, 0.0)
     }
 
     @objc func keyboardDidHide(notification: NSNotification) {
-        
-        scrollView.contentInset = UIEdgeInsets.zero
-        scrollView.scrollIndicatorInsets = UIEdgeInsets.zero
+        print("keyboardDidHide")
+//        self.contentView.contentInset = UIEdgeInsets.zero
+//        self.contentView.scrollIndicatorInsets = UIEdgeInsets.zero
     }
 
-    func deregisterFromKeyboardNotifications () -> Void {
-        let center:  NotificationCenter = NotificationCenter.default
-        center.removeObserver(self, name: UIResponder.keyboardDidHideNotification, object: nil)
-        center.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
-    }
-    func keyboardWasShown (notification: NSNotification) {
-        UIView.animate(withDuration: 0.25, delay: 0, usingSpringWithDamping: 0, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
-            self.layoutBottomContainer.constant = 50
-        }, completion: nil)
-
-    }
-
-    func keyboardWillBeHidden (notification: NSNotification) {
-        UIView.animate(withDuration: 0.25, delay: 0, usingSpringWithDamping: 0, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
-            self.layoutBottomContainer.constant = 0
-        }, completion: nil)
-    }
+//    func deregisterFromKeyboardNotifications () -> Void {
+//        let center:  NotificationCenter = NotificationCenter.default
+//        center.removeObserver(self, name: UIResponder.keyboardDidHideNotification, object: nil)
+//        center.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+//    }
+//    func keyboardWasShown (notification: NSNotification) {
+//        UIView.animate(withDuration: 0.25, delay: 0, usingSpringWithDamping: 0, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+//            self.layoutBottomContainer.constant = 50
+//        }, completion: nil)
+//
+//    }
+//
+//    func keyboardWillBeHidden (notification: NSNotification) {
+//        UIView.animate(withDuration: 0.25, delay: 0, usingSpringWithDamping: 0, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+//            self.layoutBottomContainer.constant = 0
+//        }, completion: nil)
+//    }
 }

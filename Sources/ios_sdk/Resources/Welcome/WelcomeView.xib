@@ -25,7 +25,7 @@
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Xin chào, MinhVu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="USn-vY-aw2">
                     <rect key="frame" x="20" y="10" width="360" height="40"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                    <color key="textColor" red="0.08235294118" green="0.08235294118" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
@@ -42,6 +42,9 @@
                 <constraint firstAttribute="trailing" secondItem="USn-vY-aw2" secondAttribute="trailing" constant="20" id="vJu-e7-tfy"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="lbWebcomeUser" destination="USn-vY-aw2" id="5dG-eu-Quh"/>
+            </connections>
             <point key="canvasLocation" x="188" y="-360"/>
         </view>
     </objects>

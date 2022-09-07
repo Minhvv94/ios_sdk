@@ -10,6 +10,7 @@ import UIKit
 class WelcomeView: UIView {
 
     
+    @IBOutlet weak var lbWebcomeUser: UILabel!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -31,7 +32,7 @@ class WelcomeView: UIView {
     func sayHi(accountName : String){
         print("Chào mừng ", accountName)
         
-        //lbWebcomeUser.attributedText("Chào mừng Minh vu")
+        lbWebcomeUser.attributedText("Chào mừng Minh vu")
     }
 }
 

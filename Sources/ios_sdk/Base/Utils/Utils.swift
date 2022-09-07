@@ -341,27 +341,6 @@ class Utils: NSObject {
         formatter.locale = Locale(identifier: identifier) //  "vi_VN"
         return formatter.string(from: value) ?? "0 đ"
     }
-
-//    func createJwtFromJdt (appInfo : AppInfo, time : String) -> String {
-//        var body : String = ""
-//        let client_secret : String = appInfo.client_secret ?? ""
-//        let iss : String = appInfo.client_id ?? ""
-//        let nbf = (time as NSString) .integerValue
-//        let jtiNbf = nbf * 1000
-//        let jti = String(jtiNbf)
-//        let expdate : Int = nbf + 60
-//        let jdt = JDT(dvId: Utils.shared.getDeviceId(), os: appInfo.platformOS ?? "")
-//        
-//        let exp = ExpirationClaim(value: Date(timeIntervalSince1970: TimeInterval(expdate)))
-//            do {
-//                let jwt = try JWTSigner.hs256(key: client_secret)
-//                    .sign(Payload(jti: jti, iss: iss, nbf: nbf, jdt: jdt, exp : exp))
-//                body = jwt
-//            } catch {
-//                body = "testExpirationEncoding"
-//            }
-//        return body
-//    }
     
     func createJwtFromJdt (jdt : JDT, time : Int) -> String {
         var body : String = ""
@@ -380,6 +359,28 @@ class Utils: NSObject {
                 body = "testExpirationEncoding"
             }
         return body
+    }
+    
+    func getPayloadInToken (jwtToken : String) throws -> String? {
+        var payload : String = ""
+        let arrayOfComponents = jwtToken.split(separator: ".")
+        if arrayOfComponents.count != 3 {
+            return nil
+        }
+        
+        var encodedBase64Payload = String(arrayOfComponents[1]) as String
+        if encodedBase64Payload.count % 4 != 0 {
+            let padlen = 4 - encodedBase64Payload.count % 4
+            encodedBase64Payload.append(contentsOf: repeatElement("=", count: padlen))
+        }
+
+        if let data = Data(base64Encoded: encodedBase64Payload) ,
+            let str = String(data: data, encoding: .utf8) {
+            
+            payload = str
+            print(payload) 
+        }
+        return payload ;
     }
 
 }

@@ -71,6 +71,8 @@ class LoginView: UIView {
                     UserManager.shared.setToken(token: data?.data?.access_token ?? "")
                     UserManager.shared.setRefreshToken(refreshToken: data?.data?.refresh_token ?? "")
                     
+                    let payload = Utils.shared.getPayloadInToken(jwtToken: data?.data?.access_token)
+                    
                     print(" login now =============")
                     if (self.tag == 100) {
                         self.removeFromSuperview()

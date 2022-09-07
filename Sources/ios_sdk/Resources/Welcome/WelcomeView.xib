@@ -42,10 +42,6 @@
                 <constraint firstAttribute="trailing" secondItem="USn-vY-aw2" secondAttribute="trailing" constant="20" id="vJu-e7-tfy"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <connections>
-                <outlet property="lbWebcomeUser" destination="USn-vY-aw2" id="gap-mE-mit"/>
-                <outlet property="vBackground" destination="yxP-xz-AWj" id="icJ-Wf-NzA"/>
-            </connections>
             <point key="canvasLocation" x="188" y="-360"/>
         </view>
     </objects>

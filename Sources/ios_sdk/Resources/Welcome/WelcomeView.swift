@@ -9,7 +9,6 @@ import Foundation
 import UIKit
 class WelcomeView: UIView {
 
-    @IBOutlet weak var lbWebcomeUser: UILabel!
     
     
     override init(frame: CGRect) {

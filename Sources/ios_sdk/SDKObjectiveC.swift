@@ -44,7 +44,7 @@ public class SDKObjectiveC: UIView, IosSdk {
                         if (data?.data?.isMaintained)! {
                             let message = data?.data?.messageMaintain ?? ""
                             let alert = CustomeAlert.shared.showAlertOneButtonTapped(title: "Thông báo", message: message, btnTitle: "Đồng ý")
-                            // show the alert
+                             // show the alert
                             topVC.present(alert, animated: true, completion: nil)
                         }else{
                                         let screenFrame = topVC.view.frame

@@ -42,4 +42,8 @@ class CustomeAlert {
         return alert;
     }
     
+    func sayHi(title: String){
+        
+    }
+    
 }

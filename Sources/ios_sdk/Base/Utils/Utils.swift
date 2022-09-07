@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import JWTKit
 
 class Utils: NSObject {
 
@@ -342,7 +343,6 @@ class Utils: NSObject {
     }
 
 //    func createJwtFromJdt (appInfo : AppInfo, time : String) -> String {
-//
 //        var body : String = ""
 //        let client_secret : String = appInfo.client_secret ?? ""
 //        let iss : String = appInfo.client_id ?? ""
@@ -350,8 +350,8 @@ class Utils: NSObject {
 //        let jtiNbf = nbf * 1000
 //        let jti = String(jtiNbf)
 //        let expdate : Int = nbf + 60
-//        let jdt = JDT(dvId: "1656572775", os: appInfo.platformOS ?? "")
-//
+//        let jdt = JDT(dvId: Utils.shared.getDeviceId(), os: appInfo.platformOS ?? "")
+//        
 //        let exp = ExpirationClaim(value: Date(timeIntervalSince1970: TimeInterval(expdate)))
 //            do {
 //                let jwt = try JWTSigner.hs256(key: client_secret)
@@ -362,51 +362,50 @@ class Utils: NSObject {
 //            }
 //        return body
 //    }
-//
-//    func testExpirationEncoding() -> String {
-//        let test = "PGlDvJMrBFmnsZPA29bRSOTxYsw4YvLJ4HnQuGhR42q+jZYOHL3z3sRr0QSQXH8B"
-//        let jti = "1656572775"
-//        let iss = "643621c719624254"
-//        let nbf = 1656572775
-//        let jdt = JDT(dvId: "a", os: "a")
-//        let exp = ExpirationClaim(value: Date(timeIntervalSince1970: 1656572835))
-//            do {
-//                let jwt = try JWTSigner.hs256(key: test)
-//                    .sign(Payload(jti: jti, iss: iss, nbf: nbf, jdt: jdt,exp : exp))
-//                print(" test : \(jwt)")
-//            } catch {
-//                print("testExpirationEncoding")
-//            }
-//
-//            return test
-//        }
+    
+    func createJwtFromJdt (jdt : JDT, time : Int) -> String {
+        var body : String = ""
+        let nbf = time
+        let jti = time*1000
+        let expdate = nbf + 60
+        let clientId = AppInfo.shared.client_id
+        let clientSecret = AppInfo.shared.client_secret
+    
+        let exp = ExpirationClaim(value: Date(timeIntervalSince1970: TimeInterval(expdate)))
+            do {
+                let jwt = try JWTSigner.hs256(key: clientSecret)
+                    .sign(Payload(jti: jti, iss: clientId, nbf: nbf, jdt: jdt, exp : exp))
+                body = jwt
+            } catch {
+                body = "testExpirationEncoding"
+            }
+        return body
+    }
 
 }
-//struct Payload: JWTPayload, Equatable {
-//
-//    var jti: String
-//    var iss: String
-//    var nbf: Int = 0
-//    var jdt: JDT
-//    var exp: ExpirationClaim
-//    func verify(using signer: JWTSigner) throws {
-//        try self.exp.verifyNotExpired()
-//    }
-//}
-//
-//
-//struct JDT: JWTPayload, Equatable {
-//    var dvId : String
-//    var os : String
-//
-//    /// See `JWTClaim`.
-//    public init(dvId: String, os: String) {
-//        self.dvId = dvId
-//        self.os = os
-//    }
-//
-//    func verify(using signer: JWTSigner) throws {
-//
-//    }
-//
-//}
+struct Payload: JWTPayload, Equatable {
+
+    var jti: Int = 0
+    var iss: String
+    var nbf: Int = 0
+    var jdt: JDT
+    var exp: ExpirationClaim
+    func verify(using signer: JWTSigner) throws {
+        try self.exp.verifyNotExpired()
+    }
+}
+struct JDT: JWTPayload, Equatable {
+    var dvId : String
+    var os : String
+    
+    /// See `JWTClaim`.
+    public init(dvId: String, os: String) {
+        self.dvId = dvId
+        self.os = os
+    }
+    
+    func verify(using signer: JWTSigner) throws {
+                
+    }
+
+}

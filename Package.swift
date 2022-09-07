@@ -17,6 +17,7 @@ let package = Package(
             targets: ["ios_sdk"]),
     ],
     dependencies: [
+        .package(url: "https://github.com/vapor/jwt-kit.git", from: "4.0.0"),
         .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from: "5.6.2")),
         .package(url: "https://github.com/SwiftyJSON/SwiftyJSON.git", .upToNextMajor(from: "5.0.0")),
         .package(url: "https://github.com/ReactiveX/RxSwift.git", .upToNextMajor(from: "6.0.0"))
@@ -26,7 +27,8 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "ios_sdk",
-            dependencies: ["Alamofire", "SwiftyJSON", "RxSwift"],
+            dependencies: ["Alamofire", "SwiftyJSON", "RxSwift",
+                           .product(name: "JWTKit", package: "jwt-kit")],
             resources: [
                 Resource.process("Assets.xcassets"),
                 Resource.process("Resources/Login/LoginView.xib"),

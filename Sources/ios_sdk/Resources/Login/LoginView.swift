@@ -61,8 +61,23 @@ class LoginView: UIView {
     @IBAction func btnGoogle(_ sender: Any) {
     }
     @IBAction func btnPlayNow(_ sender: Any) {
-        TimeServerRepository().getServerTime { baseResponse in
-            print(baseResponse.rawData!)
+        TimeServerRepository().getServerTime { response in
+            let jdt =  JDT(dvId:  Utils.shared.getDeviceId(), os: AppInfo.shared.platformOS)
+            let body = Utils.shared.createJwtFromJdt(jdt: jdt, time: Int(response.rawData!) ?? 0)
+            
+            Repository().loginFast(jwt: body) { (response) in
+                if response.isSuccess() {
+                    let data = JsonParserManager.getUserLogin(jsonString: response.rawData ?? "")
+                    UserManager.shared.setToken(token: data?.data?.access_token ?? "")
+                    UserManager.shared.setRefreshToken(refreshToken: data?.data?.refresh_token ?? "")
+                    
+                    print(" login now =============")
+                    if (self.tag == 100) {
+                        self.removeFromSuperview()
+                    }
+                    
+                }
+            }
         }
     }
     
@@ -78,12 +93,12 @@ class LoginView: UIView {
         let center:  NotificationCenter = NotificationCenter.default
         center.removeObserver(self, name: UIResponder.keyboardDidHideNotification, object: nil)
         center.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
-        UIView.animate(withDuration: 0.25, delay: 0, usingSpringWithDamping: 0, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+        UIView.animate(withDuration: 0.25, delay: 0.25, usingSpringWithDamping: 0, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
             self.layoutBottomContainer.constant = 0
         }, completion: nil)
     }
     @objc func keyboardWasShown () {
-        UIView.animate(withDuration: 0.25, delay: 0, usingSpringWithDamping: 0, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+        UIView.animate(withDuration: 0.25, delay: 0.25, usingSpringWithDamping: 0, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
             self.layoutBottomContainer.constant = -50
         }, completion: nil)
     }

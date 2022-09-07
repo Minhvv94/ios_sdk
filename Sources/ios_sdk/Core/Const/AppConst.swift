@@ -36,6 +36,9 @@ struct ApiConst {
     static let PLARFORM_OS = "iOS"
     
     
+    static let REQUEST_OS = "os"
+    static let REQUEST_DEVICE_ID = "dvId"
+    
     
     
 }

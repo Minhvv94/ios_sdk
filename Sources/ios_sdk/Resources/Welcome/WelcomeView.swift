@@ -32,7 +32,11 @@ class WelcomeView: UIView {
     func sayHi(accountName : String){
         print("Chào mừng ", accountName)
         
-        lbWebcomeUser.attributedText("Chào mừng Minh vu")
+        
+        let webcome = "Chào mừng " + accountName
+        
+        
+        lbWebcomeUser.text = webcome
     }
 }
 

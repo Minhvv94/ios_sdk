@@ -361,7 +361,7 @@ class Utils: NSObject {
         return body
     }
     
-    func getPayloadInToken (jwtToken : String) throws -> String? {
+    func getPayloadInToken (jwtToken : String) -> String? {
         var payload : String = ""
         let arrayOfComponents = jwtToken.split(separator: ".")
         if arrayOfComponents.count != 3 {
@@ -376,9 +376,8 @@ class Utils: NSObject {
 
         if let data = Data(base64Encoded: encodedBase64Payload) ,
             let str = String(data: data, encoding: .utf8) {
-            
             payload = str
-            print(payload) 
+            print(payload)
         }
         return payload ;
     }

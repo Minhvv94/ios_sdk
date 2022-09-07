@@ -60,7 +60,7 @@ class LoginView: UIView {
     }
     @IBAction func btnGoogle(_ sender: Any) {
     }
-    @IBAction func btnPlayNow(_ sender: Any) {
+    @IBAction func btnPlayNow(_ sender: Any)  {
         TimeServerRepository().getServerTime { response in
             let jdt =  JDT(dvId:  Utils.shared.getDeviceId(), os: AppInfo.shared.platformOS)
             let body = Utils.shared.createJwtFromJdt(jdt: jdt, time: Int(response.rawData!) ?? 0)
@@ -71,7 +71,7 @@ class LoginView: UIView {
                     UserManager.shared.setToken(token: data?.data?.access_token ?? "")
                     UserManager.shared.setRefreshToken(refreshToken: data?.data?.refresh_token ?? "")
                     
-                    let payload = Utils.shared.getPayloadInToken(jwtToken: data?.data?.access_token)
+                    let payload = Utils.shared.getPayloadInToken(jwtToken: data?.data?.access_token ?? "")
                     
                     print(" login now =============")
                     if (self.tag == 100) {

@@ -10,7 +10,7 @@ import UIKit
 class WelcomeView: UIView {
 
     
-    @IBOutlet weak var contentView: RoundRectView!
+    @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var lbWebcomeUser: UILabel!
     
     override init(frame: CGRect) {

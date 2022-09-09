@@ -10,6 +10,7 @@ import UIKit
 class WelcomeView: UIView {
 
     
+    @IBOutlet weak var contentView: RoundRectView!
     @IBOutlet weak var lbWebcomeUser: UILabel!
     
     override init(frame: CGRect) {
@@ -27,7 +28,9 @@ class WelcomeView: UIView {
     
     private func setUpView(){
         Bundle.module.loadNibNamed("WelcomeView", owner: self, options: nil)
-    
+        self.addSubview(contentView)
+        contentView.frame = self.bounds
+        contentView.autoresizingMask = [.flexibleHeight,.flexibleWidth]
     }
     func sayHi(accountName : String){
         print("Chào mừng ", accountName)

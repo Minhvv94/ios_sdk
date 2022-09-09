@@ -43,7 +43,8 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="lbWebcomeUser" destination="USn-vY-aw2" id="5dG-eu-Quh"/>
+                <outlet property="contentView" destination="yxP-xz-AWj" id="Ztq-8N-PW4"/>
+                <outlet property="lbWebcomeUser" destination="USn-vY-aw2" id="Bu6-lJ-FOh"/>
             </connections>
             <point key="canvasLocation" x="188" y="-360"/>
         </view>

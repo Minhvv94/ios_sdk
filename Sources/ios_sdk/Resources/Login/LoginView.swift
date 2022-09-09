@@ -80,7 +80,7 @@ class LoginView: UIView {
                         let windowWidth = screenFrame.width
                         let windowHeight = screenFrame.height
                         let rect = CGRect(x: 0, y: 0, width: windowWidth , height: windowHeight)
-                        let welcomeView = WelcomeView(frame: rect)
+                        let welcomeView = TestView(frame: rect)
 //                        welcomeView.sayHi(accountName: "MinhVu")
                         welcomeView.tag = 107
                         topVC.view.addSubview(welcomeView)

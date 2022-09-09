@@ -11,6 +11,7 @@ import UIKit
 @objc(TestView)
 class TestView: UIView {
 
+    @IBOutlet weak var textSayHi: UILabel!
     @IBOutlet var contentView: UIView!
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -30,5 +31,9 @@ class TestView: UIView {
         self.addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight,.flexibleWidth]
+    }
+    func sayHi(accountName : String){
+        textSayHi.text = accountName
+        
     }
 }

@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TestView">
             <connections>
                 <outlet property="contentView" destination="iyS-SK-vVi" id="Q9d-Dq-KID"/>
+                <outlet property="textSayHi" destination="Iwt-Ys-UXc" id="RDN-QG-B9a"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

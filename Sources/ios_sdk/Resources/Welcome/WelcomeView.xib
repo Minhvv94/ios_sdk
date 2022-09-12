@@ -21,18 +21,21 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M9K-Md-CpS" userLabel="vBackground">
                     <rect key="frame" x="0.0" y="0.0" width="400" height="60"/>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wib-Dv-bnF" userLabel="lb Welcome User">
-                    <rect key="frame" x="179" y="19" width="42" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wib-Dv-bnF" userLabel="lb Welcome User">
+                    <rect key="frame" x="20" y="10" width="360" height="40"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <constraints>
+                <constraint firstItem="wib-Dv-bnF" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="2pK-JV-YyM"/>
+                <constraint firstAttribute="trailing" secondItem="wib-Dv-bnF" secondAttribute="trailing" constant="20" id="2po-ZT-Gtw"/>
                 <constraint firstItem="M9K-Md-CpS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="4jY-vW-FWO"/>
                 <constraint firstAttribute="trailing" secondItem="M9K-Md-CpS" secondAttribute="trailing" id="L8M-X6-nBV"/>
                 <constraint firstAttribute="bottom" secondItem="M9K-Md-CpS" secondAttribute="bottom" id="T2k-bw-jsv"/>
+                <constraint firstItem="wib-Dv-bnF" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" constant="-10" id="b5c-Hr-FMw"/>
+                <constraint firstItem="wib-Dv-bnF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="jaX-hS-MSv"/>
                 <constraint firstItem="M9K-Md-CpS" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="wOY-eM-nRq"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>

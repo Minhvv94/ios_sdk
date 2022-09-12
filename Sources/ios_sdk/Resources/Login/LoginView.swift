@@ -79,7 +79,7 @@ class LoginView: UIView {
                         let screenFrame = topVC.view.frame
                         let windowWidth = screenFrame.width
                         let windowHeight = screenFrame.height
-                        let rect = CGRect(x: windowWidth/2, y: 20, width: windowWidth , height: 60)
+                        let rect = CGRect(x: windowWidth/2, y: 20, width: windowWidth/2+60 , height: 120)
                         let welcomeView = WelcomeView(frame: rect)
                         
                         welcomeView.translatesAutoresizingMaskIntoConstraints = false

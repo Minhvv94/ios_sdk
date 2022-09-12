@@ -10,8 +10,10 @@ import UIKit
 class WelcomeView: UIView {
 
     
+
     @IBOutlet weak var contentView: UIView!
-    @IBOutlet weak var lbWebcomeUser: UILabel!
+    @IBOutlet weak var lbWelcomeUser: UILabel!
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -31,15 +33,11 @@ class WelcomeView: UIView {
         self.addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight,.flexibleWidth]
+        
     }
     func sayHi(accountName : String){
-        print("Chào mừng ", accountName)
-        
-        
-        let webcome = "Chào mừng " + accountName
-        
-        
-        lbWebcomeUser.text = webcome
+        let webcome = "Xin chào, " + accountName
+        lbWelcomeUser.text = webcome
     }
 }
 

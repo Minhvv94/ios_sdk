@@ -1,52 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="ump-Ij-qsa" customClass="WelcomeView">
+        <view contentMode="scaleToFill" id="W8U-lh-2xG" customClass="WelcomeView" customModule="ios_sdk">
             <rect key="frame" x="0.0" y="0.0" width="400" height="60"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view alpha="0.80000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yxP-xz-AWj" customClass="RoundRectView">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZP4-Jb-Jly">
                     <rect key="frame" x="0.0" y="0.0" width="400" height="60"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                            <integer key="value" value="5"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Xin chào, MinhVu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="USn-vY-aw2">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Xin chào , Minh" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OL2-3n-oOb" userLabel="lb Welcome User">
                     <rect key="frame" x="20" y="10" width="360" height="40"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <viewLayoutGuide key="safeArea" id="IjA-ZX-vpO"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="yxP-xz-AWj" secondAttribute="bottom" id="8YC-Fm-ir1"/>
-                <constraint firstItem="yxP-xz-AWj" firstAttribute="leading" secondItem="ump-Ij-qsa" secondAttribute="leading" id="J8q-eO-9Hg"/>
-                <constraint firstItem="USn-vY-aw2" firstAttribute="leading" secondItem="ump-Ij-qsa" secondAttribute="leading" constant="20" id="MxT-YT-JT6"/>
-                <constraint firstAttribute="trailing" secondItem="yxP-xz-AWj" secondAttribute="trailing" id="dTc-si-vhG"/>
-                <constraint firstItem="USn-vY-aw2" firstAttribute="top" secondItem="ump-Ij-qsa" secondAttribute="top" constant="10" id="nhR-pZ-itu"/>
-                <constraint firstItem="USn-vY-aw2" firstAttribute="bottom" secondItem="ump-Ij-qsa" secondAttribute="bottom" constant="-10" id="pVw-dL-cbX"/>
-                <constraint firstItem="yxP-xz-AWj" firstAttribute="top" secondItem="ump-Ij-qsa" secondAttribute="top" id="ptS-o5-sCU"/>
-                <constraint firstAttribute="trailing" secondItem="USn-vY-aw2" secondAttribute="trailing" constant="20" id="vJu-e7-tfy"/>
+                <constraint firstItem="OL2-3n-oOb" firstAttribute="bottom" secondItem="W8U-lh-2xG" secondAttribute="bottom" constant="-10" id="2Ci-Fn-VRg"/>
+                <constraint firstItem="OL2-3n-oOb" firstAttribute="top" secondItem="W8U-lh-2xG" secondAttribute="top" constant="10" id="2W9-lA-DTe"/>
+                <constraint firstItem="ZP4-Jb-Jly" firstAttribute="leading" secondItem="W8U-lh-2xG" secondAttribute="leading" id="9kJ-Bl-Sbu"/>
+                <constraint firstItem="OL2-3n-oOb" firstAttribute="leading" secondItem="W8U-lh-2xG" secondAttribute="leading" constant="20" id="Etj-kE-SUT"/>
+                <constraint firstItem="ZP4-Jb-Jly" firstAttribute="top" secondItem="W8U-lh-2xG" secondAttribute="top" id="hVe-zo-sJS"/>
+                <constraint firstAttribute="trailing" secondItem="ZP4-Jb-Jly" secondAttribute="trailing" id="ih9-sa-hUz"/>
+                <constraint firstAttribute="bottom" secondItem="ZP4-Jb-Jly" secondAttribute="bottom" id="mMv-Xg-7T8"/>
+                <constraint firstAttribute="trailing" secondItem="OL2-3n-oOb" secondAttribute="trailing" constant="20" id="nwS-Sd-2zz"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="contentView" destination="yxP-xz-AWj" id="Ztq-8N-PW4"/>
-                <outlet property="lbWebcomeUser" destination="USn-vY-aw2" id="Bu6-lJ-FOh"/>
+                <outlet property="contentView" destination="ZP4-Jb-Jly" id="0Cn-CU-0C4"/>
+                <outlet property="lbWelcomeUser" destination="OL2-3n-oOb" id="ov6-Z0-bM7"/>
             </connections>
-            <point key="canvasLocation" x="188" y="-360"/>
+            <point key="canvasLocation" x="2.8037383177570092" y="-399.13606911447084"/>
         </view>
     </objects>
 </document>

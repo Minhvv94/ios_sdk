@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 
 @objc(LoginView)
@@ -75,22 +76,25 @@ class LoginView: UIView {
                         self.removeFromSuperview()
                     }
                     
-                    if let topVC = UIApplication.topViewController() {
-                        let welcomeView = WelcomeView()
-                        topVC.view.addSubview(welcomeView)
-                        welcomeView.translatesAutoresizingMaskIntoConstraints = false
-                        NSLayoutConstraint.activate([
-                            welcomeView.topAnchor.constraint(equalTo: topVC.view.topAnchor, constant: 20),
-                            welcomeView.centerXAnchor.constraint(equalTo: topVC.view.centerXAnchor),
-                            welcomeView.widthAnchor.constraint(equalToConstant: 400),
-                            welcomeView.heightAnchor.constraint(equalToConstant: 60)
-                        ])
-                        welcomeView.tag = 107
-                        welcomeView.sayHi(accountName: "Minh Vu")
-                        welcomeView.closeWelcome()
-                        print("=======================")
-                        
-                    }
+//                    if let topVC = UIApplication.topViewController() {
+//                        let welcomeView = WelcomeView()
+//                        topVC.view.addSubview(welcomeView)
+//                        welcomeView.translatesAutoresizingMaskIntoConstraints = false
+//                        NSLayoutConstraint.activate([
+//                            welcomeView.topAnchor.constraint(equalTo: topVC.view.topAnchor, constant: 20),
+//                            welcomeView.centerXAnchor.constraint(equalTo: topVC.view.centerXAnchor),
+//                            welcomeView.widthAnchor.constraint(equalToConstant: 400),
+//                            welcomeView.heightAnchor.constraint(equalToConstant: 60)
+//                        ])
+//                        welcomeView.tag = 107
+//                        welcomeView.sayHi(accountName: "Minh Vu")
+//                        welcomeView.closeWelcome()
+//                        print("=======================")
+//
+//                    }
+                    
+                    let toast = Toast()
+                    toast.show()
                 }
             }
         }

@@ -80,10 +80,10 @@ class LoginView: UIView {
                         welcomeView.translatesAutoresizingMaskIntoConstraints = false
                         
                         NSLayoutConstraint.activate([
-                            welcomeView.topAnchor.constraint(equalTo: topVC.view.bottomAnchor, constant: 10),
-                            welcomeView.leadingAnchor.constraint(equalTo: topVC.view.leadingAnchor),
-                            welcomeView.widthAnchor.constraint(equalTo: topVC.view.widthAnchor),
-                            welcomeView.heightAnchor.constraint(equalToConstant: 50)
+                            welcomeView.topAnchor.constraint(equalTo: topVC.view.topAnchor, constant: 20),
+                            welcomeView.leadingAnchor.constraint(equalTo: topVC.view.leadingAnchor, constant: 20),
+                            welcomeView.widthAnchor.constraint(equalToConstant: 80),
+                            welcomeView.heightAnchor.constraint(equalToConstant: 80)
                         ])
                         
                         

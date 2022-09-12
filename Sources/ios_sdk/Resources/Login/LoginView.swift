@@ -137,14 +137,13 @@ class LoginView: UIView {
     // stop ===========sự kiện ẩn hiện bản phím
     
     
-    func closeWelcome(){
+    @objc func closeWelcome(){
         timer = DispatchSource.makeTimerSource()
         timer.schedule(deadline: .now() + .seconds(1), repeating: .seconds(1), leeway: .seconds(1))
         timer.setEventHandler(handler: { [weak self] in
-//            guard let strongSelf = self else { return }
-//            strongSelf.countTime()
-            
-            self!.countTime()
+            guard let strongSelf = self else { return }
+            strongSelf.countTime()
+        
         })
 
         timer.resume()

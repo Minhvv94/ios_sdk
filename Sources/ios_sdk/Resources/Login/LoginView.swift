@@ -10,11 +10,6 @@ import UIKit
 
 @objc(LoginView)
 class LoginView: UIView {
-    
-    
-    
-    var timer : DispatchSourceTimer!
-    var counter : Int = 0
     @IBOutlet weak var layoutBottomContainer: NSLayoutConstraint!
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var txtPass: UITextField!
@@ -84,7 +79,6 @@ class LoginView: UIView {
                         let welcomeView = WelcomeView()
                         topVC.view.addSubview(welcomeView)
                         welcomeView.translatesAutoresizingMaskIntoConstraints = false
-                        let widthAnchor = topVC.view.frame.width/2 + 40
                         NSLayoutConstraint.activate([
                             welcomeView.topAnchor.constraint(equalTo: topVC.view.topAnchor, constant: 20),
                             welcomeView.centerXAnchor.constraint(equalTo: topVC.view.centerXAnchor),
@@ -93,8 +87,7 @@ class LoginView: UIView {
                         ])
                         welcomeView.tag = 107
                         welcomeView.sayHi(accountName: "Minh Vu")
-
-                        self.closeWelcome()
+                        welcomeView.closeWelcome()
                         
                     }
                 }
@@ -131,26 +124,5 @@ class LoginView: UIView {
     }
     // stop ===========sự kiện ẩn hiện bản phím
     
-    @objc func closeWelcome(){
-        timer = DispatchSource.makeTimerSource()
-        timer.schedule(deadline: .now() + .seconds(1), repeating: .seconds(1), leeway: .seconds(1))
-        timer.setEventHandler(handler: { [weak self] in
-            guard let strongSelf = self else { return }
-            strongSelf.countTime()
-        
-        })
-
-        timer.resume()
-    }
-    func countTime(){
-        counter += 1
-        print(counter)
-        if counter == 4 {
-            self.removeFromSuperview()
-            timer.cancel()
-            
-            
-        }
-    }
     
 }

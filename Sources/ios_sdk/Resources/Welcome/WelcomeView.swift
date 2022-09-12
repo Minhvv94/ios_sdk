@@ -55,11 +55,12 @@ class WelcomeView: UIView {
         timer?.resume()
         
         
-        print("chay vao day ===============2222222=")
+        
     }
     
     
     @objc public func hide(){
+        print("chay vao day ===============2222222=")
         self.contentView.removeFromSuperview()
         self.timer?.cancel()
         self.timer = nil

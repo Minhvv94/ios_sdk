@@ -149,7 +149,8 @@ class LoginView: UIView {
     }
     func countTime(){
         counter += 1
-        if counter == 2 {
+        print(counter)
+        if counter == 4 {
             if (self.tag == 107) {
                 self.removeFromSuperview()
             }

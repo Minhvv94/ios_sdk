@@ -7,6 +7,8 @@
 
 import Foundation
 import UIKit
+
+@objc(WelcomeView)
 class WelcomeView: UIView {
 
     
@@ -35,7 +37,7 @@ class WelcomeView: UIView {
         contentView.autoresizingMask = [.flexibleHeight,.flexibleWidth]
         
     }
-    func sayHi(accountName : String){
+    @objc func sayHi(accountName : String){
         let webcome = "Xin chào, " + accountName
         lbWelcomeUser.text = webcome
     }

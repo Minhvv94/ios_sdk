@@ -10,8 +10,7 @@ import UIKit
 
 @objc(LoginView)
 class LoginView: UIView {
-    var timer : DispatchSourceTimer!
-    var counter : Int = 0
+
     @IBOutlet weak var layoutBottomContainer: NSLayoutConstraint!
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var txtPass: UITextField!
@@ -73,15 +72,14 @@ class LoginView: UIView {
                     UserManager.shared.setRefreshToken(refreshToken: data?.data?.refresh_token ?? "")
                     
                     let payload = Utils.shared.getPayloadInToken(jwtToken: data?.data?.access_token ?? "")
-                    
+                    if (self.tag == 100) {
+                        self.removeFromSuperview()
+                    }
                     
                     if let topVC = UIApplication.topViewController() {
-                        
                         let welcomeView = WelcomeView()
                         topVC.view.addSubview(welcomeView)
                         welcomeView.translatesAutoresizingMaskIntoConstraints = false
-                        
-                        
                         let widthAnchor = topVC.view.frame.width/2 + 40
                         NSLayoutConstraint.activate([
                             welcomeView.topAnchor.constraint(equalTo: topVC.view.topAnchor, constant: 20),
@@ -89,15 +87,10 @@ class LoginView: UIView {
                             welcomeView.widthAnchor.constraint(equalToConstant: 400),
                             welcomeView.heightAnchor.constraint(equalToConstant: 60)
                         ])
-                        
-
-                        welcomeView.sayHi(accountName: "Minh Vu")
                         welcomeView.tag = 107
-                        
-//                        if (self.tag == 100) {
-//                            self.removeFromSuperview()
-//                        }
-                        self.closeWelcome()
+                        welcomeView.sayHi(accountName: "Minh Vu")
+
+                        welcomeView.closeWelcome()
                         
                     }
                 }
@@ -135,24 +128,5 @@ class LoginView: UIView {
     // stop ===========sự kiện ẩn hiện bản phím
     
     
-    @objc func closeWelcome(){
-        timer = DispatchSource.makeTimerSource()
-        timer.schedule(deadline: .now() + .seconds(1), repeating: .seconds(1), leeway: .seconds(1))
-        timer.setEventHandler(handler: { [weak self] in
-            guard let strongSelf = self else { return }
-            strongSelf.countTime()
-        
-        })
-
-        timer.resume()
-    }
-    func countTime(){
-        counter += 1
-        print(counter)
-        if counter == 4 {
-            if (self.tag == 107) {
-                self.removeFromSuperview()
-            }
-        }
-    }
+    
 }

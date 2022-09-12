@@ -84,7 +84,7 @@ class LoginView: UIView {
                         let widthAnchor = topVC.view.frame.width/2 + 40
                         NSLayoutConstraint.activate([
                             welcomeView.topAnchor.constraint(equalTo: topVC.view.topAnchor, constant: 20),
-                            welcomeView.centerYAnchor.constraint(equalTo: topVC.view.centerYAnchor),
+                            welcomeView.centerXAnchor.constraint(equalTo: topVC.view.centerXAnchor),
                             welcomeView.widthAnchor.constraint(equalToConstant: 60),
                             welcomeView.heightAnchor.constraint(equalToConstant: 400)
                         ])

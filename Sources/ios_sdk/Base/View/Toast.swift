@@ -37,6 +37,8 @@ class Toast {
         contentView.layer.borderWidth = 1
         contentView.center = CGPoint(x: window.center.x, y: window.center.y*7/5)
         contentView.addSubview(lableToast)
+        
+        print("chay vao day ================")
     }
     
     private var timer:DispatchSourceTimer? = nil
@@ -64,6 +66,9 @@ class Toast {
             self.hide()
         })
         timer?.resume()
+        
+        
+        print("chay vao day ===============2222222=")
     }
     
     @objc public func hide(){

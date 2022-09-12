@@ -94,14 +94,12 @@ class LoginView: UIView {
                         welcomeView.sayHi(accountName: "Minh Vu")
                         welcomeView.tag = 107
                         
+//                        if (self.tag == 100) {
+//                            self.removeFromSuperview()
+//                        }
                         self.closeWelcome()
                         
                     }
-
-                    if (self.tag == 100) {
-                        self.removeFromSuperview()
-                    }
-                    
                 }
             }
         }

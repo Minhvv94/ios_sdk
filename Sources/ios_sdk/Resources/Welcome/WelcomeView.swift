@@ -56,7 +56,9 @@ class WelcomeView: UIView {
         counter += 1
         print(counter)
         if counter == 2 {
+            self.contentView.removeFromSuperview()
             timer.cancel()
+            timer = nil
         }
     }
 }

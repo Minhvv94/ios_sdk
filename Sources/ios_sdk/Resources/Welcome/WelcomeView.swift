@@ -57,7 +57,7 @@ class WelcomeView: UIView {
     func countTime(){
         counter += 1
         print(counter)
-        if counter == 4 {
+        if counter == 2 {
             self.removeFromSuperview()
             timer.cancel()
         }

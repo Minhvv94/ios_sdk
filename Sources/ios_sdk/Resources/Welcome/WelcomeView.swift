@@ -56,10 +56,7 @@ class WelcomeView: UIView {
         counter += 1
         print(counter)
         if counter == 2 {
-            self.removeFromSuperview()
             timer.cancel()
-            
-            
         }
     }
 }

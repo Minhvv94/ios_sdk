@@ -79,8 +79,10 @@ class LoginView: UIView {
                         let screenFrame = topVC.view.frame
                         let windowWidth = screenFrame.width
                         let windowHeight = screenFrame.height
-                        let rect = CGRect(x: 0, y: 0, width: windowWidth , height: windowHeight)
+                        let rect = CGRect(x: 0, y: windowHeight/2, width: windowWidth , height: 60)
                         let welcomeView = WelcomeView(frame: rect)
+                        
+                        welcomeView.translatesAutoresizingMaskIntoConstraints = false
                         welcomeView.sayHi(accountName: "MinhVu")
                         welcomeView.tag = 107
                         topVC.view.addSubview(welcomeView)

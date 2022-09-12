@@ -77,10 +77,11 @@ class LoginView: UIView {
                     if let topVC = UIApplication.topViewController() {
                         
                         let welcomeView = WelcomeView()
+                        topVC.view.addSubview(welcomeView)
                         welcomeView.translatesAutoresizingMaskIntoConstraints = false
                         
                         NSLayoutConstraint.activate([
-                            welcomeView.topAnchor.constraint(equalTo: topVC.view.topAnchor, constant: 20),
+                            welcomeView.topAnchor.constraint(equalTo: topVC.view.topAnchor, constant: 50),
                             welcomeView.leadingAnchor.constraint(equalTo: topVC.view.leadingAnchor, constant: 20),
                             welcomeView.widthAnchor.constraint(equalToConstant: 80),
                             welcomeView.heightAnchor.constraint(equalToConstant: 80)
@@ -89,7 +90,7 @@ class LoginView: UIView {
                         
                         welcomeView.sayHi(accountName: "Minh Vu")
                         welcomeView.tag = 107
-                        topVC.view.addSubview(welcomeView)
+                        
                     }
 
                     if (self.tag == 100) {

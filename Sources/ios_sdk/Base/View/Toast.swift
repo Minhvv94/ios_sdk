@@ -40,7 +40,7 @@ class Toast {
     }
     
     private var timer:DispatchSourceTimer? = nil
-    func show(showTimeSec:Int = 3){
+    func show(showTimeSec:Int = 20){
         if timer != nil {
             hide()
         }

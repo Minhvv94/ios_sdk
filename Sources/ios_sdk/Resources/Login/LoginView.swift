@@ -79,7 +79,7 @@ class LoginView: UIView {
                         let screenFrame = topVC.view.frame
                         let windowWidth = screenFrame.width
                         let windowHeight = screenFrame.height
-                        let rect = CGRect(x: 0, y: 0, width: 400 , height: 60)
+                        let rect = CGRect(x: 0, y: 0, width: windowWidth , height: windowHeight)
                         let welcomeView = WelcomeView(frame: rect)
                         welcomeView.sayHi(accountName: "MinhVu")
                         welcomeView.tag = 107

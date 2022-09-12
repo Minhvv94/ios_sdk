@@ -16,7 +16,7 @@ class WelcomeView: UIView {
     
     @IBOutlet weak var lbWelcomeUser: UILabel!
     
-    
+
 
     override init(frame: CGRect) {
         super.init(frame: frame)

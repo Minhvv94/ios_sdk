@@ -76,20 +76,18 @@ class LoginView: UIView {
                     
                     if let topVC = UIApplication.topViewController() {
                         
-                        let screenFrame = topVC.view.frame
-                        let windowWidth = screenFrame.width
-                        let windowHeight = screenFrame.height
-                        let rect = CGRect(x: windowWidth/2, y: 20, width: windowWidth/2+60 , height: 120)
-
                         let welcomeView = WelcomeView()
-                        welcomeView.leftAnchor.constraint(equalTo: topVC.view.leftAnchor, constant: 20).isActive = true
-                        welcomeView.rightAnchor.constraint(equalTo: topVC.view.rightAnchor, constant: -20).isActive = true
-
-                        welcomeView.centerYAnchor.constraint(equalTo: topVC.view.centerYAnchor).isActive = true
-                        welcomeView.heightAnchor.constraint(equalToConstant: 100).isActive = true
+                        welcomeView.translatesAutoresizingMaskIntoConstraints = false
+                        
+                        NSLayoutConstraint.activate([
+                            welcomeView.topAnchor.constraint(equalTo: topVC.view.bottomAnchor, constant: 10),
+                            welcomeView.leadingAnchor.constraint(equalTo: topVC.view.leadingAnchor),
+                            welcomeView.widthAnchor.constraint(equalTo: topVC.view.widthAnchor),
+                            welcomeView.heightAnchor.constraint(equalToConstant: 50)
+                        ])
                         
                         
-                        welcomeView.sayHi(accountName: "MinhVu")
+                        welcomeView.sayHi(accountName: "Minh Vu")
                         welcomeView.tag = 107
                         topVC.view.addSubview(welcomeView)
                     }

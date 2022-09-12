@@ -80,9 +80,15 @@ class LoginView: UIView {
                         let windowWidth = screenFrame.width
                         let windowHeight = screenFrame.height
                         let rect = CGRect(x: windowWidth/2, y: 20, width: windowWidth/2+60 , height: 120)
-                        let welcomeView = WelcomeView(frame: rect)
+
+                        let welcomeView = WelcomeView()
+                        welcomeView.leftAnchor.constraint(equalTo: topVC.view.leftAnchor, constant: 20).isActive = true
+                        welcomeView.rightAnchor.constraint(equalTo: topVC.view.rightAnchor, constant: -20).isActive = true
+
+                        welcomeView.centerYAnchor.constraint(equalTo: topVC.view.centerYAnchor).isActive = true
+                        welcomeView.heightAnchor.constraint(equalToConstant: 100).isActive = true
                         
-                        welcomeView.translatesAutoresizingMaskIntoConstraints = false
+                        
                         welcomeView.sayHi(accountName: "MinhVu")
                         welcomeView.tag = 107
                         topVC.view.addSubview(welcomeView)

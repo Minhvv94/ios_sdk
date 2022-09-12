@@ -33,9 +33,6 @@ class WelcomeView: UIView {
     
     private func setUpView(){
         Bundle.module.loadNibNamed("WelcomeView", owner: self, options: nil)
-        
-        self.translatesAutoresizingMaskIntoConstraints = false
-        
         self.addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight,.flexibleWidth]

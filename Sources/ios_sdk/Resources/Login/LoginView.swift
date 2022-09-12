@@ -10,6 +10,9 @@ import UIKit
 
 @objc(LoginView)
 class LoginView: UIView {
+    
+    
+    
     var timer : DispatchSourceTimer!
     var counter : Int = 0
     @IBOutlet weak var layoutBottomContainer: NSLayoutConstraint!
@@ -142,7 +145,7 @@ class LoginView: UIView {
     func countTime(){
         counter += 1
         print(counter)
-        if counter == 2 {
+        if counter == 4 {
             self.removeFromSuperview()
             timer.cancel()
             

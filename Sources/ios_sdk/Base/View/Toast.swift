@@ -60,8 +60,11 @@ class Toast {
         window.addSubview(contentView)
         easyIn()
         
-        timer = DispatchSource.makeTimerSource(flags: .strict, queue: DispatchQueue.main)
-        timer?.schedule(deadline: .now() + .seconds(showTimeSec))
+//        timer = DispatchSource.makeTimerSource(flags: .strict, queue: DispatchQueue.main)
+//        timer?.schedule(deadline: .now() + .seconds(showTimeSec))
+//
+        timer = DispatchSource.makeTimerSource()
+        timer?.schedule(deadline: .now() + .seconds(3), repeating: .seconds(1), leeway: .seconds(1))
         timer?.setEventHandler(handler: {
             self.hide()
         })

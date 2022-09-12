@@ -88,9 +88,7 @@ class LoginView: UIView {
                         welcomeView.tag = 107
                         welcomeView.sayHi(accountName: "Minh Vu")
                         welcomeView.closeWelcome()
-                        if (self.tag == 107) {
-                            self.removeFromSuperview()
-                        }
+                        print("=======================")
                         
                     }
                 }

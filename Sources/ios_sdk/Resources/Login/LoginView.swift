@@ -85,9 +85,7 @@ class LoginView: UIView {
                         welcomeView.tag = 107
                         topVC.view.addSubview(welcomeView)
                     }
-                    
-                    
-                    print(" login now =============")
+
                     if (self.tag == 100) {
                         self.removeFromSuperview()
                     }

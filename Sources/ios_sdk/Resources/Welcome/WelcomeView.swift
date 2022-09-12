@@ -12,8 +12,8 @@ import UIKit
 class WelcomeView: UIView {
 
     
-
-    @IBOutlet weak var contentView: UIView!
+    @IBOutlet var contentView: UIView!
+    
     @IBOutlet weak var lbWelcomeUser: UILabel!
     
     

@@ -41,25 +41,36 @@ class WelcomeView: UIView {
 
     }
     
-    @objc func closeWelcome(){
-        timer = DispatchSource.makeTimerSource()
-        timer.schedule(deadline: .now() + .seconds(1), repeating: .seconds(1), leeway: .seconds(1))
-        timer.setEventHandler(handler: { [weak self] in
-            guard let strongSelf = self else { return }
-            strongSelf.countTime()
-        
-        })
-
-        timer.resume()
-    }
-    func countTime(){
-        counter += 1
-        print(counter)
-        if counter == 2 {
-            self.contentView.removeFromSuperview()
-            timer.cancel()
-            timer = nil
+    
+    func show(){
+        if timer != nil {
+            hide()
         }
+        easyIn()
+        timer = DispatchSource.makeTimerSource()
+        timer?.schedule(deadline: .now() + .seconds(3), repeating: .seconds(1), leeway: .seconds(1))
+        timer?.setEventHandler(handler: {
+            self.hide()
+        })
+        timer?.resume()
+        
+        
+        print("chay vao day ===============2222222=")
+    }
+    
+    
+    @objc public func hide(){
+        self.contentView.removeFromSuperview()
+        self.timer?.cancel()
+        self.timer = nil
+    }
+    
+    public func easyIn(){
+        UIView.beginAnimations(nil, context: nil)
+        UIView.setAnimationCurve(.easeIn)
+        UIView.setAnimationDuration(0.2)
+        contentView.alpha = 1.0
+        UIView.commitAnimations()
     }
 }
 

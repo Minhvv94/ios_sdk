@@ -94,7 +94,6 @@ class LoginView: UIView {
 //                    }
                     
                     let toast = Toast()
-                    toast.ini
                     toast.show()
                 }
             }

@@ -141,8 +141,10 @@ class LoginView: UIView {
         timer = DispatchSource.makeTimerSource()
         timer.schedule(deadline: .now() + .seconds(1), repeating: .seconds(1), leeway: .seconds(1))
         timer.setEventHandler(handler: { [weak self] in
-            guard let strongSelf = self else { return }
-            strongSelf.countTime()
+//            guard let strongSelf = self else { return }
+//            strongSelf.countTime()
+            
+            self!.countTime()
         })
 
         timer.resume()

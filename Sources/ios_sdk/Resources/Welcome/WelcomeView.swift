@@ -40,7 +40,6 @@ class WelcomeView: UIView {
         lbWelcomeUser.text = webcome
     }
     
-    
     func show(){
         if timer != nil {
             hide()
@@ -52,11 +51,7 @@ class WelcomeView: UIView {
             self.hide()
         })
         timer?.resume()
-        
-        
-        
     }
-    
     
     @objc public func hide(){
         DispatchQueue.main.async {

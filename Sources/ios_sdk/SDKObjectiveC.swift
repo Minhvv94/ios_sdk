@@ -7,13 +7,17 @@
 
 import Foundation
 import UIKit
+import FirebaseCore
+
+
 protocol IosSdk {
     func login()
     func dashBoard()
     func listProduct()
+    func initWithDelegate(application: UIApplication, appInfo: AppInfo)
 }
 @objc(SDKObjectiveC)
-public class SDKObjectiveC: UIView, IosSdk {
+public class SDKObjectiveC: UIView, IosSdk, UIApplicationDelegate {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -52,7 +56,7 @@ public class SDKObjectiveC: UIView, IosSdk {
                                         let windowHeight = screenFrame.height
                                         let rect = CGRect(x: 0, y: 0, width: windowWidth , height: windowHeight)
                                         let newView = LoginView(frame: rect)
-                                        newView.tag = 100
+                                        newView.tag = TagConst.TAG_LOGIN_VIEW
                                         topVC.view.addSubview(newView)
                         }
                     }else{
@@ -63,7 +67,6 @@ public class SDKObjectiveC: UIView, IosSdk {
                 
             }
         }
-        print("login")
     }
     
     
@@ -72,20 +75,20 @@ public class SDKObjectiveC: UIView, IosSdk {
             let screenFrame = topVC.view.frame
             let windowWidth = screenFrame.width
             let windowHeight = screenFrame.height
-            if (self.tag == 101) {
+            if (self.tag == TagConst.TAG_BUTTON_VIEW) {
                 self.removeFromSuperview()
             }
-            buttonView.tag = 101
+            buttonView.tag = TagConst.TAG_BUTTON_VIEW
             topVC.view.addSubview(buttonView)
             
             buttonView.frame = CGRect(x: 0, y: 100, width: 50, height: 50)
             buttonView.tapBlock = {
-                if (self.buttonView.tag == 101) {
+                if (self.buttonView.tag == TagConst.TAG_BUTTON_VIEW) {
                     self.buttonView.removeFromSuperview()
                 }
                 let rect = CGRect(x: 0, y: 0, width: windowWidth , height: windowHeight)
                 let dashboardView = DashboardView(frame: rect)
-                dashboardView.tag = 102
+                dashboardView.tag = TagConst.TAG_DASHBOARD_VIEW
                 topVC.view.addSubview(dashboardView)
             }
 
@@ -102,14 +105,18 @@ public class SDKObjectiveC: UIView, IosSdk {
     }
     
     @objc open func listProduct() {
-        
         let proto1 :OptionalMethodsProtocol = OptionalMethodsProtocolExten()
         proto1.didDismiss();
-        
-        
         let proto2 :OptionalMethodsProtocol = OptionalMethodsProtocolExten2()
         proto2.didDismiss();
-        
+    }
+    
+    
+    @objc open func initWithDelegate(application: UIApplication, appInfo: AppInfo){
+        let filePath = Bundle.main.path(forResource: appInfo.firebaseConfigFile, ofType: "plist")
+        guard let fileopts = FirebaseOptions.init(contentsOfFile: filePath!)
+              else { assert(false, "Couldn't load config file") }
+        FirebaseApp.configure(options: fileopts)
     }
 
 }

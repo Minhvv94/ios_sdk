@@ -19,7 +19,7 @@ class LoginView: UIView {
     
     @IBAction func btnClose(_ sender: Any) {
         //contentView.removeAllSubviews();
-        if (self.tag == 100) {
+        if (self.tag == TagConst.TAG_LOGIN_VIEW) {
             self.removeFromSuperview()
         }
     }
@@ -72,7 +72,7 @@ class LoginView: UIView {
                     UserManager.shared.setRefreshToken(refreshToken: data?.data?.refresh_token ?? "")
                     
                     let payload = Utils.shared.getPayloadInToken(jwtToken: data?.data?.access_token ?? "")
-                    if (self.tag == 100) {
+                    if (self.tag == TagConst.TAG_LOGIN_VIEW) {
                         self.removeFromSuperview()
                     }
                     
@@ -86,9 +86,9 @@ class LoginView: UIView {
                             welcomeView.widthAnchor.constraint(equalToConstant: 400),
                             welcomeView.heightAnchor.constraint(equalToConstant: 60)
                         ])
-                        welcomeView.tag = 107
+                        welcomeView.tag = TagConst.TAG_WELCOME_VIEW
                         welcomeView.sayHi(accountName: "Minh Vu")
-                        welcomeView.show()// toast
+                        welcomeView.show()
                     }
                 }
             }

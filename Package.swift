@@ -20,7 +20,8 @@ let package = Package(
         .package(url: "https://github.com/vapor/jwt-kit.git", from: "4.0.0"),
         .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from: "5.6.2")),
         .package(url: "https://github.com/SwiftyJSON/SwiftyJSON.git", .upToNextMajor(from: "5.0.0")),
-        .package(url: "https://github.com/ReactiveX/RxSwift.git", .upToNextMajor(from: "6.0.0"))
+        .package(url: "https://github.com/ReactiveX/RxSwift.git", .upToNextMajor(from: "6.0.0")),
+        .package(name: "Firebase", url: "https://github.com/firebase/firebase-ios-sdk.git",.upToNextMajor(from: "8.3.0"))
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -28,15 +29,16 @@ let package = Package(
         .target(
             name: "ios_sdk",
             dependencies: ["Alamofire", "SwiftyJSON", "RxSwift",
-                           .product(name: "JWTKit", package: "jwt-kit")],
+                           .product(name: "JWTKit", package: "jwt-kit"),
+                           .product(name: "FirebaseAuth", package: "Firebase"),
+                           .product(name: "FirebaseMessaging", package: "Firebase"),
+            
+            ],
             resources: [
                 Resource.process("Assets.xcassets"),
                 Resource.process("Resources/Login/LoginView.xib"),
                 Resource.process("Resources/Dashboard/DashboardView.xib"),
                 Resource.process("Resources/Dashboard/PersonalHeaderView.xib"),
-                
-                
-
             ]
         ),
             //dependencies: ["SwiftyJSON", "RxSwift"]),

@@ -59,19 +59,13 @@ class Toast {
         contentView.alpha = 0.0
         window.addSubview(contentView)
         easyIn()
-        
-//        timer = DispatchSource.makeTimerSource(flags: .strict, queue: DispatchQueue.main)
-//        timer?.schedule(deadline: .now() + .seconds(showTimeSec))
-//
         timer = DispatchSource.makeTimerSource()
         timer?.schedule(deadline: .now() + .seconds(3), repeating: .seconds(1), leeway: .seconds(1))
         timer?.setEventHandler(handler: {
             self.hide()
         })
         timer?.resume()
-        
-        
-        print("chay vao day ===============2222222=")
+    
     }
     
     @objc public func hide(){

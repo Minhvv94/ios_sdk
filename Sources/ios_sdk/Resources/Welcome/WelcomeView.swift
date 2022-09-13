@@ -38,7 +38,6 @@ class WelcomeView: UIView {
     @objc func sayHi(accountName : String){
         let webcome = "Xin chào, " + accountName
         lbWelcomeUser.text = webcome
-
     }
     
     
@@ -60,12 +59,9 @@ class WelcomeView: UIView {
     
     
     @objc public func hide(){
-        print("chay vao day ===============2222222=")
         DispatchQueue.main.async {
-             // Call the rootViewController
             self.contentView.removeFromSuperview()
         }
-        
         self.timer?.cancel()
         self.timer = nil
     }

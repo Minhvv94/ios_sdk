@@ -88,12 +88,8 @@ class LoginView: UIView {
                         ])
                         welcomeView.tag = 107
                         welcomeView.sayHi(accountName: "Minh Vu")
-                        welcomeView.show()
-
+                        welcomeView.show()// toast
                     }
-                    
-//                    let toast = Toast()
-//                    toast.show()
                 }
             }
         }

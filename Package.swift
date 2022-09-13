@@ -39,6 +39,7 @@ let package = Package(
                 Resource.process("Resources/Login/LoginView.xib"),
                 Resource.process("Resources/Dashboard/DashboardView.xib"),
                 Resource.process("Resources/Dashboard/PersonalHeaderView.xib"),
+                Resource.process("Resources/Dashboard/WelcomeView.xib"),
             ]
         ),
             //dependencies: ["SwiftyJSON", "RxSwift"]),

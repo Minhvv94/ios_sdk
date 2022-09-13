@@ -8,6 +8,8 @@
 import Foundation
 import UIKit
 import FirebaseCore
+import FirebaseMessaging
+import UserNotifications
 
 
 protocol IosSdk {
@@ -17,7 +19,7 @@ protocol IosSdk {
     func initWithDelegate(application: UIApplication, appInfo: AppInfo)
 }
 @objc(SDKObjectiveC)
-public class SDKObjectiveC: UIView, IosSdk, UIApplicationDelegate {
+public class SDKObjectiveC: UIView, IosSdk, UIApplicationDelegate,  UNUserNotificationCenterDelegate, MessagingDelegate {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -117,7 +119,31 @@ public class SDKObjectiveC: UIView, IosSdk, UIApplicationDelegate {
         guard let fileopts = FirebaseOptions.init(contentsOfFile: filePath!)
               else { assert(false, "Couldn't load config file") }
         FirebaseApp.configure(options: fileopts)
-    }
+        
+        Messaging.messaging().delegate = self //Nhận các message từ FirebaseMessaging
+        configApplePush(application) // đăng ký nhận push.
 
+    }
+    
+    func configApplePush(_ application: UIApplication) {
+            if #available(iOS 10.0, *) {
+                // For iOS 10 display notification (sent via APNS)
+                UNUserNotificationCenter.current().delegate = self
+                let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+                UNUserNotificationCenter.current().requestAuthorization(
+                    options: authOptions,
+                    completionHandler: {_, _ in })
+            } else {
+                let settings: UIUserNotificationSettings =
+                    UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
+                application.registerUserNotificationSettings(settings)
+            }
+            
+            application.registerForRemoteNotifications()
+            
+            if let token = Messaging.messaging().fcmToken {
+                print("FCM token: \(token)")
+            }
+        }
 }
 

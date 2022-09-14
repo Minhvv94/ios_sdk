@@ -42,6 +42,9 @@ class TestView: UIView {
         contentView.autoresizingMask = [.flexibleHeight,.flexibleWidth]
     }
 
+    @IBAction func btnTest(_ sender: Any) {
+        print(" hi minh 2")
+    }
     @IBAction func btnLogin(_ sender: Any) {
         print(" hi minh")
     }

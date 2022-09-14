@@ -28,11 +28,22 @@
                         <action selector="btnLogin:" destination="-1" eventType="touchUpInside" id="vHZ-gd-uQa"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aUr-lc-qNZ">
+                    <rect key="frame" x="174" y="506" width="67" height="36"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                    <connections>
+                        <action selector="btnTest:" destination="-1" eventType="touchUpInside" id="uuj-2z-tUX"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fi9-TN-vbW"/>
             <color key="backgroundColor" systemColor="systemGreenColor"/>
             <constraints>
                 <constraint firstItem="Ql9-jS-Hx5" firstAttribute="centerX" secondItem="fi9-TN-vbW" secondAttribute="centerX" id="5rl-uM-ndW"/>
+                <constraint firstItem="aUr-lc-qNZ" firstAttribute="centerY" secondItem="Ql9-jS-Hx5" secondAttribute="centerY" id="95G-zO-sni"/>
+                <constraint firstItem="aUr-lc-qNZ" firstAttribute="leading" secondItem="fi9-TN-vbW" secondAttribute="leading" constant="164" id="FG6-FL-Nmb"/>
+                <constraint firstItem="aUr-lc-qNZ" firstAttribute="top" secondItem="Ql9-jS-Hx5" secondAttribute="top" id="I33-ma-M3i"/>
                 <constraint firstItem="Ql9-jS-Hx5" firstAttribute="centerY" secondItem="fi9-TN-vbW" secondAttribute="centerY" id="lsc-F3-ouk"/>
             </constraints>
             <point key="canvasLocation" x="269.56521739130437" y="150.66964285714286"/>

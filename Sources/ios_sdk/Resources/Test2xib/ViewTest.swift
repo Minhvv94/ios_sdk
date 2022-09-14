@@ -28,12 +28,7 @@ class ViewTest : UIView {
     }
     
     private func setUpView(){
-//        if Utils.isLandscape {
-//            Bundle.module.loadNibNamed("ViewTestV", owner: self, options: nil)
-//            
-//        }else{
-//            
-//        }
+
         Bundle.module.loadNibNamed("ViewTestH", owner: self, options: nil)
         self.addSubview(contentView)
         contentView.frame = self.bounds

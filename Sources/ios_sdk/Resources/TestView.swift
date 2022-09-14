@@ -27,7 +27,16 @@ class TestView: UIView {
     }
     
     private func setUpView(){
-        Bundle.module.loadNibNamed("Test2View", owner: self, options: nil)
+        
+        
+        if Utils.isLandscape {
+           Bundle.module.loadNibNamed("TestView", owner: self, options: nil)
+        
+        }else{
+            Bundle.module.loadNibNamed("Test2View", owner: self, options: nil)
+        }
+        
+        
         self.addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight,.flexibleWidth]

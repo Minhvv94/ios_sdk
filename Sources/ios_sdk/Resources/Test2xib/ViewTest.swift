@@ -9,8 +9,10 @@ import Foundation
 
 import UIKit
 
-
+@objc(ViewTest)
 class ViewTest : UIView {
+    
+    @IBOutlet var contentView: ViewTest!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -36,7 +38,7 @@ class ViewTest : UIView {
         contentView.autoresizingMask = [.flexibleHeight,.flexibleWidth]
     }
     
-    @IBOutlet var contentView: ViewTest!
+
     
     @IBAction func btnLogin(_ sender: Any) {
         

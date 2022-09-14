@@ -44,8 +44,13 @@ class TestView: UIView {
 
     @IBAction func btnTest(_ sender: Any) {
         print(" hi minh 2")
+        
+
     }
     @IBAction func btnLogin(_ sender: Any) {
         print(" hi minh")
+        if (self.tag == TagConst.TAG_VIEW_TEST) {
+            self.removeFromSuperview()
+        }
     }
 }

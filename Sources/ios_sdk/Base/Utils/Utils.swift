@@ -381,6 +381,24 @@ class Utils: NSObject {
         }
         return payload ;
     }
+    
+    static var isLandscape: Bool {
+        return UIApplication.shared.windows
+            .first?
+            .windowScene?
+            .interfaceOrientation
+            .isLandscape ?? false
+    }
+    
+    static var isPortrait: Bool {
+            get {
+                return UIDevice.current.orientation.isValidInterfaceOrientation
+                    ? UIDevice.current.orientation.isPortrait
+                    : (UIApplication.shared.windows.first?.windowScene?.interfaceOrientation.isPortrait)!
+            }
+        }
+    
+    
 
 }
 struct Payload: JWTPayload, Equatable {

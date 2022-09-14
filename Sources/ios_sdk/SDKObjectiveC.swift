@@ -17,6 +17,8 @@ protocol IosSdk {
     func dashBoard()
     func listProduct()
     func initWithDelegate(application: UIApplication, appInfo: AppInfo)
+    
+    func testXib()
 }
 @objc(SDKObjectiveC)
 public class SDKObjectiveC: UIView, IosSdk, UIApplicationDelegate,  UNUserNotificationCenterDelegate, MessagingDelegate {
@@ -145,5 +147,18 @@ public class SDKObjectiveC: UIView, IosSdk, UIApplicationDelegate,  UNUserNotifi
                 print("FCM token: \(token)")
             }
         }
+    
+    
+    @objc open func testXib (){
+        if let topVC = UIApplication.topViewController() {
+            let screenFrame = topVC.view.frame
+            let windowWidth = screenFrame.width
+            let windowHeight = screenFrame.height
+            let rect = CGRect(x: 0, y: 0, width: windowWidth , height: windowHeight)
+            let newView = ViewTest(frame: rect)
+            newView.tag = TagConst.TAG_VIEW_TEST
+            topVC.view.addSubview(newView)
+        }
+    }
 }
 

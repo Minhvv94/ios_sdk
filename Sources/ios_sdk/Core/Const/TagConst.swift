@@ -10,7 +10,7 @@ struct TagConst {
     static let TAG_LOGIN_VIEW = 100
     static let TAG_BUTTON_VIEW = 101
     static let TAG_DASHBOARD_VIEW = 102
-    static let TAG_WELCOME_VIEW3 = 103
+    static let TAG_VIEW_TEST = 103
     static let TAG_WELCOME_VIEW4 = 104
     static let TAG_WELCOME_VIEW5 = 105
     static let TAG_WELCOME_VIEW6 = 106

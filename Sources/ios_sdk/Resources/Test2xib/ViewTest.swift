@@ -12,7 +12,7 @@ import UIKit
 @objc(ViewTest)
 class ViewTest : UIView {
     
-    @IBOutlet var contentView: ViewTest!
+    @IBOutlet var contentView: UIView!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -29,9 +29,10 @@ class ViewTest : UIView {
     
     private func setUpView(){
         if Utils.isLandscape {
-            Bundle.module.loadNibNamed("ViewTestH", owner: self, options: nil)
-        }else{
             Bundle.module.loadNibNamed("ViewTestV", owner: self, options: nil)
+            
+        }else{
+            Bundle.module.loadNibNamed("ViewTestH", owner: self, options: nil)
         }
         self.addSubview(contentView)
         contentView.frame = self.bounds

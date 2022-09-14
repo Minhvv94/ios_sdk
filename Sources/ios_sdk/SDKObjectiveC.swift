@@ -155,7 +155,7 @@ public class SDKObjectiveC: UIView, IosSdk, UIApplicationDelegate,  UNUserNotifi
             let windowWidth = screenFrame.width
             let windowHeight = screenFrame.height
             let rect = CGRect(x: 0, y: 0, width: windowWidth , height: windowHeight)
-            let newView = ViewTest(frame: rect)
+            let newView = TestView(frame: rect)
             newView.tag = TagConst.TAG_VIEW_TEST
             topVC.view.addSubview(newView)
         }

@@ -19,37 +19,41 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ql9-jS-Hx5">
-                    <rect key="frame" x="182.5" y="435" width="49" height="36"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                    <state key="normal" title="Login"/>
-                    <connections>
-                        <action selector="btnLogin:" destination="-1" eventType="touchUpInside" id="vHZ-gd-uQa"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aUr-lc-qNZ">
-                    <rect key="frame" x="174" y="506" width="67" height="36"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                    <connections>
-                        <action selector="btnTest:" destination="-1" eventType="touchUpInside" id="uuj-2z-tUX"/>
-                    </connections>
-                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pI5-6O-uZi">
+                    <rect key="frame" x="0.0" y="44" width="414" height="128"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ql9-jS-Hx5">
+                            <rect key="frame" x="157" y="46" width="100" height="36"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="view ngang"/>
+                            <connections>
+                                <action selector="btnLogin:" destination="-1" eventType="touchUpInside" id="vHZ-gd-uQa"/>
+                                <action selector="btnTest:" destination="-1" eventType="touchUpInside" id="VCF-y4-mos"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBlueColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="128" id="RUb-Cd-i6i"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fi9-TN-vbW"/>
             <color key="backgroundColor" systemColor="systemGreenColor"/>
             <constraints>
-                <constraint firstItem="Ql9-jS-Hx5" firstAttribute="centerX" secondItem="fi9-TN-vbW" secondAttribute="centerX" id="5rl-uM-ndW"/>
-                <constraint firstItem="aUr-lc-qNZ" firstAttribute="centerY" secondItem="Ql9-jS-Hx5" secondAttribute="centerY" id="95G-zO-sni"/>
-                <constraint firstItem="aUr-lc-qNZ" firstAttribute="leading" secondItem="fi9-TN-vbW" secondAttribute="leading" constant="164" id="FG6-FL-Nmb"/>
-                <constraint firstItem="aUr-lc-qNZ" firstAttribute="top" secondItem="Ql9-jS-Hx5" secondAttribute="top" id="I33-ma-M3i"/>
-                <constraint firstItem="Ql9-jS-Hx5" firstAttribute="centerY" secondItem="fi9-TN-vbW" secondAttribute="centerY" id="lsc-F3-ouk"/>
+                <constraint firstItem="pI5-6O-uZi" firstAttribute="top" secondItem="fi9-TN-vbW" secondAttribute="top" id="Tf9-2Y-3gr"/>
+                <constraint firstItem="fi9-TN-vbW" firstAttribute="trailing" secondItem="pI5-6O-uZi" secondAttribute="trailing" id="fm9-ZX-iFI"/>
+                <constraint firstItem="pI5-6O-uZi" firstAttribute="leading" secondItem="fi9-TN-vbW" secondAttribute="leading" id="xgJ-Wh-Aah"/>
             </constraints>
             <point key="canvasLocation" x="269.56521739130437" y="150.66964285714286"/>
         </view>
     </objects>
     <resources>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

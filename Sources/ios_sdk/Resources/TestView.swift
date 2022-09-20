@@ -45,12 +45,21 @@ class TestView: UIView {
     @IBAction func btnTest(_ sender: Any) {
         print(" hi minh 2")
         
+        if Utils.isLandscape {
+            Bundle.module.loadNibNamed("Test2View", owner: self, options: nil)
+        }
+        
+        
 
     }
     @IBAction func btnLogin(_ sender: Any) {
         print(" hi minh")
         if (self.tag == TagConst.TAG_VIEW_TEST) {
             self.removeFromSuperview()
+        }
+        
+        if !Utils.isLandscape {
+            Bundle.module.loadNibNamed("TestView", owner: self, options: nil)
         }
     }
 }

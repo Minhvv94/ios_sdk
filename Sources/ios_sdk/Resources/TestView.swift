@@ -45,9 +45,9 @@ class TestView: UIView {
     @IBAction func btnTest(_ sender: Any) {
         print(" hi minh 2")
         
-        if Utils.isLandscape {
-            Bundle.module.loadNibNamed("Test2View", owner: self, options: nil)
-        }
+//        if Utils.isLandscape {
+//            Bundle.module.loadNibNamed("Test2View", owner: self, options: nil)
+//        }
         
         
 
@@ -58,8 +58,8 @@ class TestView: UIView {
             self.removeFromSuperview()
         }
         
-        if !Utils.isLandscape {
-            Bundle.module.loadNibNamed("TestView", owner: self, options: nil)
-        }
+//        if !Utils.isLandscape {
+//            Bundle.module.loadNibNamed("TestView", owner: self, options: nil)
+//        }
     }
 }
